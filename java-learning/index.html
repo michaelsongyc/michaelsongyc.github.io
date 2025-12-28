@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Java随笔 - Michael</title><meta name="Description" content="Welcome to SYC Blog"><meta property="og:url" content="https://michaelsongyc.github.io/java-learning/">
+  <meta property="og:site_name" content="Michael">
+  <meta property="og:title" content="Java随笔">
+  <meta property="og:description" content="Java基础概括 大图 Java 设计模式 &amp;&amp; 算法 框架 &amp;&amp; spring 中间件 &amp;&amp; 其他 Java Document Oracle Java tutorial List public class ArrayList&lt;E&gt; extends AbstractList&lt;E&gt; implements List&lt;E&gt;, RandomAccess, Cloneable, java.io.Serializable{} public class LinkedList&lt;E&gt; extends AbstractSequentialList&lt;E&gt; implements List&lt;E&gt;, Deque&lt;E&gt;, Cloneable, java.io.Serializable{} public class CopyOnWriteArrayList&lt;E&gt; implements List&lt;E&gt;, RandomAccess, Cloneable, java.io.Serializable {} List list = Collections.synchronizedList(new ArrayList(...)); Java equals() and hashCode() refer Java HashMap equals() Object class defined equals() method like this:">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2019-03-19T22:26:50+00:00">
+    <meta property="article:modified_time" content="2019-03-19T22:26:50+00:00">
+    <meta property="article:tag" content="Java">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Java随笔">
+  <meta name="twitter:description" content="Java基础概括 大图 Java 设计模式 &amp;&amp; 算法 框架 &amp;&amp; spring 中间件 &amp;&amp; 其他 Java Document Oracle Java tutorial List public class ArrayList&lt;E&gt; extends AbstractList&lt;E&gt; implements List&lt;E&gt;, RandomAccess, Cloneable, java.io.Serializable{} public class LinkedList&lt;E&gt; extends AbstractSequentialList&lt;E&gt; implements List&lt;E&gt;, Deque&lt;E&gt;, Cloneable, java.io.Serializable{} public class CopyOnWriteArrayList&lt;E&gt; implements List&lt;E&gt;, RandomAccess, Cloneable, java.io.Serializable {} List list = Collections.synchronizedList(new ArrayList(...)); Java equals() and hashCode() refer Java HashMap equals() Object class defined equals() method like this:">
+<meta name="application-name" content="MichaelSongs">
+<meta name="apple-mobile-web-app-title" content="MichaelSongs">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://michaelsongyc.github.io/java-learning/" /><link rel="prev" href="https://michaelsongyc.github.io/git/" /><link rel="next" href="https://michaelsongyc.github.io/concurrencyparall/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Java随笔",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/michaelsongyc.github.io\/java-learning\/"
+        },"image": ["https:\/\/michaelsongyc.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Java","wordcount":  3488 ,
+        "url": "https:\/\/michaelsongyc.github.io\/java-learning\/","datePublished": "2019-03-19T22:26:50+00:00","dateModified": "2019-03-19T22:26:50+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Michael Song"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Michael"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>SYC-Lifelong learning(终身学习)</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Michael"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>SYC-Lifelong learning(终身学习)</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Java随笔</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/java/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Java</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2019-03-19">2019-03-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 3488 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 7 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#java基础概括">Java基础概括</a>
+      <ul>
+        <li><a href="#大图">大图</a></li>
+        <li><a href="#java">Java</a></li>
+        <li><a href="#设计模式--算法">设计模式 &amp;&amp; 算法</a></li>
+        <li><a href="#框架--spring">框架 &amp;&amp; spring</a></li>
+        <li><a href="#中间件--其他">中间件 &amp;&amp; 其他</a></li>
+      </ul>
+    </li>
+    <li><a href="#java-1">Java</a>
+      <ul>
+        <li><a href="#document">Document</a></li>
+        <li><a href="#list">List</a></li>
+        <li><a href="#java-equals-and-hashcode">Java equals() and hashCode()</a>
+          <ul>
+            <li><a href="#equals">equals()</a></li>
+            <li><a href="#hashcode">hashCode()</a></li>
+            <li><a href="#importance-of-equals-and-hashcode-method">Importance of equals() and hashCode() method</a></li>
+            <li><a href="#when-to-override-equals-and-hashcode-methods">When to override equals() and hashCode() methods?</a></li>
+            <li><a href="#what-is-hash-collision-">What is Hash Collision ??</a></li>
+          </ul>
+        </li>
+        <li><a href="#project-lombok">Project Lombok</a></li>
+        <li><a href="#serialization-and-deserialization">Serialization and Deserialization</a></li>
+        <li><a href="#java-泛型generics">Java 泛型（generics）</a></li>
+        <li><a href="#java-reflection">Java Reflection</a></li>
+        <li><a href="#java-annotations">Java Annotations</a>
+          <ul>
+            <li><a href="#java-annotations-example">Java Annotations Example</a></li>
+            <li><a href="#java-annotations-parsing">Java Annotations Parsing</a></li>
+          </ul>
+        </li>
+        <li><a href="#map">Map</a></li>
+        <li><a href="#hashmap">HashMap</a>
+          <ul>
+            <li><a href="#java-hashmap-constructors">Java HashMap Constructors</a></li>
+            <li><a href="#how-hashmap-works-in-java">How HashMap works in java?</a></li>
+          </ul>
+        </li>
+        <li><a href="#java移位运算">java移位运算</a></li>
+      </ul>
+    </li>
+    <li><a href="#jvm">JVM</a>
+      <ul>
+        <li><a href="#图例">图例</a></li>
+      </ul>
+    </li>
+    <li><a href="#todo">todo</a>
+      <ul>
+        <li><a href="#java-链表">java 链表</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="java基础概括">Java基础概括</h2>
+<h3 id="大图">大图</h3>
+<figure><img src="/image/tech/java/architecture/JavaBaseArchitecture.png">
+</figure>
+
+<h3 id="java">Java</h3>
+<figure><img src="/image/tech/java/architecture/JavaBaseArchitecture_java.png">
+</figure>
+
+<h3 id="设计模式--算法">设计模式 &amp;&amp; 算法</h3>
+<figure><img src="/image/tech/java/architecture/JavaBaseArchitecture_design.png">
+</figure>
+
+<h3 id="框架--spring">框架 &amp;&amp; spring</h3>
+<figure><img src="/image/tech/java/architecture/JavaBaseArchitecture_11.png">
+</figure>
+
+<h3 id="中间件--其他">中间件 &amp;&amp; 其他</h3>
+<figure><img src="/image/tech/java/architecture/JavaBaseArchitecture_2.png">
+</figure>
+
+<h2 id="java-1">Java</h2>
+<h3 id="document">Document</h3>
+<ul>
+<li><a href="https://docs.oracle.com/javase/tutorial/java/index.html" target="_blank" rel="noopener noreffer ">Oracle Java tutorial</a></li>
+</ul>
+<h3 id="list">List</h3>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AbstractList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">implements</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">RandomAccess</span><span class="p">,</span><span class="w"> </span><span class="n">Cloneable</span><span class="p">,</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">Serializable</span><span class="p">{}</span></span></span></code></pre></div></div>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">LinkedList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AbstractSequentialList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">implements</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">Deque</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">Cloneable</span><span class="p">,</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">Serializable</span><span class="p">{}</span></span></span></code></pre></div></div>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CopyOnWriteArrayList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">implements</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">RandomAccess</span><span class="p">,</span><span class="w"> </span><span class="n">Cloneable</span><span class="p">,</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">Serializable</span><span class="w"> </span><span class="p">{}</span></span></span></code></pre></div></div>
+<blockquote>
+<pre><code> List list = Collections.synchronizedList(new ArrayList(...));
+</code></pre></blockquote>
+<h3 id="java-equals-and-hashcode">Java equals() and hashCode()</h3>
+<ul>
+<li><a href="https://www.digitalocean.com/community/tutorials/java-equals-hashcode" target="_blank" rel="noopener noreffer ">refer</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/java-hashmap#how-hashmap-works-in-java" target="_blank" rel="noopener noreffer ">Java HashMap</a></li>
+</ul>
+<h4 id="equals">equals()</h4>
+<p>Object class defined equals() method like this:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">equals</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">obj</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
+<p>According to java documentation of equals() method, any implementation should adhere to following principles.</p>
+<ul>
+<li>For any object x, x.equals(x) should return true.</li>
+<li>For any two object x and y, x.equals(y) should return true if and only if y.equals(x) returns true.</li>
+<li>For multiple objects x, y, and z, if x.equals(y) returns true and y.equals(z) returns true, then x.equals(z) should return true.</li>
+<li>Multiple invocations of x.equals(y) should return same result, unless any of the object properties is modified that is being used in the equals() method implementation.</li>
+<li>Object class equals() method implementation returns true only when both the references are pointing to same object.</li>
+</ul>
+<h4 id="hashcode">hashCode()</h4>
+<p>Java Object hashCode() is a native method and returns the integer hash code value of the object. The general contract of hashCode() method is:</p>
+<ul>
+<li>Multiple invocations of hashCode() should return the same integer value, unless the object property is modified that is being used in the equals() method.</li>
+<li><code>An object hash code value can change in multiple executions of the same application.</code></li>
+<li><code>If two objects are equal according to equals() method, then their hash code must be same.</code></li>
+<li><code>If two objects are unequal according to equals() method, their hash code are not required to be different.</code> Their hash code value may or may-not be equal.</li>
+</ul>
+<h4 id="importance-of-equals-and-hashcode-method">Importance of equals() and hashCode() method</h4>
+<p>Java hashCode() and equals() method are used in Hash table based implementations in java for storing and retrieving data. I have explained it in detail at <code>How HashMap works in java?</code> The implementation of equals() and hashCode() should follow these rules.</p>
+<ul>
+<li>If o1.equals(o2), then o1.hashCode() == o2.hashCode() should always be true.</li>
+<li>If o1.hashCode() == o2.hashCode is true, it doesn’t mean that o1.equals(o2) will be true.</li>
+</ul>
+<h4 id="when-to-override-equals-and-hashcode-methods">When to override equals() and hashCode() methods?</h4>
+<p><code>When we override equals() method</code>, it’s almost necessary to override the hashCode() method too so that their contract is not violated by our implementation. Note that your program will not throw any exceptions if the equals() and hashCode() contract is violated, if you are not planning to use the class as Hash table key, then it will not create any problem. If you are planning to use a class as Hash table key, then it’s must to override both equals() and hashCode() methods. Let’s see what happens when we rely on default implementation of equals() and hashCode() methods and use a custom class as HashMap key.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DataKey</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// getter and setter methods</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&#34;DataKey [name=&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;, id=&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;]&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HashingTest</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">DataKey</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">hm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getAllData</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">DataKey</span><span class="w"> </span><span class="n">dk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataKey</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">dk</span><span class="p">.</span><span class="na">setId</span><span class="p">(</span><span class="n">1</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">dk</span><span class="p">.</span><span class="na">setName</span><span class="p">(</span><span class="s">&#34;Pankaj&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">log</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&#34;{}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">dk</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Integer</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hm</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">dk</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">log</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&#34;{}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">DataKey</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getAllData</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">DataKey</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">hm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">DataKey</span><span class="w"> </span><span class="n">dk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataKey</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">dk</span><span class="p">.</span><span class="na">setId</span><span class="p">(</span><span class="n">1</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">dk</span><span class="p">.</span><span class="na">setName</span><span class="p">(</span><span class="s">&#34;Pankaj&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">log</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&#34;{}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">dk</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">hm</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">dk</span><span class="p">,</span><span class="w"> </span><span class="n">10</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">hm</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
+<p>When we run above program, it will print null. It’s because Object hashCode() method is used to find the bucket to look for the key. Since we don’t have access to the HashMap keys and we are creating the key again to retrieve the data, you will notice that hash code values of both the objects are different and hence value is not found.</p>
+<p>We can also use Project Lombok to auto generate equals and hashCode method implementations.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">lombok.Data</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DataKey</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&#34;DataKey [name=&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;, id=&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;]&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
+<h4 id="what-is-hash-collision-">What is Hash Collision ??</h4>
+<p>In very simple terms, Java Hash table implementations uses following logic for get and put operations.</p>
+<ol>
+<li>First identify the “Bucket” to use using the “key” hash code.</li>
+<li>If there are no objects present in the bucket with same hash code, then add the object for put operation and return null for get operation.</li>
+<li>If there are other objects in the bucket with same hash code, then “key” equals method comes into play.
+<ul>
+<li>If equals() return true and it’s a put operation, then object value is overridden.</li>
+<li>If equals() return false and it’s a put operation, then new entry is added to the bucket.</li>
+<li>If equals() return true and it’s a get operation, then object value is returned.</li>
+<li>If equals() return false and it’s a get operation, then null is returned.</li>
+</ul>
+</li>
+</ol>
+<p>Below image shows a bucket items of HashMap and how their equals() and hashCode() are related.</p>
+<figure><img src="/image/tech/java/base/hashCode.png"><figcaption>
+      <h4>desc</h4>
+    </figcaption>
+</figure>
+
+<p>The phenomenon when two keys have same hash code is called hash collision. If hashCode() method is not implemented properly, there will be higher number of hash collision and map entries will not be properly distributed causing slowness in the get and put operations. This is the reason for prime number usage in generating hash code so that map entries are properly distributed across all the buckets.</p>
+<p><strong>What if we don’t implement both hashCode() and equals()?</strong></p>
+<p>We have already seen above that if hashCode() is not implemented, we won’t be able to retrieve the value because HashMap use hash code to find the bucket to look for the entry. If we only use hashCode() and don’t implement equals() then also value will be not retrieved because equals() method will return false.</p>
+<p><strong>Best Practices for implementing equals() and hashCode() method</strong></p>
+<ul>
+<li>Use same properties in both equals() and hashCode() method implementations, so that their contract doesn’t violate when any properties is updated.</li>
+<li>It’s better to use immutable objects as Hash table key so that we can cache the hash code rather than calculating it on every call. That’s why String is a good candidate for Hash table key because it’s immutable and cache the hash code value.</li>
+<li>Implement hashCode() method so that least number of hash collision occurs and entries are evenly distributed across all the buckets.</li>
+</ul>
+<h3 id="project-lombok">Project Lombok</h3>
+<ul>
+<li><a href="https://www.digitalocean.com/community/tutorials/java-project-lombok" target="_blank" rel="noopener noreffer ">refer</a></li>
+</ul>
+<h3 id="serialization-and-deserialization">Serialization and Deserialization</h3>
+<p><code>Serialization</code> is the conversion of the state of an object into a byte stream;<code>deserialization</code> does the opposite. Stated differently, serialization is the conversion of a Java object into a static stream (sequence) of bytes, which we can then save to a database or transfer over a network.</p>
+<ul>
+<li>
+<p>When should I implement Serializable interface?</p>
+<ul>
+<li>implement the Serializable interface when you need to store a copy of the object, send them to another process which runs on the same system or over the network.</li>
+</ul>
+</li>
+<li>
+<p>Why do we do that?</p>
+<ul>
+<li>Because you want to store or send an object.</li>
+</ul>
+</li>
+<li>
+<p>Does it give any advantages or security?</p>
+<ul>
+<li>It makes storing and sending objects easy. It has nothing to do with security.</li>
+</ul>
+</li>
+</ul>
+<p><strong>What to do instead</strong></p>
+<p>Instead, use a serialization scheme that you can explicitly control. Such as Protocol Buffers, JSON, XML, or your own custom scheme.</p>
+<p><a href="https://www.baeldung.com/java-serialization" target="_blank" rel="noopener noreffer ">refer</a>
+<a href="https://zhuanlan.zhihu.com/p/66210653" target="_blank" rel="noopener noreffer ">refer2</a></p>
+<h3 id="java-泛型generics">Java 泛型（generics）</h3>
+<blockquote>
+<p>Java Genrics is one of the most important features introduced in Java 5.</p></blockquote>
+<p>What does the <E> syntax mean in Java?</p>
+<p>Here <code>&lt;E&gt;</code> denotes the type parameter of Node class .The type parameter defines that it can refer to any type (like String, Integer, Employee etc.). Java generics have type parameter naming conventions like following:</p>
+<p>Java Generic Type Naming convention helps us understanding code easily and having a naming convention is one of the best practices of Java programming language. So generics also comes with its own naming conventions. Usually, type parameter names are single, uppercase letters to make it easily distinguishable from java variables. The most commonly used type parameter names are:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-html">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">E - Element (used extensively by the Java Collections Framework, for example ArrayList, Set etc.)
+</span></span><span class="line"><span class="cl">K - Key (Used in Map)
+</span></span><span class="line"><span class="cl">N - Number
+</span></span><span class="line"><span class="cl">T - Type
+</span></span><span class="line"><span class="cl">V - Value (Used in Map)
+</span></span><span class="line"><span class="cl">S,U,V etc. - 2nd, 3rd, 4th types
+</span></span><span class="line"><span class="cl">？- 通配符泛型</span></span></code></pre></div></div>
+<p>For example take the following scenerio</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Node</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">E</span><span class="w"> </span><span class="n">elem</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">Node</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w"> </span><span class="n">next</span><span class="p">,</span><span class="w"> </span><span class="n">previous</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">class</span> <span class="nc">Test</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">Node</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Node</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
+<p>You can use generics with Interface,method and constructor too.</p>
+<p>For more about generics visit these:</p>
+<ul>
+<li><a href="https://www.javatpoint.com/generics-in-java" target="_blank" rel="noopener noreffer ">https://www.javatpoint.com/generics-in-java</a></li>
+</ul>
+<ol>
+<li>
+<p>Generics in Java</p>
+<p>Generics was added in Java 5 to provide <code>compile-time type checking</code> and removing risk of <code>ClassCastException</code> that was common while working with collection classes. The whole collection framework was re-written to use generics for type-safety. Let’s see how generics help us using collection classes safely.</p>
+</li>
+</ol>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">List</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&#34;abc&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Integer</span><span class="p">(</span><span class="n">5</span><span class="p">));</span><span class="w"> </span><span class="c1">//OK</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">for</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">list</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="c1">//type casting leading to ClassCastException at runtime</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="o">=</span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="n">obj</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
+<p>Above code compiles fine but throws ClassCastException at runtime because we are trying to cast Object in the list to String whereas one of the element is of type Integer. After Java 5, we use collection classes like below.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span><span class="w"> </span><span class="c1">// java 7 ? List&lt;String&gt; list1 = new ArrayList&lt;&gt;();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">list1</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&#34;abc&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//list1.add(new Integer(5)); //compiler error</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">for</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">list1</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">//no type casting needed, avoids ClassCastException</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
+<p>Notice that at the time of list creation, we have specified that the type of elements in the list will be String. So if we try to add any other type of object in the list, the program will throw compile-time error. Also notice that in for loop, we don’t need typecasting of the element in the list, hence removing the ClassCastException at runtime.</p>
+<ul>
+<li><a href="https://www.journaldev.com/1663/java-generics-example-method-class-interface" target="_blank" rel="noopener noreffer ">https://www.journaldev.com/1663/java-generics-example-method-class-interface</a></li>
+</ul>
+<ol>
+<li>
+<p>Why do we use Generics in Java?
+Generics provide strong compile-time type checking and reduces risk of ClassCastException and explicit casting of objects.</p>
+</li>
+<li>
+<p>What is T in Generics?
+We use <T> to create a generic class, interface, and method. The T is replaced with the actual type when we use it.</p>
+</li>
+<li>
+<p>How does Generics work in Java?
+Generic code ensures type safety. The compiler uses type-erasure to remove all type parameters at the compile time to reduce the overload at runtime.</p>
+</li>
+</ol>
+<ul>
+<li><a href="https://docs.oracle.com/javase/tutorial/java/generics/why.html" target="_blank" rel="noopener noreffer ">refer</a></li>
+<li><a href="https://www.runoob.com/java/java-generics.html" target="_blank" rel="noopener noreffer ">reter 2</a></li>
+<li><a href="https://juejin.cn/post/6844903917835419661" target="_blank" rel="noopener noreffer ">泛型通配符</a></li>
+</ul>
+<h3 id="java-reflection">Java Reflection</h3>
+<ul>
+<li><a href="https://www.digitalocean.com/community/tutorials/java-reflection-example-tutorial" target="_blank" rel="noopener noreffer ">refer</a></li>
+</ul>
+<p>Reflection in Java is a very powerful concept and it’s of little use in normal programming but it’s the backbone for most of the Java, J2EE frameworks. Some of the frameworks that use java reflection are:</p>
+<ul>
+<li>JUnit - uses reflection to parse @Test annotation to get the test methods and then invoke it.</li>
+<li>Spring - dependency injection, read more at Spring Dependency Injection</li>
+<li>Tomcat web container to forward the request to correct module by parsing their web.xml files and request URI.</li>
+</ul>
+<p>The list is endless and they all use java reflection because all these frameworks have no knowledge and access of user defined classes, interfaces, their methods etc. We should not use reflection in normal programming where we already have access to the classes and interfaces because of following drawbacks.</p>
+<ul>
+<li>Poor Performance - Since java reflection resolve the types dynamically, it involves processing like scanning the classpath to find the class to load, causing slow performance.</li>
+<li>Security Restrictions - Reflection requires runtime permissions that might not be available for system running under security manager. This can cause you application to fail at runtime because of security manager.</li>
+<li>Security Issues - Using reflection we can access part of code that we are not supposed to access, for example we can access private fields of a class and change it’s value. This can be a serious security threat and cause your application to behave abnormally.</li>
+<li>High Maintenance - Reflection code is hard to understand and debug, also any issues with the code can’t be found at compile time because the classes might not be available, making it less flexible and hard to maintain.</li>
+</ul>
+<h3 id="java-annotations">Java Annotations</h3>
+<ul>
+<li><a href="https://www.digitalocean.com/community/tutorials/java-annotations" target="_blank" rel="noopener noreffer ">refer</a></li>
+</ul>
+<p>Java 1.5 introduced annotations and now it’s heavily used in Java EE frameworks like Hibernate, Jersey, and Spring. Java Annotation is metadata about the program embedded in the program itself. It can be parsed by the annotation parsing tool or by the compiler. We can also specify annotation availability to either compile time only or till runtime.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.lang.annotation.Documented</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.lang.annotation.ElementType</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.lang.annotation.Inherited</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.lang.annotation.Retention</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.lang.annotation.RetentionPolicy</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.lang.annotation.Target</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Documented</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Target</span><span class="p">(</span><span class="n">ElementType</span><span class="p">.</span><span class="na">METHOD</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Inherited</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Retention</span><span class="p">(</span><span class="n">RetentionPolicy</span><span class="p">.</span><span class="na">RUNTIME</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="nd">@interface</span><span class="w"> </span><span class="n">MethodInfo</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">String</span><span class="w"> </span><span class="nf">author</span><span class="p">()</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="s">&#34;Pankaj&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">String</span><span class="w"> </span><span class="nf">date</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="nf">revision</span><span class="p">()</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">String</span><span class="w"> </span><span class="nf">comments</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
+<p>Meta annotations in java</p>
+<p>There are five types of meta annotations:</p>
+<ul>
+<li>@Documented
+<ul>
+<li>indicates that elements using this annotation should be documented by javadoc and similar tools. This type should be used to annotate the declarations of types whose annotations affect the use of annotated elements by their clients. If a type declaration is annotated with Documented, its annotations become part of the public API of the annotated elements.</li>
+</ul>
+</li>
+<li><code>@Target</code>
+<ul>
+<li>indicates the kinds of program element to which an annotation type is applicable. Some possible values are TYPE, METHOD, CONSTRUCTOR, FIELD etc. If Target meta-annotation is not present, then annotation can be used on any program element.</li>
+</ul>
+</li>
+<li>@Inherited
+<ul>
+<li>indicates that an annotation type is automatically inherited. If user queries the annotation type on a class declaration, and the class declaration has no annotation for this type, then the class’s superclass will automatically be queried for the annotation type. This process will be repeated until an annotation for this type is found, or the top of the class hierarchy (Object) is reached.</li>
+</ul>
+</li>
+<li><code>@Retention</code>
+<ul>
+<li>indicates how long annotations with the annotated type are to be retained. It takes RetentionPolicy argument whose Possible values are SOURCE, CLASS and RUNTIME</li>
+</ul>
+</li>
+<li>@Repeatable
+<ul>
+<li>used to indicate that the annotation type whose declaration it annotates is repeatable.</li>
+</ul>
+</li>
+</ul>
+<h4 id="java-annotations-example">Java Annotations Example</h4>
+<p>Let’s see a java example showing the use of built-in annotations in java as well as the use of custom annotation created by us in the above example.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileNotFoundException</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AnnotationExample</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nd">@MethodInfo</span><span class="p">(</span><span class="n">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Pankaj&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">comments</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Main method&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Nov 17 2012&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">revision</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">1</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="s">&#34;Overriden toString method&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nd">@Deprecated</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nd">@MethodInfo</span><span class="p">(</span><span class="n">comments</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;deprecated method&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Nov 17 2012&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">oldMethod</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;old method, don&#39;t use it.&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nd">@SuppressWarnings</span><span class="p">({</span><span class="w"> </span><span class="s">&#34;unchecked&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;deprecation&#34;</span><span class="w"> </span><span class="p">})</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nd">@MethodInfo</span><span class="p">(</span><span class="n">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Pankaj&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">comments</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Main method&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Nov 17 2012&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">revision</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">10</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">genericsTest</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">List</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">l</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&#34;abc&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">oldMethod</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
+<p>I believe above java annotation example is self-explanatory and showing the use of annotations in different cases.</p>
+<h4 id="java-annotations-parsing">Java Annotations Parsing</h4>
+<p>We will use Reflection to parse java annotations from a class. Please note that Annotation Retention Policy should be RUNTIME otherwise its information will not be available at runtime and we won’t be able to fetch any data from it.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.lang.annotation.Annotation</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.lang.reflect.Method</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AnnotationParsing</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Method</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">AnnotationParsing</span><span class="p">.</span><span class="na">class</span><span class="p">.</span><span class="na">getClassLoader</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">					</span><span class="p">.</span><span class="na">loadClass</span><span class="p">((</span><span class="s">&#34;com.michael.annotations.AnnotationExample&#34;</span><span class="p">)).</span><span class="na">getMethods</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">				</span><span class="c1">// checks if MethodInfo annotation is present for the method</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">				</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">method</span><span class="p">.</span><span class="na">isAnnotationPresent</span><span class="p">(</span><span class="n">com</span><span class="p">.</span><span class="na">michael</span><span class="p">.</span><span class="na">annotations</span><span class="p">.</span><span class="na">MethodInfo</span><span class="p">.</span><span class="na">class</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">					</span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">						</span><span class="c1">// iterates all the annotations available in the method</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">						</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Annotation</span><span class="w"> </span><span class="n">anno</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">method</span><span class="p">.</span><span class="na">getDeclaredAnnotations</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">							</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Annotation in Method &#39;&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;&#39; : &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">anno</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">						</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">						</span><span class="n">MethodInfo</span><span class="w"> </span><span class="n">methodAnno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">method</span><span class="p">.</span><span class="na">getAnnotation</span><span class="p">(</span><span class="n">MethodInfo</span><span class="p">.</span><span class="na">class</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">						</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">methodAnno</span><span class="p">.</span><span class="na">revision</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">							</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Method with revision no 1 = &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">method</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">						</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">					</span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Throwable</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">						</span><span class="n">ex</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">					</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">				</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SecurityException</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">ClassNotFoundException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
+<p>Reflection API is very powerful and used widely in Java, J2EE frameworks like Spring, Hibernate, JUnit, check out Reflection in Java. That’s all for the java annotations example tutorial, I hope you learned something from it.</p>
+<h3 id="map">Map</h3>
+<h3 id="hashmap">HashMap</h3>
+<ul>
+<li><a href="https://www.digitalocean.com/community/tutorials/java-hashmap" target="_blank" rel="noopener noreffer ">refer</a></li>
+</ul>
+<p>Java HashMap is one of the most popular Collection classes in java. Java HashMap is Hash table based implementation. HashMap in java extends AbstractMap class that implements Map interface.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="n">K</span><span class="p">,</span><span class="n">V</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AbstractMap</span><span class="o">&lt;</span><span class="n">K</span><span class="p">,</span><span class="n">V</span><span class="o">&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">implements</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">K</span><span class="p">,</span><span class="n">V</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">Cloneable</span><span class="p">,</span><span class="w"> </span><span class="n">Serializable</span><span class="w"> </span><span class="p">{}</span></span></span></code></pre></div></div>
+<p>Some of the important points about HashMap in Java are;</p>
+<ul>
+<li>Java HashMap allows null key and null values.</li>
+<li>HashMap is not an ordered collection. You can iterate over HashMap entries through keys set but they are not guaranteed to be in the order of their addition to the HashMap.</li>
+<li>HashMap is almost similar to Hashtable except that it’s unsynchronized and allows null key and values.</li>
+<li>HashMap uses it’s inner class Node&lt;K,V&gt; for storing map entries.</li>
+<li>HashMap stores entries into multiple singly linked lists, called buckets or bins. Default number of bins is 16 and it’s always power of 2.</li>
+<li>HashMap uses hashCode() and equals() methods on keys for get and put operations. So HashMap key object should provide good implementation of these methods. This is the reason immutable classes are better suitable for keys, for example String and Interger.</li>
+<li>Java HashMap is not thread safe, for multithreaded environment you should use ConcurrentHashMap class or get synchronized map using Collections.synchronizedMap() method.</li>
+</ul>
+<h4 id="java-hashmap-constructors">Java HashMap Constructors</h4>
+<p>Java HashMap provides four constructors.</p>
+<ul>
+<li>public HashMap(): Most commonly used HashMap constructor. This constructor will create an empty HashMap with default initial capacity 16 and load factor 0.75</li>
+<li>public HashMap(int initialCapacity): This HashMap constructor is used to specify the initial capacity and 0.75 load factor. This is useful in avoiding rehashing if you know the number of mappings to be stored in the HashMap.</li>
+<li>public HashMap(int initialCapacity, float loadFactor): This HashMap constructor will create an empty HashMap with specified initial capacity and load factor. You can use this if you know the maximum number of mappings to be stored in HashMap. In common scenarios you should avoid this because load factor 0.75 offers a good tradeoff between space and time cost.</li>
+<li>public HashMap(Map&lt;? extends K, ? extends V&gt; m): Creates a Map having same mappings as the specified map and with load factor 0.75</li>
+</ul>
+<h4 id="how-hashmap-works-in-java">How HashMap works in java?</h4>
+<p>  HashMap in java use it’s inner class Node&lt;K,V&gt; for storing mappings. HashMap works on hashing algorithm and uses hashCode() and equals() method on key for get and put operations. HashMap use singly linked list to store elements, these are called bins or buckets.</p>
+<p>   When we call put method, hashCode of key is used to determine the bucket that will be used to store the mapping. Once bucket is identified, hashCode is used to check if there is already a key with same hashCode or not. If there is an existing key with same hashCode, then equals() method is used on key. If equals returns true, then value is overwritten, otherwise a new mapping is made to this singly linked list bucket. If there is no key with same hashCode then mapping is inserted into the bucket.</p>
+<p>  For HashMap get operation, again key hashCode is used to determine the bucket to look for the value. After bucket is identified, entries are traversed to find out the Entry using hashCode and equals method. If match is found, value is returned otherwise null is returned. There are much more things involved such as hashing algorithm to get the bucket for the key, rehashing of mappings etc. But for our working, just remember that HashMap operations work on Key and good implementation of hashCode and equals method is required to avoid unwanted behaviour.</p>
+<p>  Below image shows the explanation of get and put operations.</p>
+<h3 id="java移位运算">java移位运算</h3>
+<ul>
+<li><code>左乘</code>、<code>右除</code>
+<ul>
+<li><code>左移</code>1位相当于乘以2的1次方，左移n位就相当于乘以 2的n次方。</li>
+<li><code>右移</code>1位相当于除以2的1次方，右移n位就相当于除以 2的n次方。</li>
+</ul>
+</li>
+<li>demo</li>
+</ul>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">10</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">10</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">20</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">10</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">10</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">80</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">6</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">6</span><span class="o">/</span><span class="n">2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">6</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">6</span><span class="o">/</span><span class="p">(</span><span class="n">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">6</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">6</span><span class="o">/</span><span class="p">(</span><span class="n">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span></span></span></code></pre></div></div>
+<h2 id="jvm">JVM</h2>
+<h3 id="图例">图例</h3>
+<figure><img src="/image/tech/java/jvm/JVM-0523.png"><figcaption>
+      <h4>JVM</h4>
+    </figcaption>
+</figure>
+
+<h2 id="todo">todo</h2>
+<h3 id="java-链表">java 链表</h3>
+<ul>
+<li><a href="https://www.cnblogs.com/easyidea/p/13371863.html" target="_blank" rel="noopener noreffer ">java ListNode 链表 </a></li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2019-03-19</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/java-learning/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/java/">Java</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/git/" class="prev" rel="prev" title="Git小结"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Git小结</a>
+            <a href="/concurrencyparall/" class="next" rel="next" title="并行&amp;&amp;并发">并行&&并发<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by MichaelSongs
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2018 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Michael Song</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/algoliasearch@5.20.2/dist/lite/builds/browser.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script>window.config={"comment":{},"search":{"algoliaAppID":"GZT24PWKNT","algoliaIndex":"index","algoliaSearchKey":"634ab679e825b815de2663de38908f9d","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

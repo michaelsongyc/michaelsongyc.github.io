@@ -1,0 +1,159 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>研发工具 - 标签 - Michael</title>
+        <link>https://michaelsongyc.github.io/tags/%E7%A0%94%E5%8F%91%E5%B7%A5%E5%85%B7/</link>
+        <description>研发工具 - 标签 - Michael</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 07 Apr 2025 15:10:47 &#43;0800</lastBuildDate><atom:link href="https://michaelsongyc.github.io/tags/%E7%A0%94%E5%8F%91%E5%B7%A5%E5%85%B7/" rel="self" type="application/rss+xml" /><item>
+    <title>独立开发者常用的研发工具集合</title>
+    <link>https://michaelsongyc.github.io/independent/</link>
+    <pubDate>Mon, 07 Apr 2025 15:10:47 &#43;0800</pubDate>
+    <author>Michael Song</author>
+    <guid>https://michaelsongyc.github.io/independent/</guid>
+    <description><![CDATA[<p>对于独立开发者而言，选择高效、轻量且成本可控的工具是提升效率的关键。以下是根据研发流程分类的工具推荐，涵盖从需求管理到部署运维的全链条：</p>
+<h2 id="1项目与任务管理"><strong>1.项目与任务管理</strong></h2>
+<ol>
+<li><strong>Trello</strong>
+<a href="https://trello.com/" target="_blank" rel="noopener noreffer ">https://trello.com/</a></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：可视化看板，拖拽式任务管理，支持个人免费版。</li>
+<li><strong>适用场景</strong>：简单任务规划、敏捷开发流程。
+2<strong>禅道</strong></li>
+<li><strong>特点</strong>：开源免费，集成需求、测试、缺陷管理，适合中小团队。</li>
+<li><strong>适用场景</strong>：研发全流程管理，适合注重本地化部署的开发者。
+3</li>
+<li><strong>Notion</strong>：文档管理、知识库、项目看板一体化。</li>
+</ul>
+<h2 id="2-研发">2. 研发</h2>
+<h3 id="21-代码托管与协作"><strong>2.1 代码托管与协作</strong></h3>
+<ol>
+<li><strong>GitHub</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：免费私有仓库，集成 Pull Request、Issue 追踪，生态丰富。</li>
+<li><strong>适用场景</strong>：代码版本控制、团队协作（适合个人或小团队）。</li>
+</ul>
+<ol start="2">
+<li><strong>GitLab</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：免费版支持 CI/CD、代码审查，功能全面。</li>
+<li><strong>适用场景</strong>：全栈开发，追求一站式解决方案。</li>
+</ul>
+<h3 id="22-开发与测试工具"><strong>2.2 开发与测试工具</strong></h3>
+<ol>
+<li><strong>Visual Studio Code</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：轻量强大的 IDE，支持插件扩展，跨平台。</li>
+<li><strong>适用场景</strong>：多语言开发、远程协作。</li>
+</ul>
+<ol start="2">
+<li><strong>Postman</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：API 测试与管理工具，支持自动化测试。</li>
+<li><strong>适用场景</strong>：接口开发与调试。</li>
+</ul>
+<ol start="3">
+<li><strong>JUnit/Selenium</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：单元测试（JUnit）和自动化 UI 测试（Selenium）。</li>
+<li><strong>适用场景</strong>：确保代码质量，减少手动测试成本。</li>
+</ul>
+<h3 id="23用户认证与支付"><strong>2.3、用户认证与支付</strong></h3>
+<ol>
+<li><strong>Supabase</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：开源 BaaS 平台，提供用户认证、数据库等功能，免费额度高。</li>
+<li><strong>适用场景</strong>：快速构建用户系统，适合中小项目。</li>
+</ul>
+<ol start="2">
+<li><strong>Stripe</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：国际支付处理，支持订阅模式，开发友好。</li>
+<li><strong>适用场景</strong>：跨境业务收款。</li>
+</ul>
+<ol start="3">
+<li><strong>KodePay</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：国内开发者友好，支持信用卡、Apple Pay，集成简单。</li>
+<li><strong>适用场景</strong>：网页端或插件支付功能。</li>
+</ul>
+<h3 id="24建站与设计"><strong>2.4、建站与设计</strong></h3>
+<ol>
+<li><strong>WordPress</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：开源 CMS，插件生态丰富，适合快速搭建内容型网站。</li>
+<li><strong>适用场景</strong>：博客、电商、企业官网。</li>
+</ul>
+<ol start="2">
+<li><strong>Figma</strong> <a href="https://www.figma.com/" target="_blank" rel="noopener noreffer ">https://www.figma.com/</a></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：在线协作设计工具，支持原型制作。</li>
+<li><strong>适用场景</strong>：UI/UX 设计，团队协作。</li>
+</ul>
+<h3 id="25-图片服务器"><strong>2.5 图片服务器</strong></h3>
+<ul>
+<li><strong>ImgBB</strong> ：<a href="https://imgbb.com/" target="_blank" rel="noopener noreffer ">https://imgbb.com/</a> 是最好的免费图片托管服务之一，无需注册就能使用。支持 JPEG、PNG、BMP、TIFF、GIF、WEBP、HEIC、PDF 等多种格式，上传文件的最大限制为 32MB，不限制上传图片数量和网上停留时间。上传后可快速获取全尺寸图像直接链接或缩略 HTML 链接，方便在博客中使用。</li>
+<li><strong>Postimage</strong> ：<a href="https://postimg.cc/files" target="_blank" rel="noopener noreffer ">https://postimg.cc/files</a>  无需注册，成立于 2004 年，运行稳定。支持 JPEG 和 PNG 等文件格式，可上传最大 8MB 大小的图像。用户能自定义分享图片大小，设置永久链接或自动失效链接，有效期最长 31 天，适合在网站、博客、留言板和论坛中使用。（优点：会生成各个渠道的超链）</li>
+</ul>
+<h2 id="3运维">3.运维</h2>
+<h3 id="3部署与运维"><strong>3.部署与运维</strong></h3>
+<ol>
+<li><strong>Vercel</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：静态网站托管，支持 Serverless 函数，一键部署。</li>
+<li><strong>适用场景</strong>：前端项目快速上线，适合 React/Vue 等框架。</li>
+</ul>
+<ol start="2">
+<li><strong>Netlify</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：免费 CDN 加速，自动化构建与部署，适合静态站点。</li>
+<li><strong>适用场景</strong>：博客、营销页面等轻量级网站。</li>
+</ul>
+<ol start="3">
+<li><strong>Docker</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：容器化部署，简化环境配置。</li>
+<li><strong>适用场景</strong>：跨平台应用打包与发布。</li>
+</ul>
+<h3 id="32-数据分析与监控"><strong>3.2 数据分析与监控</strong></h3>
+<ol>
+<li><strong>Google Analytics (GA)</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：免费且功能强大，追踪用户行为。</li>
+<li><strong>适用场景</strong>：网站流量分析。</li>
+</ul>
+<ol start="2">
+<li><strong>Umami</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：开源、隐私友好的分析工具，支持实时数据。</li>
+<li><strong>适用场景</strong>：注重用户隐私的项目。</li>
+</ul>
+<ol start="3">
+<li><strong>Prometheus + Grafana</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：开源监控方案，实时跟踪应用性能。</li>
+<li><strong>适用场景</strong>：服务器与微服务监控。</li>
+</ul>
+<h2 id="工具">工具</h2>
+<h3 id="实用工具"><strong>实用工具</strong></h3>
+<ul>
+<li>
+<p><strong>AWS SES/Resend</strong>：邮件服务，支持交易与营销邮件。</p>]]></description>
+</item>
+</channel>
+</rss>

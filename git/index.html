@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Git小结 - Michael</title><meta name="Description" content="Welcome to SYC Blog"><meta property="og:url" content="https://michaelsongyc.github.io/git/">
+  <meta property="og:site_name" content="Michael">
+  <meta property="og:title" content="Git小结">
+  <meta property="og:description" content="版本控制 : 集中式 vs 分布式 集中式版本控制（csv、svn） 集中式版本控制系统，版本库是集中存放在中央服务器的，而干活的时候，用的都是自己的电脑，所以要先从中央服务器取得最新的版本，然后开始干活，干完活了，再把自己的活推送给中央服务器。中央服务器就好比是一个图书馆，你要改一本书，必须先从图书馆借出来，然后回到家自己改，改完了，再放回图书馆。 缺点 集中式版本控制系统最大的毛病就是必须联网才能工作； 集中式版本控制系统的中央服务器要是出了问题，所有人都没法干活了。 分布式版本控制（git） 分布式版本控制系统根本没有“中央服务器”，每个人的电脑上都是一个完整的版本库，这样，你工作的时候，就不需要联网了，因为版本库就在你自己的电脑上. 优点 不需要联网，也可以工作； 安全性要高很多，因为每个人电脑里都有完整的版本库，某一个人的电脑坏掉了不要紧，随便从其他人那里复制一个就可以了。 Git安装&amp;&amp;配置 yum安装(Linux) 在Linux上是有yum安装Git，非常简单，只需要一行命令">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2018-10-11T12:55:26+08:00">
+    <meta property="article:modified_time" content="2018-10-11T12:55:26+08:00">
+    <meta property="article:tag" content="Git">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Git小结">
+  <meta name="twitter:description" content="版本控制 : 集中式 vs 分布式 集中式版本控制（csv、svn） 集中式版本控制系统，版本库是集中存放在中央服务器的，而干活的时候，用的都是自己的电脑，所以要先从中央服务器取得最新的版本，然后开始干活，干完活了，再把自己的活推送给中央服务器。中央服务器就好比是一个图书馆，你要改一本书，必须先从图书馆借出来，然后回到家自己改，改完了，再放回图书馆。 缺点 集中式版本控制系统最大的毛病就是必须联网才能工作； 集中式版本控制系统的中央服务器要是出了问题，所有人都没法干活了。 分布式版本控制（git） 分布式版本控制系统根本没有“中央服务器”，每个人的电脑上都是一个完整的版本库，这样，你工作的时候，就不需要联网了，因为版本库就在你自己的电脑上. 优点 不需要联网，也可以工作； 安全性要高很多，因为每个人电脑里都有完整的版本库，某一个人的电脑坏掉了不要紧，随便从其他人那里复制一个就可以了。 Git安装&amp;&amp;配置 yum安装(Linux) 在Linux上是有yum安装Git，非常简单，只需要一行命令">
+<meta name="application-name" content="MichaelSongs">
+<meta name="apple-mobile-web-app-title" content="MichaelSongs">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://michaelsongyc.github.io/git/" /><link rel="prev" href="https://michaelsongyc.github.io/linux/" /><link rel="next" href="https://michaelsongyc.github.io/java-learning/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Git小结",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/michaelsongyc.github.io\/git\/"
+        },"image": ["https:\/\/michaelsongyc.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "git","wordcount":  3714 ,
+        "url": "https:\/\/michaelsongyc.github.io\/git\/","datePublished": "2018-10-11T12:55:26+08:00","dateModified": "2018-10-11T12:55:26+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Michael Song"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Michael"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>SYC-Lifelong learning(终身学习)</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Michael"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>SYC-Lifelong learning(终身学习)</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Git小结</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2018-10-11">2018-10-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 3714 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 8 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#版本控制--集中式-vs-分布式">版本控制 : 集中式 vs 分布式</a>
+      <ul>
+        <li><a href="#集中式版本控制csvsvn">集中式版本控制（csv、svn）</a></li>
+        <li><a href="#分布式版本控制git">分布式版本控制（git）</a></li>
+      </ul>
+    </li>
+    <li><a href="#git安装配置">Git安装&amp;&amp;配置</a>
+      <ul>
+        <li><a href="#yum安装linux">yum安装(Linux)</a></li>
+        <li><a href="#git初始化配置">Git初始化配置</a></li>
+        <li><a href="#git-配置ssh">Git 配置SSH</a></li>
+      </ul>
+    </li>
+    <li><a href="#git使用">Git使用</a>
+      <ul>
+        <li><a href="#命令流程图">命令流程图</a></li>
+        <li><a href="#git-help">git help</a></li>
+        <li><a href="#常规git操作demo">常规git操作Demo</a></li>
+      </ul>
+    </li>
+    <li><a href="#git常用基本命令">Git常用基本命令</a></li>
+    <li><a href="#tmp">tmp</a></li>
+    <li><a href="#refer-to">Refer to</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="版本控制--集中式-vs-分布式">版本控制 : 集中式 vs 分布式</h2>
+<h3 id="集中式版本控制csvsvn">集中式版本控制（csv、svn）</h3>
+<ul>
+<li>集中式版本控制系统，版本库是集中存放在中央服务器的，而干活的时候，用的都是自己的电脑，所以要先从中央服务器取得最新的版本，然后开始干活，干完活了，再把自己的活推送给中央服务器。中央服务器就好比是一个图书馆，你要改一本书，必须先从图书馆借出来，然后回到家自己改，改完了，再放回图书馆。</li>
+<li>缺点
+<ul>
+<li>集中式版本控制系统最大的毛病就是必须联网才能工作；</li>
+<li>集中式版本控制系统的中央服务器要是出了问题，所有人都没法干活了。</li>
+</ul>
+</li>
+</ul>
+<h3 id="分布式版本控制git">分布式版本控制（git）</h3>
+<ul>
+<li>分布式版本控制系统根本没有“中央服务器”，每个人的电脑上都是一个完整的版本库，这样，你工作的时候，就不需要联网了，因为版本库就在你自己的电脑上.</li>
+<li>优点
+<ul>
+<li>不需要联网，也可以工作；</li>
+<li>安全性要高很多，因为每个人电脑里都有完整的版本库，某一个人的电脑坏掉了不要紧，随便从其他人那里复制一个就可以了。</li>
+</ul>
+</li>
+</ul>
+<h2 id="git安装配置">Git安装&amp;&amp;配置</h2>
+<h3 id="yum安装linux">yum安装(Linux)</h3>
+<p>在Linux上是有yum安装Git，非常简单，只需要一行命令</p>
+<blockquote>
+<p>yum -y install git</p></blockquote>
+<p>输入</p>
+<blockquote>
+<p>git version</p></blockquote>
+<p>查看Git是否安装完成以及查看其版本号</p>
+<p>备注： yum安装git被安装在 <code>/usr/libexec/git-core</code> 目录下</p>
+<h3 id="git初始化配置">Git初始化配置</h3>
+<p>a、设置用户名：
+<code> git config --global user.name &quot;&lt;用户名&gt;&quot;</code></p>
+<p>b、设置用户邮箱：
+<code>git config --global user.email &quot;&lt;电子邮件&gt;&quot;</code></p>
+<p>注意：该配置会在github主页上显示谁提交了该文件</p>
+<p>c、配置ok之后，我们用如下命令来看看是否配置成功</p>
+<p><code>git config --list</code></p>
+<p>注意：<code>git config --global</code> 参数，有了这个参数表示你这台机器上所有的git仓库都会使用这个配置，当然你也可以对某个仓库指定不同的用户名和邮箱</p>
+<h3 id="git-配置ssh">Git 配置SSH</h3>
+<p>git使用SSH，需要以下三个步骤:</p>
+<ul>
+<li>使用秘钥生成工具生成rsa秘钥和公钥</li>
+<li>将rsa公钥添加到git代码托管平台</li>
+<li>将rsa秘钥添加到ssh-agent中，为ssh client指定使用的秘钥文件</li>
+</ul>
+<p>第一步：检查本地主机是否已经存在ssh key</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-shell">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">cd</span> ~/.ssh
+</span></span><span class="line"><span class="cl">ls
+</span></span><span class="line"><span class="cl">//看是否存在 id_rsa 和 id_rsa.pub文件，如果存在，说明已经有SSH Key</span></span></code></pre></div></div>
+<p>第二步：生成ssh key
+如果不存在ssh key，使用如下命令生成</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>ssh-keygen -t rsa -C &#34;xxx@xxx.com&#34;
+//执行后一直回车即可</code></pre></div>
+<p>第三步：获取ssh key公钥内容（id_rsa.pub）</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>cd ~/.ssh
+cat id_rsa.pub</code></pre></div>
+<p>第四步：Github账号上添加公钥
+进入Settings设置</p>
+<p>第五步：验证是否设置成功</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>ssh -T git@github.com</code></pre></div>
+<h2 id="git使用">Git使用</h2>
+<h3 id="命令流程图">命令流程图</h3>
+<figure><img src="/image/tech/tools/git_0.png"><figcaption>
+      <h4>远程仓库-本地仓库-工作区</h4>
+    </figcaption>
+</figure>
+
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/image/tech/tools/git_2.png"
+        data-srcset="/image/tech/tools/git_2.png, /image/tech/tools/git_2.png 1.5x, /image/tech/tools/git_2.png 2x"
+        data-sizes="auto"
+        alt="/image/tech/tools/git_2.png"
+        title="徒手深蹲" /></p>
+<figure><img src="/image/tech/tools/git_1.png"><figcaption>
+      <h4>本地仓库-工作区</h4>
+    </figcaption>
+</figure>
+
+<h3 id="git-help">git help</h3>
+<p>要想获得 git config 命令的手册，执行</p>
+<blockquote>
+<p>git help add</p></blockquote>
+<p>如果你不需要全面的手册，只需要可用选项的快速参考，那么可以用 -h 选项获得更简明的 “help” 输出：</p>
+<blockquote>
+<p>git add -h</p></blockquote>
+<h3 id="常规git操作demo">常规git操作Demo</h3>
+<p>你应该能够置并初始化一个仓库（repository）、开始或停止跟踪（track）文件、暂存（stage）或提交（commit）更改.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-shell">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">1.进入目标文件夹
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> demo
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">2.初始化仓库
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">3.仓库中创建 readme.txt文件，文本内容：test
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">4.查看仓库状态
+</span></span><span class="line"><span class="cl">git status
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">请记住，你工作目录下的每一个文件都不外乎这两种状态：已跟踪 或 未跟踪。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">5.添加文件到暂存区中
+</span></span><span class="line"><span class="cl">git add readme.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">6.提交文件到仓库
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;readme.txt提交&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">7.查看仓库状态
+</span></span><span class="line"><span class="cl">git status
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">8.提交到远程库
+</span></span><span class="line"><span class="cl">git push
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">9.本地修改 readme.txt 文件后可以使用diff查看文件修改前后对比
+</span></span><span class="line"><span class="cl">git diff readme.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">10.查看最近到最远的历史提交日志
+</span></span><span class="line"><span class="cl">git log
+</span></span><span class="line"><span class="cl"><span class="o">[</span>不传入任何参数的默认情况下，git log 会按时间先后顺序列出所有的提交，最近的更新排在最上面。 
+</span></span><span class="line"><span class="cl">正如你所看到的，这个命令会列出每个提交的 SHA-1 校验和、作者的名字和电子邮件地址、提交时间以及提交说明。<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">11.回退版本
+</span></span><span class="line"><span class="cl">git reset  --hard 版本号</span></span></code></pre></div></div>
+<h2 id="git常用基本命令">Git常用基本命令</h2>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-shell">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">   mkdir  XX <span class="o">(</span>创建一个空目录 XX指目录名<span class="o">)</span>
+</span></span><span class="line"><span class="cl">   git init     把当前的目录变成可以管理的git仓库，生成隐藏.git文件
+</span></span><span class="line"><span class="cl">   <span class="nb">pwd</span>    显示当前目录的路径
+</span></span><span class="line"><span class="cl">   cat XX             查看XX文件内容
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">   git add XX         把xx文件添加到暂存区去
+</span></span><span class="line"><span class="cl">   git commit –m “XX” 提交文件到本地仓库 –m 后面的是注释
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">   git push –u<span class="o">(</span>第一次要用-u 以后不需要<span class="o">)</span> origin master 把当前master分支推送到远程库
+</span></span><span class="line"><span class="cl">   git push origin master  Git会把master分支推送到远程库对应的远程分支上
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">   git push origin --delete serverfix 删除远程分支
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">   git status         查看仓库状态
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   git diff  XX   查看XX文件修改了那些内容
+</span></span><span class="line"><span class="cl">   git log        查看历史记录
+</span></span><span class="line"><span class="cl">   git reflog       查看历史记录的版本号id
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   git reset  --hard HEAD^ 回退到上一个版本 
+</span></span><span class="line"><span class="cl">   git reset  --hard HEAD~ 回退到上一个版本
+</span></span><span class="line"><span class="cl">   git reset  –-hard HEAD~100 <span class="o">(</span>回退到100个版本<span class="o">)</span>
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">   git checkout -- XX  把XX文件在工作区的修改全部撤销
+</span></span><span class="line"><span class="cl">   git rm XX          删除XX文件
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   git remote 查看远程库的信息
+</span></span><span class="line"><span class="cl">   git remote –v 查看远程库的详细信息
+</span></span><span class="line"><span class="cl">   git remote add origin https://github.com/tugenhua0707/testgit 关联一个远程库
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">   git fetch 从远程仓库中抓取与拉取
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">   git clone https://github.com/tugenhua0707/testgit  从远程库中克隆
+</span></span><span class="line"><span class="cl">   git checkout –b dev  创建dev分支 并切换到dev分支上； 等同于两条命令的: git branch dev<span class="p">;</span> git checkout dev<span class="p">;</span> 
+</span></span><span class="line"><span class="cl">   git checkout master 切换到master分支
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">   git branch  查看当前所有的分支<span class="o">[</span>查看当前所有分支的一个列表<span class="o">]</span>
+</span></span><span class="line"><span class="cl">   git branch -v 查看每一个分支的最后一次提交
+</span></span><span class="line"><span class="cl">   git branch –d bug_fix 删除bug_fix分支
+</span></span><span class="line"><span class="cl">   git branch &lt;name&gt;  创建新分支
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">   git branch --no-merged master 尚未合并到 master 分支列表
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">   git merge dev    在当前的分支上合并dev分支
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   git stash 把当前的工作隐藏起来 等以后恢复现场后继续工作
+</span></span><span class="line"><span class="cl">   git stash list 查看所有被隐藏的文件列表
+</span></span><span class="line"><span class="cl">   git stash apply 恢复被隐藏的文件，但是内容不删除
+</span></span><span class="line"><span class="cl">   git stash drop 删除文件
+</span></span><span class="line"><span class="cl">   git stash pop 恢复文件的同时 也删除文件</span></span></code></pre></div></div>
+<h2 id="tmp">tmp</h2>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-html">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">初始化一个Git仓库，使用: git init
+</span></span><span class="line"><span class="cl">添加文件到Git仓库，分两步：
+</span></span><span class="line"><span class="cl">使用命令: git add <span class="p">&lt;</span><span class="nt">file</span><span class="p">&gt;</span>  注意，可反复多次使用，添加多个文件；
+</span></span><span class="line"><span class="cl">使用命令: git commit -m <span class="p">&lt;</span><span class="nt">message</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">要随时掌握工作区的状态，使用命令: 
+</span></span><span class="line"><span class="cl">    git status
+</span></span><span class="line"><span class="cl">    请记住，你工作目录下的每一个文件都不外乎这两种状态：已跟踪 或 未跟踪。    
+</span></span><span class="line"><span class="cl">如果git status告诉你有文件被修改过, 则用 git diff可以查看修改内容: 
+</span></span><span class="line"><span class="cl">    git diff readme.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令：
+</span></span><span class="line"><span class="cl">    git reset --hard commit_id。
+</span></span><span class="line"><span class="cl">穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。
+</span></span><span class="line"><span class="cl">要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">如果嫌输出信息太多，看得眼花缭乱的，可以试试加上--pretty=oneline参数：
+</span></span><span class="line"><span class="cl">git log --pretty=oneline
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">如果用git log可以按s向下翻log
+</span></span><span class="line"><span class="cl">git log --oneline 可以一行展现
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令: git checkout -- file。
+</span></span><span class="line"><span class="cl">场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令 git reset HEAD <span class="p">&lt;</span><span class="nt">file</span><span class="p">&gt;</span>，就回到了场景1，第二步按场景1操作。
+</span></span><span class="line"><span class="cl">场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">远程库已经准备好了，下一步是用命令git clone克隆一个本地库：
+</span></span><span class="line"><span class="cl">git clone git@github.com:xxx/xxx.git
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">命令git rm用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失最近一次提交后你修改的内容。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git remote -v 查看远程库信息.
+</span></span><span class="line"><span class="cl">$ git remote -v
+</span></span><span class="line"><span class="cl">origin  git@github.com:michaelliao/learn-git.git (fetch)
+</span></span><span class="line"><span class="cl">origin  git@github.com:michaelliao/learn-git.git (push)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">然后，根据名字删除，比如删除origin：
+</span></span><span class="line"><span class="cl">$ git remote rm origin
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">我们创建dev分支，然后切换到dev分支:
+</span></span><span class="line"><span class="cl">$ git checkout -b dev
+</span></span><span class="line"><span class="cl">git checkout命令加上-b参数表示创建并切换，相当于以下两条命令：
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">or 创建并切换dev分支：
+</span></span><span class="line"><span class="cl">$ git switch -c dev
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">用git branch命令查看当前分支：
+</span></span><span class="line"><span class="cl">git branch命令会列出所有分支，当前分支前面会标一个*号。
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">我们把dev分支的工作成果合并到master分支上：
+</span></span><span class="line"><span class="cl">$ git merge dev
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">合并完成后，就可以放心地删除dev分支了：
+</span></span><span class="line"><span class="cl">$ git branch -d dev
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Git鼓励大量使用分支：
+</span></span><span class="line"><span class="cl">查看分支：git branch
+</span></span><span class="line"><span class="cl">创建分支：git branch <span class="p">&lt;</span><span class="nt">name</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">切换分支：git checkout <span class="p">&lt;</span><span class="nt">name</span><span class="p">&gt;</span>或者git switch <span class="p">&lt;</span><span class="nt">name</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">创建+切换分支：git checkout -b <span class="p">&lt;</span><span class="nt">name</span><span class="p">&gt;</span>或者git switch -c <span class="p">&lt;</span><span class="nt">name</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">合并某分支到当前分支：git merge <span class="p">&lt;</span><span class="nt">name</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">删除分支：git branch -d <span class="p">&lt;</span><span class="nt">name</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">推送分支，就是把该分支上的所有本地提交推送到远程库。推送时，要指定本地分支，这样，Git就会把该分支推送到远程库对应的远程分支上：
+</span></span><span class="line"><span class="cl">$ git push origin master
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">如果要推送其他分支，比如dev，就改成：
+</span></span><span class="line"><span class="cl">$ git push origin dev
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">因此，多人协作的工作模式通常是这样：
+</span></span><span class="line"><span class="cl">首先，可以试图用git push origin <span class="p">&lt;</span><span class="nt">branch-name</span><span class="p">&gt;</span>推送自己的修
+</span></span><span class="line"><span class="cl">如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并；
+</span></span><span class="line"><span class="cl">如果合并有冲突，则解决冲突，并在本地提交；
+</span></span><span class="line"><span class="cl">没有冲突或者解决掉冲突后，再用git push origin <span class="p">&lt;</span><span class="nt">branch-name</span><span class="p">&gt;</span>推送就能成功！
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream-to <span class="p">&lt;</span><span class="nt">branch-name</span><span class="p">&gt;</span> origin/<span class="p">&lt;</span><span class="nt">branch-name</span><span class="p">&gt;</span>。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">这就是多人协作的工作模式，一旦熟悉了，就非常简单。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">小结
+</span></span><span class="line"><span class="cl">查看远程库信息，使用git remote -v；
+</span></span><span class="line"><span class="cl">本地新建的分支如果不推送到远程，对其他人就是不可见的；
+</span></span><span class="line"><span class="cl">从本地推送分支，使用git push origin branch-name，如果推送失败，先用git pull抓取远程的新提交；
+</span></span><span class="line"><span class="cl">在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致；
+</span></span><span class="line"><span class="cl">建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name；
+</span></span><span class="line"><span class="cl">从远程抓取分支，使用git pull，如果有冲突，要先处理冲突。</span></span></code></pre></div></div>
+<h2 id="refer-to">Refer to</h2>
+<ul>
+<li><a href="https://git-scm.com/book/zh/v2" target="_blank" rel="noopener noreffer ">https://git-scm.com/book/zh/v2</a></li>
+<li><a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener noreffer ">https://www.liaoxuefeng.com/wiki/896043488029600</a></li>
+<li><a href="https://www.cnblogs.com/upstudy/p/15868898.html" target="_blank" rel="noopener noreffer ">https://www.cnblogs.com/upstudy/p/15868898.html</a></li>
+<li><a href="https://www.cnblogs.com/upstudy/p/15870787.html" target="_blank" rel="noopener noreffer ">https://www.cnblogs.com/upstudy/p/15870787.html</a></li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2018-10-11</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/git/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/git/">Git</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/linux/" class="prev" rel="prev" title="Linux相关"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Linux相关</a>
+            <a href="/java-learning/" class="next" rel="next" title="Java随笔">Java随笔<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by MichaelSongs
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2018 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Michael Song</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/algoliasearch@5.20.2/dist/lite/builds/browser.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script>window.config={"comment":{},"search":{"algoliaAppID":"GZT24PWKNT","algoliaIndex":"index","algoliaSearchKey":"634ab679e825b815de2663de38908f9d","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

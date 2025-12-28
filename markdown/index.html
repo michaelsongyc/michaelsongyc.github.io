@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Markdown 基本语法 - Michael</title><meta name="Description" content="Welcome to SYC Blog"><meta property="og:url" content="https://michaelsongyc.github.io/markdown/">
+  <meta property="og:site_name" content="Michael">
+  <meta property="og:title" content="Markdown 基本语法">
+  <meta property="og:description" content="markdown-it-demo
+Refer markdown grammar
+Markdown，写博客当然要用这个。在线编辑器，所见即所得地编写。
+标题 markdown总支持1~6六级标题，通过在一行之前加上不同数量的井号来表示。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2018-05-06T15:20:51+00:00">
+    <meta property="article:modified_time" content="2018-05-06T15:20:51+00:00">
+    <meta property="article:tag" content="Markdown">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Markdown 基本语法">
+  <meta name="twitter:description" content="markdown-it-demo
+Refer markdown grammar
+Markdown，写博客当然要用这个。在线编辑器，所见即所得地编写。
+标题 markdown总支持1~6六级标题，通过在一行之前加上不同数量的井号来表示。">
+<meta name="application-name" content="MichaelSongs">
+<meta name="apple-mobile-web-app-title" content="MichaelSongs">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://michaelsongyc.github.io/markdown/" /><link rel="prev" href="https://michaelsongyc.github.io/githubaction/" /><link rel="next" href="https://michaelsongyc.github.io/windowsbat/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Markdown 基本语法",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/michaelsongyc.github.io\/markdown\/"
+        },"image": ["https:\/\/michaelsongyc.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "markdown","wordcount":  1223 ,
+        "url": "https:\/\/michaelsongyc.github.io\/markdown\/","datePublished": "2018-05-06T15:20:51+00:00","dateModified": "2018-05-06T15:20:51+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Michael Song"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Michael"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>SYC-Lifelong learning(终身学习)</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Michael"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>SYC-Lifelong learning(终身学习)</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Markdown 基本语法</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2018-05-06">2018-05-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1223 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#标题">标题</a></li>
+    <li><a href="#段落">段落</a></li>
+    <li><a href="#文本样式">文本样式</a></li>
+    <li><a href="#引用">引用</a></li>
+    <li><a href="#task-list--checkbox-">task list ( checkbox )</a></li>
+    <li><a href="#列表">列表</a></li>
+    <li><a href="#内联代码">内联代码</a></li>
+    <li><a href="#分隔线">分隔线</a></li>
+    <li><a href="#超链接">超链接</a></li>
+    <li><a href="#转义">转义</a></li>
+    <li><a href="#表格table">表格(table)</a></li>
+    <li><a href="#toc">TOC</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#内联">内联</a></li>
+    <li><a href="#外联">外联</a></li>
+    <li><a href="#refer-1">refer</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><!-- toc -->
+<p><a href="https://markdown-it.github.io/" target="_blank" rel="noopener noreffer ">markdown-it-demo</a></p>
+<h1 id="refer">Refer</h1>
+<p><a href="https://wizardforcel.gitbooks.io/markdown-simple-world/content/2.html" target="_blank" rel="noopener noreffer ">markdown grammar</a></p>
+<p><a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="noopener noreffer ">Markdown，写博客当然要用这个。在线编辑器，所见即所得地编写。</a></p>
+<h2 id="标题">标题</h2>
+<p>markdown总支持1~6六级标题，通过在一行之前加上不同数量的井号来表示。</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-angular2html">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-angular2html" data-lang="angular2html"># 这是 H1 #
+
+## 这是 H2 ##
+
+### 这是 H3 ###</code></pre></div>
+<p>&hellip;</p>
+<h2 id="段落">段落</h2>
+<p>非常自然，一行文字就是一个段落。</p>
+<p>这是一个段落1</p>
+<p>这是一个段落2</p>
+<p>   段落开头的一个空格<code>&amp;emsp;&amp;emsp;</code></p>
+<blockquote>
+<p>  </p></blockquote>
+<h2 id="文本样式">文本样式</h2>
+<p>字体样式常用的有粗体、斜体、删除线等。</p>
+<p><code>*斜体字*</code> 对应 <em>斜体字</em></p>
+<p><code>**粗体字**</code> 对应 <strong>粗体字</strong></p>
+<p><code>~~删除线~~</code> 对应 <del>删除线</del></p>
+<p><code>行内代码</code>  对应 <code>行内代码</code></p>
+<p>还有一些样式原生不支持，但是可以通过html间接支持。</p>
+<p>可以使用星号*或下划线_指定粗体或者斜体。
+<em>这是斜体</em>
+<em>这也是斜体</em></p>
+<p><strong>这是粗体</strong>
+<em><strong>这是粗体+斜体</strong></em></p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-angular2html">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-angular2html" data-lang="angular2html">*这是斜体*
+_这也是斜体_
+
+**这是粗体**
+***这是粗体+斜体***
+
+` 行内代码 `</code></pre></div>
+<h2 id="引用">引用</h2>
+<p>通过在行首加上大于号&gt;来添加引用格式。</p>
+<blockquote>
+<p>DD</p>
+<p>DD</p></blockquote>
+<p>引用可以嵌套：</p>
+<blockquote>
+<p>w</p>
+<blockquote>
+<p>引用可以嵌套：</p></blockquote></blockquote>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-angular2html">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-angular2html" data-lang="angular2html">&gt;w
+&gt; &gt;引用可以嵌套：</code></pre></div>
+<p>也可以嵌套其他格式：</p>
+<h2 id="task-list--checkbox-">task list ( checkbox )</h2>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-html">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">- [ ] todo: task one not finish `- + SPACE +[ ]`
+</span></span><span class="line"><span class="cl">- [x] finish: task twp finish `- + SPACE +[x]`</span></span></code></pre></div></div>
+<ul>
+<li><i class="far fa-square fa-fw" aria-hidden="true"></i> todo: task one not finish <code>- + SPACE +[ ]</code></li>
+<li><i class="far fa-check-square fa-fw" aria-hidden="true"></i> finish: task twp finish <code>- + SPACE +[x]</code></li>
+</ul>
+<h2 id="列表">列表</h2>
+<p>无序列表使用星号、加号或是减号作为列表标记：</p>
+<ul>
+<li>Red</li>
+<li>Green</li>
+<li>Blue</li>
+</ul>
+<p>等同于</p>
+<ul>
+<li>Red</li>
+<li>Green</li>
+<li>Blue</li>
+</ul>
+<p>和</p>
+<ul>
+<li>Red</li>
+<li>Green</li>
+<li>Blue</li>
+</ul>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-angular2html">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-angular2html" data-lang="angular2html">- Red
+- Green
+- Blue </code></pre></div>
+<p>有序列表则使用数字接着一个英文句点：</p>
+<ol>
+<li>Bird</li>
+<li>McHale</li>
+<li>Parish</li>
+</ol>
+<p>数字并不会影响输出的 HTML 结果，也就是说上面的例子等同于：</p>
+<ol>
+<li>Bird</li>
+<li>McHale</li>
+<li>Parish</li>
+</ol>
+<h2 id="内联代码">内联代码</h2>
+<p>用反引号` 来标记内联代码，它们会解释成<code>标签</code></p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-angular2html">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-angular2html" data-lang="angular2html">&lt;code&gt;标签&lt;/code&gt;</code></pre></div>
+<p>如果代码的内容中有反引号，请用两个反引号包裹。</p>
+<p>代码中的&amp;、&lt;、&gt;符号都会自动转义，请放心使用。</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-CODE">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-CODE" data-lang="CODE">`
+eee
+`</code></pre></div>
+<p><code>eee</code></p>
+<p>还有一种是github的风格，代码段的前后用三个反引号 ``` 独占一行来标记。</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>ww</code></pre></div>
+<h2 id="分隔线">分隔线</h2>
+<p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：</p>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-angular2html">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-angular2html" data-lang="angular2html">* * *
+***
+*****
+- - -
+---------------------------------------</code></pre></div>
+<h2 id="超链接">超链接</h2>
+<p><a href="http://example.com/" target="_blank" rel="noopener noreffer ">an example</a></p>
+<p><a href="http://example.com/" title="Optional Title" target="_blank" rel="noopener noreffer ">an example</a></p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-angular2html">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-angular2html" data-lang="angular2html">[an example](http://example.com/)
+
+[an example](http://example.com/ &#34;Optional Title&#34;)</code></pre></div>
+<p>会被解释为</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-angular2html">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-angular2html" data-lang="angular2html">&lt;a href=&#39;https://www.google.com/&#39;&gt;google&lt;/a&gt;
+&lt;a href=&#39;https://www.google.com/&#39; title=&#34;Optional Title&#34;&gt;google&lt;/a&gt;</code></pre></div>
+<h2 id="转义">转义</h2>
+<p>markdown支持在以下字符前面插入反斜杠，插入之后，将不再解析这些字符，而是原样输出。</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-angular2html">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-angular2html" data-lang="angular2html">\   反斜线
+`   反引号
+*   星号
+_   底线
+{}  花括号
+[]  方括号
+()  括弧
+#   井字号
++   加号
+-   减号
+.   英文句点
+!   惊叹号</code></pre></div>
+<h2 id="表格table">表格(table)</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Item</th>
+          <th style="text-align: right">Value</th>
+          <th style="text-align: center">Qty</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Computer</td>
+          <td style="text-align: right">$1600</td>
+          <td style="text-align: center">5</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Phone</td>
+          <td style="text-align: right">$12</td>
+          <td style="text-align: center">12</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Pipe</td>
+          <td style="text-align: right">$1</td>
+          <td style="text-align: center">234</td>
+      </tr>
+  </tbody>
+</table>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-angular2html">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-angular2html" data-lang="angular2html">| Item     | Value | Qty   |
+| :------- | ----: | :---: |
+| Computer | $1600 |  5    |
+| Phone    | $12   |  12   |
+| Pipe     | $1    |  234  |</code></pre></div>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">title1</th>
+          <th style="text-align: center">title2</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">v1</td>
+          <td style="text-align: center">v2</td>
+      </tr>
+  </tbody>
+</table>
+<p>要注意第二行的冒号决定了居左居右还是居中，如果你不加冒号，默认是居左的。</p>
+<p>另外可以把第一行去掉，做成没有表头的表格，<strong>但第二行始终是要有的</strong>。</p>
+<h2 id="toc">TOC</h2>
+<p>TOC = Table of content ， 将内容制作成导航</p>
+<p><a href="https://blog.csdn.net/qq_46527915/article/details/105466439" target="_blank" rel="noopener noreffer ">hexo toc</a></p>
+<p><a href="https://blog.csdn.net/qq_25760623/article/details/107739436" target="_blank" rel="noopener noreffer ">快速生成markdown目录TOC</a></p>
+<p><a href="https://www.jianshu.com/p/57f23e4140ba" target="_blank" rel="noopener noreffer ">快速生成markdown目录TOC，页内跳转</a></p>
+<h1 id="图片">图片</h1>
+<h2 id="内联">内联</h2>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/path/img.jpg"
+        data-srcset="/path/img.jpg, /path/img.jpg 1.5x, /path/img.jpg 2x"
+        data-sizes="auto"
+        alt="/path/img.jpg"
+        title="Alt text" /></p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-angular2html">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-angular2html" data-lang="angular2html">![Alt text](/path/img.jpg)</code></pre></div>
+<p>会被解释为</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-angular2html">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-angular2html" data-lang="angular2html">&lt;img src=&#39;/path/to/img.jpg&#39;/&gt;</code></pre></div>
+<p>这种格式显示图片不能控制对齐和大小，需要的话可以采取raw html的方法：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-HTML">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-HTML" data-lang="HTML"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">align</span><span class="o">=</span><span class="s">&#34;center&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://i.loli.net/2021/01/31/4ZHoWduI59fiqJY.png&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;100&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+<p>自适配图片 引用方式如下：</p>
+<figure><img src="/image/travel/2022xinjiang/day9-02.png"><figcaption>
+      <h4>独库公路-雪山</h4>
+    </figcaption>
+</figure>
+
+<h2 id="外联">外联</h2>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-angular2html">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-angular2html" data-lang="angular2html">![图片](https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png)</code></pre></div>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png"
+        data-srcset="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png, https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png 1.5x, https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png 2x"
+        data-sizes="auto"
+        alt="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png"
+        title="图片" /></p>
+<h2 id="refer-1">refer</h2>
+<ul>
+<li><a href="https://hugoloveit.com/zh-cn/basic-markdown-syntax" target="_blank" rel="noopener noreffer ">Refer</a></li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2018-05-06</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/markdown/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/markdown/">Markdown</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/githubaction/" class="prev" rel="prev" title="Github Pages Action (github 自动部署指令)"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Github Pages Action (github 自动部署指令)</a>
+            <a href="/windowsbat/" class="next" rel="next" title="bat同jar交互">bat同jar交互<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by MichaelSongs
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2018 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Michael Song</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/algoliasearch@5.20.2/dist/lite/builds/browser.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script>window.config={"comment":{},"search":{"algoliaAppID":"GZT24PWKNT","algoliaIndex":"index","algoliaSearchKey":"634ab679e825b815de2663de38908f9d","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

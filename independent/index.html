@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>独立开发者常用的研发工具集合 - Michael</title><meta name="Description" content="Welcome to SYC Blog"><meta property="og:url" content="https://michaelsongyc.github.io/independent/">
+  <meta property="og:site_name" content="Michael">
+  <meta property="og:title" content="独立开发者常用的研发工具集合">
+  <meta property="og:description" content="对于独立开发者而言，选择高效、轻量且成本可控的工具是提升效率的关键。以下是根据研发流程分类的工具推荐，涵盖从需求管理到部署运维的全链条：
+1.项目与任务管理 Trello https://trello.com/ 特点：可视化看板，拖拽式任务管理，支持个人免费版。 适用场景：简单任务规划、敏捷开发流程。 2禅道 特点：开源免费，集成需求、测试、缺陷管理，适合中小团队。 适用场景：研发全流程管理，适合注重本地化部署的开发者。 3 Notion：文档管理、知识库、项目看板一体化。 2. 研发 2.1 代码托管与协作 GitHub 特点：免费私有仓库，集成 Pull Request、Issue 追踪，生态丰富。 适用场景：代码版本控制、团队协作（适合个人或小团队）。 GitLab 特点：免费版支持 CI/CD、代码审查，功能全面。 适用场景：全栈开发，追求一站式解决方案。 2.2 开发与测试工具 Visual Studio Code 特点：轻量强大的 IDE，支持插件扩展，跨平台。 适用场景：多语言开发、远程协作。 Postman 特点：API 测试与管理工具，支持自动化测试。 适用场景：接口开发与调试。 JUnit/Selenium 特点：单元测试（JUnit）和自动化 UI 测试（Selenium）。 适用场景：确保代码质量，减少手动测试成本。 2.3、用户认证与支付 Supabase 特点：开源 BaaS 平台，提供用户认证、数据库等功能，免费额度高。 适用场景：快速构建用户系统，适合中小项目。 Stripe 特点：国际支付处理，支持订阅模式，开发友好。 适用场景：跨境业务收款。 KodePay 特点：国内开发者友好，支持信用卡、Apple Pay，集成简单。 适用场景：网页端或插件支付功能。 2.4、建站与设计 WordPress 特点：开源 CMS，插件生态丰富，适合快速搭建内容型网站。 适用场景：博客、电商、企业官网。 Figma https://www.figma.com/ 特点：在线协作设计工具，支持原型制作。 适用场景：UI/UX 设计，团队协作。 2.5 图片服务器 ImgBB ：https://imgbb.com/ 是最好的免费图片托管服务之一，无需注册就能使用。支持 JPEG、PNG、BMP、TIFF、GIF、WEBP、HEIC、PDF 等多种格式，上传文件的最大限制为 32MB，不限制上传图片数量和网上停留时间。上传后可快速获取全尺寸图像直接链接或缩略 HTML 链接，方便在博客中使用。 Postimage ：https://postimg.cc/files 无需注册，成立于 2004 年，运行稳定。支持 JPEG 和 PNG 等文件格式，可上传最大 8MB 大小的图像。用户能自定义分享图片大小，设置永久链接或自动失效链接，有效期最长 31 天，适合在网站、博客、留言板和论坛中使用。（优点：会生成各个渠道的超链） 3.运维 3.部署与运维 Vercel 特点：静态网站托管，支持 Serverless 函数，一键部署。 适用场景：前端项目快速上线，适合 React/Vue 等框架。 Netlify 特点：免费 CDN 加速，自动化构建与部署，适合静态站点。 适用场景：博客、营销页面等轻量级网站。 Docker 特点：容器化部署，简化环境配置。 适用场景：跨平台应用打包与发布。 3.2 数据分析与监控 Google Analytics (GA) 特点：免费且功能强大，追踪用户行为。 适用场景：网站流量分析。 Umami 特点：开源、隐私友好的分析工具，支持实时数据。 适用场景：注重用户隐私的项目。 Prometheus &#43; Grafana 特点：开源监控方案，实时跟踪应用性能。 适用场景：服务器与微服务监控。 工具 实用工具 AWS SES/Resend：邮件服务，支持交易与营销邮件。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-07T15:10:47+08:00">
+    <meta property="article:modified_time" content="2025-04-07T15:10:47+08:00">
+    <meta property="article:tag" content="研发工具">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="独立开发者常用的研发工具集合">
+  <meta name="twitter:description" content="对于独立开发者而言，选择高效、轻量且成本可控的工具是提升效率的关键。以下是根据研发流程分类的工具推荐，涵盖从需求管理到部署运维的全链条：
+1.项目与任务管理 Trello https://trello.com/ 特点：可视化看板，拖拽式任务管理，支持个人免费版。 适用场景：简单任务规划、敏捷开发流程。 2禅道 特点：开源免费，集成需求、测试、缺陷管理，适合中小团队。 适用场景：研发全流程管理，适合注重本地化部署的开发者。 3 Notion：文档管理、知识库、项目看板一体化。 2. 研发 2.1 代码托管与协作 GitHub 特点：免费私有仓库，集成 Pull Request、Issue 追踪，生态丰富。 适用场景：代码版本控制、团队协作（适合个人或小团队）。 GitLab 特点：免费版支持 CI/CD、代码审查，功能全面。 适用场景：全栈开发，追求一站式解决方案。 2.2 开发与测试工具 Visual Studio Code 特点：轻量强大的 IDE，支持插件扩展，跨平台。 适用场景：多语言开发、远程协作。 Postman 特点：API 测试与管理工具，支持自动化测试。 适用场景：接口开发与调试。 JUnit/Selenium 特点：单元测试（JUnit）和自动化 UI 测试（Selenium）。 适用场景：确保代码质量，减少手动测试成本。 2.3、用户认证与支付 Supabase 特点：开源 BaaS 平台，提供用户认证、数据库等功能，免费额度高。 适用场景：快速构建用户系统，适合中小项目。 Stripe 特点：国际支付处理，支持订阅模式，开发友好。 适用场景：跨境业务收款。 KodePay 特点：国内开发者友好，支持信用卡、Apple Pay，集成简单。 适用场景：网页端或插件支付功能。 2.4、建站与设计 WordPress 特点：开源 CMS，插件生态丰富，适合快速搭建内容型网站。 适用场景：博客、电商、企业官网。 Figma https://www.figma.com/ 特点：在线协作设计工具，支持原型制作。 适用场景：UI/UX 设计，团队协作。 2.5 图片服务器 ImgBB ：https://imgbb.com/ 是最好的免费图片托管服务之一，无需注册就能使用。支持 JPEG、PNG、BMP、TIFF、GIF、WEBP、HEIC、PDF 等多种格式，上传文件的最大限制为 32MB，不限制上传图片数量和网上停留时间。上传后可快速获取全尺寸图像直接链接或缩略 HTML 链接，方便在博客中使用。 Postimage ：https://postimg.cc/files 无需注册，成立于 2004 年，运行稳定。支持 JPEG 和 PNG 等文件格式，可上传最大 8MB 大小的图像。用户能自定义分享图片大小，设置永久链接或自动失效链接，有效期最长 31 天，适合在网站、博客、留言板和论坛中使用。（优点：会生成各个渠道的超链） 3.运维 3.部署与运维 Vercel 特点：静态网站托管，支持 Serverless 函数，一键部署。 适用场景：前端项目快速上线，适合 React/Vue 等框架。 Netlify 特点：免费 CDN 加速，自动化构建与部署，适合静态站点。 适用场景：博客、营销页面等轻量级网站。 Docker 特点：容器化部署，简化环境配置。 适用场景：跨平台应用打包与发布。 3.2 数据分析与监控 Google Analytics (GA) 特点：免费且功能强大，追踪用户行为。 适用场景：网站流量分析。 Umami 特点：开源、隐私友好的分析工具，支持实时数据。 适用场景：注重用户隐私的项目。 Prometheus &#43; Grafana 特点：开源监控方案，实时跟踪应用性能。 适用场景：服务器与微服务监控。 工具 实用工具 AWS SES/Resend：邮件服务，支持交易与营销邮件。">
+<meta name="application-name" content="MichaelSongs">
+<meta name="apple-mobile-web-app-title" content="MichaelSongs">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://michaelsongyc.github.io/independent/" /><link rel="prev" href="https://michaelsongyc.github.io/2024-summary/" /><link rel="next" href="https://michaelsongyc.github.io/2025-summary/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "独立开发者常用的研发工具集合",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/michaelsongyc.github.io\/independent\/"
+        },"image": ["https:\/\/michaelsongyc.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "研发工具","wordcount":  1497 ,
+        "url": "https:\/\/michaelsongyc.github.io\/independent\/","datePublished": "2025-04-07T15:10:47+08:00","dateModified": "2025-04-07T15:10:47+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Michael Song"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Michael"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>SYC-Lifelong learning(终身学习)</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Michael"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>SYC-Lifelong learning(终身学习)</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">独立开发者常用的研发工具集合</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Categories</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-04-07">2025-04-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1497 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1项目与任务管理"><strong>1.项目与任务管理</strong></a></li>
+    <li><a href="#2-研发">2. 研发</a>
+      <ul>
+        <li><a href="#21-代码托管与协作"><strong>2.1 代码托管与协作</strong></a></li>
+        <li><a href="#22-开发与测试工具"><strong>2.2 开发与测试工具</strong></a></li>
+        <li><a href="#23用户认证与支付"><strong>2.3、用户认证与支付</strong></a></li>
+        <li><a href="#24建站与设计"><strong>2.4、建站与设计</strong></a></li>
+        <li><a href="#25-图片服务器"><strong>2.5 图片服务器</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#3运维">3.运维</a>
+      <ul>
+        <li><a href="#3部署与运维"><strong>3.部署与运维</strong></a></li>
+        <li><a href="#32-数据分析与监控"><strong>3.2 数据分析与监控</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#工具">工具</a>
+      <ul>
+        <li><a href="#实用工具"><strong>实用工具</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#选择建议"><strong>选择建议</strong></a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>对于独立开发者而言，选择高效、轻量且成本可控的工具是提升效率的关键。以下是根据研发流程分类的工具推荐，涵盖从需求管理到部署运维的全链条：</p>
+<h2 id="1项目与任务管理"><strong>1.项目与任务管理</strong></h2>
+<ol>
+<li><strong>Trello</strong>
+<a href="https://trello.com/" target="_blank" rel="noopener noreffer ">https://trello.com/</a></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：可视化看板，拖拽式任务管理，支持个人免费版。</li>
+<li><strong>适用场景</strong>：简单任务规划、敏捷开发流程。
+2<strong>禅道</strong></li>
+<li><strong>特点</strong>：开源免费，集成需求、测试、缺陷管理，适合中小团队。</li>
+<li><strong>适用场景</strong>：研发全流程管理，适合注重本地化部署的开发者。
+3</li>
+<li><strong>Notion</strong>：文档管理、知识库、项目看板一体化。</li>
+</ul>
+<h2 id="2-研发">2. 研发</h2>
+<h3 id="21-代码托管与协作"><strong>2.1 代码托管与协作</strong></h3>
+<ol>
+<li><strong>GitHub</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：免费私有仓库，集成 Pull Request、Issue 追踪，生态丰富。</li>
+<li><strong>适用场景</strong>：代码版本控制、团队协作（适合个人或小团队）。</li>
+</ul>
+<ol start="2">
+<li><strong>GitLab</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：免费版支持 CI/CD、代码审查，功能全面。</li>
+<li><strong>适用场景</strong>：全栈开发，追求一站式解决方案。</li>
+</ul>
+<h3 id="22-开发与测试工具"><strong>2.2 开发与测试工具</strong></h3>
+<ol>
+<li><strong>Visual Studio Code</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：轻量强大的 IDE，支持插件扩展，跨平台。</li>
+<li><strong>适用场景</strong>：多语言开发、远程协作。</li>
+</ul>
+<ol start="2">
+<li><strong>Postman</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：API 测试与管理工具，支持自动化测试。</li>
+<li><strong>适用场景</strong>：接口开发与调试。</li>
+</ul>
+<ol start="3">
+<li><strong>JUnit/Selenium</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：单元测试（JUnit）和自动化 UI 测试（Selenium）。</li>
+<li><strong>适用场景</strong>：确保代码质量，减少手动测试成本。</li>
+</ul>
+<h3 id="23用户认证与支付"><strong>2.3、用户认证与支付</strong></h3>
+<ol>
+<li><strong>Supabase</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：开源 BaaS 平台，提供用户认证、数据库等功能，免费额度高。</li>
+<li><strong>适用场景</strong>：快速构建用户系统，适合中小项目。</li>
+</ul>
+<ol start="2">
+<li><strong>Stripe</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：国际支付处理，支持订阅模式，开发友好。</li>
+<li><strong>适用场景</strong>：跨境业务收款。</li>
+</ul>
+<ol start="3">
+<li><strong>KodePay</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：国内开发者友好，支持信用卡、Apple Pay，集成简单。</li>
+<li><strong>适用场景</strong>：网页端或插件支付功能。</li>
+</ul>
+<h3 id="24建站与设计"><strong>2.4、建站与设计</strong></h3>
+<ol>
+<li><strong>WordPress</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：开源 CMS，插件生态丰富，适合快速搭建内容型网站。</li>
+<li><strong>适用场景</strong>：博客、电商、企业官网。</li>
+</ul>
+<ol start="2">
+<li><strong>Figma</strong> <a href="https://www.figma.com/" target="_blank" rel="noopener noreffer ">https://www.figma.com/</a></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：在线协作设计工具，支持原型制作。</li>
+<li><strong>适用场景</strong>：UI/UX 设计，团队协作。</li>
+</ul>
+<h3 id="25-图片服务器"><strong>2.5 图片服务器</strong></h3>
+<ul>
+<li><strong>ImgBB</strong> ：<a href="https://imgbb.com/" target="_blank" rel="noopener noreffer ">https://imgbb.com/</a> 是最好的免费图片托管服务之一，无需注册就能使用。支持 JPEG、PNG、BMP、TIFF、GIF、WEBP、HEIC、PDF 等多种格式，上传文件的最大限制为 32MB，不限制上传图片数量和网上停留时间。上传后可快速获取全尺寸图像直接链接或缩略 HTML 链接，方便在博客中使用。</li>
+<li><strong>Postimage</strong> ：<a href="https://postimg.cc/files" target="_blank" rel="noopener noreffer ">https://postimg.cc/files</a>  无需注册，成立于 2004 年，运行稳定。支持 JPEG 和 PNG 等文件格式，可上传最大 8MB 大小的图像。用户能自定义分享图片大小，设置永久链接或自动失效链接，有效期最长 31 天，适合在网站、博客、留言板和论坛中使用。（优点：会生成各个渠道的超链）</li>
+</ul>
+<h2 id="3运维">3.运维</h2>
+<h3 id="3部署与运维"><strong>3.部署与运维</strong></h3>
+<ol>
+<li><strong>Vercel</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：静态网站托管，支持 Serverless 函数，一键部署。</li>
+<li><strong>适用场景</strong>：前端项目快速上线，适合 React/Vue 等框架。</li>
+</ul>
+<ol start="2">
+<li><strong>Netlify</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：免费 CDN 加速，自动化构建与部署，适合静态站点。</li>
+<li><strong>适用场景</strong>：博客、营销页面等轻量级网站。</li>
+</ul>
+<ol start="3">
+<li><strong>Docker</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：容器化部署，简化环境配置。</li>
+<li><strong>适用场景</strong>：跨平台应用打包与发布。</li>
+</ul>
+<h3 id="32-数据分析与监控"><strong>3.2 数据分析与监控</strong></h3>
+<ol>
+<li><strong>Google Analytics (GA)</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：免费且功能强大，追踪用户行为。</li>
+<li><strong>适用场景</strong>：网站流量分析。</li>
+</ul>
+<ol start="2">
+<li><strong>Umami</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：开源、隐私友好的分析工具，支持实时数据。</li>
+<li><strong>适用场景</strong>：注重用户隐私的项目。</li>
+</ul>
+<ol start="3">
+<li><strong>Prometheus + Grafana</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：开源监控方案，实时跟踪应用性能。</li>
+<li><strong>适用场景</strong>：服务器与微服务监控。</li>
+</ul>
+<h2 id="工具">工具</h2>
+<h3 id="实用工具"><strong>实用工具</strong></h3>
+<ul>
+<li>
+<p><strong>AWS SES/Resend</strong>：邮件服务，支持交易与营销邮件。</p>
+</li>
+<li>
+<p><strong>Mixpanel</strong>：事件驱动的用户行为分析，免费额度高。</p>
+</li>
+<li>
+<p>markdown -&gt; 富文本</p>
+</li>
+<li>
+<p><a href="https://www.bejson.com/md/" target="_blank" rel="noopener noreffer ">https://www.bejson.com/md/</a></p>
+</li>
+<li>
+<p><a href="https://cayzlh.github.io/tools/online-markdown/" target="_blank" rel="noopener noreffer ">https://cayzlh.github.io/tools/online-markdown/</a></p>
+</li>
+<li>
+<p>富文本 -&gt; markdown</p>
+</li>
+<li>
+<p><a href="https://seo.yiguotech.com/seo-tools/rich-text-to-markdown-converter" target="_blank" rel="noopener noreffer ">https://seo.yiguotech.com/seo-tools/rich-text-to-markdown-converter</a></p>
+</li>
+</ul>
+<h2 id="选择建议"><strong>选择建议</strong></h2>
+<ul>
+<li><strong>轻量级需求</strong>：Trello（任务）+ GitHub（代码）+ Vercel（部署）+ Notion（文档）。</li>
+<li><strong>全流程管理</strong>：禅道（研发）+ GitLab（代码 + CI/CD）+ Docker（部署）。</li>
+<li><strong>跨境业务</strong>：Supabase（认证）+ Stripe（支付）+ Netlify（托管）。</li>
+</ul>
+<p>根据项目规模和需求，灵活组合工具，优先选择集成度高、免费层充足的服务，以降低成本和学习曲线</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2025-04-07</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/independent/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E7%A0%94%E5%8F%91%E5%B7%A5%E5%85%B7/">研发工具</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/2024-summary/" class="prev" rel="prev" title="2024年度总结"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>2024年度总结</a>
+            <a href="/2025-summary/" class="next" rel="next" title="2025 年度总结">2025 年度总结<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by MichaelSongs
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2018 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Michael Song</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/algoliasearch@5.20.2/dist/lite/builds/browser.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script>window.config={"comment":{},"search":{"algoliaAppID":"GZT24PWKNT","algoliaIndex":"index","algoliaSearchKey":"634ab679e825b815de2663de38908f9d","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

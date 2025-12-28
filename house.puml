@@ -1,0 +1,37 @@
+
+@startuml
+
+actor Me as m
+actor 木工 as g
+'participant 木工 as g
+actor 板材五金等供应商 as seller
+autonumber
+
+group 第一部分 设计
+m->m: 设计草图，衣柜布局
+m->m: 选好板材和色调
+end
+
+group 第二部分 沟通
+m->g: 约时间，上门初步沟通，沟通收费/结算步骤
+g->g: 复尺，给出建议，定终稿
+g->g: 列出所需的全部材料清单
+end
+
+group 第三部分 采购
+m->seller: 寻找供应商
+m->seller: 按木工给出清单，采购
+m<--seller: 发货到家（时间：3-5天）
+end
+
+group 第四部分 加工
+m->g: 预约上门安装时间
+m<-g: 上门安装（预估5-10天）
+end
+
+group 第五部分 验收/交付
+m<--g: 交付确认
+end
+
+
+@enduml
