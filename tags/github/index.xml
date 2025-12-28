@@ -1,15 +1,23 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>github - 标签 - </title>
+        <title>Github - 标签 - Michael</title>
         <link>https://michaelsongyc.github.io/tags/github/</link>
-        <description>github - 标签 - </description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 13 May 2017 20:03:11 &#43;0800</lastBuildDate><atom:link href="https://michaelsongyc.github.io/tags/github/" rel="self" type="application/rss+xml" /><item>
-    <title>Github Pages Action</title>
-    <link>https://michaelsongyc.github.io/posts/tech/github/githubaction/</link>
-    <pubDate>Sat, 13 May 2017 20:03:11 &#43;0800</pubDate>
+        <description>Github - 标签 - Michael</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 21 Mar 2018 20:03:11 &#43;0800</lastBuildDate><atom:link href="https://michaelsongyc.github.io/tags/github/" rel="self" type="application/rss+xml" /><item>
+    <title>Github Pages Action (github 自动部署指令)</title>
+    <link>https://michaelsongyc.github.io/githubaction/</link>
+    <pubDate>Wed, 21 Mar 2018 20:03:11 &#43;0800</pubDate>
     <author>Michael Song</author>
-    <guid>https://michaelsongyc.github.io/posts/tech/github/githubaction/</guid>
-    <description><![CDATA[github 自动部署, refer to : Hugo 白话文 | GitHub Action 自动部署 基于 Github Action 自动构建 Hugo 博客 document]]></description>
+    <guid>https://michaelsongyc.github.io/githubaction/</guid>
+    <description><![CDATA[<h2 id="github-自动部署流程">github 自动部署流程</h2>
+<ul>
+<li>开发人员把代码push 到 github</li>
+<li>触发 github 钩子（push）执行 github action预定好的工作流</li>
+<li>安装依赖，打包构建</li>
+<li>通过ssh 上传静态资源到服务器</li>
+<li>可选性通知开发者</li>
+</ul>
+<p><a href="" rel=""></a></p>]]></description>
 </item>
 </channel>
 </rss>

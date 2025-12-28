@@ -1,15 +1,17 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>纪录片 - 标签 - </title>
+        <title>纪录片 - 标签 - Michael</title>
         <link>https://michaelsongyc.github.io/tags/%E7%BA%AA%E5%BD%95%E7%89%87/</link>
-        <description>纪录片 - 标签 - </description>
+        <description>纪录片 - 标签 - Michael</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 26 Jun 2021 21:23:51 &#43;0800</lastBuildDate><atom:link href="https://michaelsongyc.github.io/tags/%E7%BA%AA%E5%BD%95%E7%89%87/" rel="self" type="application/rss+xml" /><item>
     <title>[纪录片] 学习的人.Homo.Academics</title>
-    <link>https://michaelsongyc.github.io/posts/life/movie/learning/</link>
+    <link>https://michaelsongyc.github.io/learning/</link>
     <pubDate>Sat, 26 Jun 2021 21:23:51 &#43;0800</pubDate>
     <author>Michael Song</author>
-    <guid>https://michaelsongyc.github.io/posts/life/movie/learning/</guid>
-    <description><![CDATA[学习的人 近期发现一部不错的韩国纪录片，关于如何学习，片名《学习的人.Homo.Academics》, 网易公开课、哔哩哔哩或外网均有完整视频。]]></description>
+    <guid>https://michaelsongyc.github.io/learning/</guid>
+    <description><![CDATA[<h2 id="学习的人">学习的人</h2>
+<p>  近期发现一部不错的韩国纪录片，关于如何学习，片名《学习的人.Homo.Academics》, 网易公开课、哔哩哔哩或外网均有完整视频。
+<code>这部片值得反复观看学习。</code></p>]]></description>
 </item>
 </channel>
 </rss>

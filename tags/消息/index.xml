@@ -1,15 +1,21 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>消息 - 标签 - </title>
+        <title>消息 - 标签 - Michael</title>
         <link>https://michaelsongyc.github.io/tags/%E6%B6%88%E6%81%AF/</link>
-        <description>消息 - 标签 - </description>
+        <description>消息 - 标签 - Michael</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 12 Sep 2020 19:49:30 &#43;0800</lastBuildDate><atom:link href="https://michaelsongyc.github.io/tags/%E6%B6%88%E6%81%AF/" rel="self" type="application/rss+xml" /><item>
-    <title>消息(MQ)小结</title>
-    <link>https://michaelsongyc.github.io/posts/middleware/mq/mq/</link>
+    <title>中间件-消息(MQ)</title>
+    <link>https://michaelsongyc.github.io/mq/</link>
     <pubDate>Sat, 12 Sep 2020 19:49:30 &#43;0800</pubDate>
     <author>Michael Song</author>
-    <guid>https://michaelsongyc.github.io/posts/middleware/mq/mq/</guid>
-    <description><![CDATA[什么是消息中间件 消息队列 (MQ全称: Message Queue) 是应用程序和应用程序之间的通信方法。 MQ关注于数据的发送和接收，利用高效、可靠的异步消息传递机制集成]]></description>
+    <guid>https://michaelsongyc.github.io/mq/</guid>
+    <description><![CDATA[<h2 id="什么是消息中间件">什么是消息中间件</h2>
+<ul>
+<li>消息队列 (MQ全称: Message Queue) 是应用程序和应用程序之间的通信方法。</li>
+<li>MQ关注于数据的发送和接收，利用高效、可靠的异步消息传递机制集成分布式系统。通过提供消息传递和消息排队模型，它可以在分布式环境下扩展进程间的通信。</li>
+</ul>
+<h2 id="为什么需要消息中间件">为什么需要消息中间件</h2>
+<p>  在项目中，可将一些无需即时返回且耗时的操作提取出来，进行<code>异步处理</code>，这种异步处理的方式大大的节省了服务器的请求响应时间，最终提高了系统的<code>吞吐量</code>。</p>]]></description>
 </item>
 </channel>
 </rss>

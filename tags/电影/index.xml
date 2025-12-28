@@ -1,15 +1,19 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>电影 - 标签 - </title>
+        <title>电影 - 标签 - Michael</title>
         <link>https://michaelsongyc.github.io/tags/%E7%94%B5%E5%BD%B1/</link>
-        <description>电影 - 标签 - </description>
+        <description>电影 - 标签 - Michael</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 07 Oct 2022 21:37:34 &#43;0800</lastBuildDate><atom:link href="https://michaelsongyc.github.io/tags/%E7%94%B5%E5%BD%B1/" rel="self" type="application/rss+xml" /><item>
     <title>情绪低落时，可以看下这些电影，自我治愈</title>
-    <link>https://michaelsongyc.github.io/posts/life/movie/inspriemovies/</link>
+    <link>https://michaelsongyc.github.io/inspriemovies/</link>
     <pubDate>Fri, 07 Oct 2022 21:37:34 &#43;0800</pubDate>
     <author>Michael Song</author>
-    <guid>https://michaelsongyc.github.io/posts/life/movie/inspriemovies/</guid>
-    <description><![CDATA[当幸福来敲门 看过N遍的电影，记忆最深刻的台词： 当人们做不到一些事情的时候，他们就会对你说你也同样不能。 不要让别人告诉你，你不能做什么。 只要有]]></description>
+    <guid>https://michaelsongyc.github.io/inspriemovies/</guid>
+    <description><![CDATA[<h2 id="当幸福来敲门">当幸福来敲门</h2>
+<p>  看过N遍的电影，记忆最深刻的台词：</p>
+<blockquote>
+<p>当人们做不到一些事情的时候，他们就会对你说你也同样不能。</p>
+<p>不要让别人告诉你，你不能做什么。 只要有梦想，就要去追求。</p>]]></description>
 </item>
 </channel>
 </rss>

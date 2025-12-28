@@ -1,15 +1,21 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>理财 - 标签 - </title>
+        <title>理财 - 标签 - Michael</title>
         <link>https://michaelsongyc.github.io/tags/%E7%90%86%E8%B4%A2/</link>
-        <description>理财 - 标签 - </description>
+        <description>理财 - 标签 - Michael</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 29 Jul 2019 20:03:11 &#43;0800</lastBuildDate><atom:link href="https://michaelsongyc.github.io/tags/%E7%90%86%E8%B4%A2/" rel="self" type="application/rss+xml" /><item>
     <title>[读书笔记] 《穷查理宝典》</title>
-    <link>https://michaelsongyc.github.io/posts/book/poor_charlie_book/</link>
+    <link>https://michaelsongyc.github.io/poor_charlie_book/</link>
     <pubDate>Mon, 29 Jul 2019 20:03:11 &#43;0800</pubDate>
     <author>Michael Song</author>
-    <guid>https://michaelsongyc.github.io/posts/book/poor_charlie_book/</guid>
-    <description><![CDATA[语录 查理就是如此独特的人，他的独特性既表现在他的思想上，也表现在他的人格上。 比如说，查理思考问题总是从逆向开始。如果要明白人生如何得到幸福，]]></description>
+    <guid>https://michaelsongyc.github.io/poor_charlie_book/</guid>
+    <description><![CDATA[<p></p>
+<h2 id="语录">语录</h2>
+<ul>
+<li>
+<p>查理就是如此独特的人，他的独特性既表现在他的思想上，也表现在他的人格上。
+比如说，查理思考问题总是从逆向开始。如果要明白人生如何得到幸福，查理首先是研究人生如何才能变得痛苦；要研究企业如何做强做大，查理首先研究企业是如何衰败的；大部分人更关心如何在股市投资上成功，查理最关心的是为什么在股市投资上大部分人都失败了。
+他的这种思考方法来源于下面这句农夫谚语中所蕴含的哲理：我只想知道将来我会死在什么地方，这样我就就=不去那儿了。”这也是逆向思维的典型例子。</p>]]></description>
 </item>
 </channel>
 </rss>

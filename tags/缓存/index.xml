@@ -1,15 +1,17 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>缓存 - 标签 - </title>
+        <title>缓存 - 标签 - Michael</title>
         <link>https://michaelsongyc.github.io/tags/%E7%BC%93%E5%AD%98/</link>
-        <description>缓存 - 标签 - </description>
+        <description>缓存 - 标签 - Michael</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 01 Nov 2020 19:49:30 &#43;0800</lastBuildDate><atom:link href="https://michaelsongyc.github.io/tags/%E7%BC%93%E5%AD%98/" rel="self" type="application/rss+xml" /><item>
-    <title>缓存框架小结</title>
-    <link>https://michaelsongyc.github.io/posts/middleware/cache/cache/</link>
+    <title>中间件-缓存</title>
+    <link>https://michaelsongyc.github.io/cache/</link>
     <pubDate>Sun, 01 Nov 2020 19:49:30 &#43;0800</pubDate>
     <author>Michael Song</author>
-    <guid>https://michaelsongyc.github.io/posts/middleware/cache/cache/</guid>
-    <description><![CDATA[常用三个框架 Caffeine, GuavaCache, EhCache 前言 在大部分互联网架构中 Cache 己经成为了必可不少的一环- 常用的方案有大家熟知的 NoSQL数据库 (Redis、Memcached]]></description>
+    <guid>https://michaelsongyc.github.io/cache/</guid>
+    <description><![CDATA[<p>常用三个框架 Caffeine, GuavaCache, EhCache</p>
+<h2 id="前言">前言</h2>
+<p>在大部分互联网架构中 Cache 己经成为了必可不少的一环- 常用的方案有大家熟知的 NoSQL数据库 (Redis、Memcached) 等,也有大量的进程内缓存 Caffeine、EhCache、Guava Cache等.</p>]]></description>
 </item>
 </channel>
 </rss>

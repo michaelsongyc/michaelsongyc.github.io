@@ -1,15 +1,19 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>python - 标签 - </title>
+        <title>Python - 标签 - Michael</title>
         <link>https://michaelsongyc.github.io/tags/python/</link>
-        <description>python - 标签 - </description>
+        <description>Python - 标签 - Michael</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 16 Nov 2019 21:01:52 &#43;0800</lastBuildDate><atom:link href="https://michaelsongyc.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
-    <title>python3</title>
-    <link>https://michaelsongyc.github.io/posts/tech/python/python3/</link>
+    <title>Python3</title>
+    <link>https://michaelsongyc.github.io/python3/</link>
     <pubDate>Sat, 16 Nov 2019 21:01:52 &#43;0800</pubDate>
     <author>Michael Song</author>
-    <guid>https://michaelsongyc.github.io/posts/tech/python/python3/</guid>
-    <description><![CDATA[Chart github: Python3 pyecharts]]></description>
+    <guid>https://michaelsongyc.github.io/python3/</guid>
+    <description><![CDATA[<ul>
+<li></li>
+</ul>
+<h2 id="chart---pyecharts">Chart - pyecharts</h2>
+<p><a href="https://github.com/pyecharts/pyecharts" target="_blank" rel="noopener noreffer ">github: Python3 pyecharts</a></p>]]></description>
 </item>
 </channel>
 </rss>

@@ -1,15 +1,20 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>并行&amp;&amp;并发 - 标签 - </title>
+        <title>并行&amp;&amp;并发 - 标签 - Michael</title>
         <link>https://michaelsongyc.github.io/tags/%E5%B9%B6%E8%A1%8C%E5%B9%B6%E5%8F%91/</link>
-        <description>并行&amp;&amp;并发 - 标签 - </description>
+        <description>并行&amp;&amp;并发 - 标签 - Michael</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 25 May 2019 22:24:05 &#43;0800</lastBuildDate><atom:link href="https://michaelsongyc.github.io/tags/%E5%B9%B6%E8%A1%8C%E5%B9%B6%E5%8F%91/" rel="self" type="application/rss+xml" /><item>
     <title>并行&amp;&amp;并发</title>
-    <link>https://michaelsongyc.github.io/posts/tech/java/concurrencyparall/</link>
+    <link>https://michaelsongyc.github.io/concurrencyparall/</link>
     <pubDate>Sat, 25 May 2019 22:24:05 &#43;0800</pubDate>
     <author>Michael Song</author>
-    <guid>https://michaelsongyc.github.io/posts/tech/java/concurrencyparall/</guid>
-    <description><![CDATA[并发: 一个处理器同时处理多个任务。有效解决了单CPU下的多任务问题； 并行: 多个处理器或者是多核的处理器同时处理多个不同的任务.[ 能够并行执行]]></description>
+    <guid>https://michaelsongyc.github.io/concurrencyparall/</guid>
+    <description><![CDATA[<ul>
+<li>并发: 一个处理器同时处理多个任务。<code>有效解决了单CPU下的多任务问题</code>；</li>
+<li>并行: 多个处理器或者是多核的处理器同时处理多个不同的任务.[ <code>能够并行执行任务的基础就是多核CPU</code> ]</li>
+</ul>
+<blockquote>
+<p>前者是逻辑上的同时发生（simultaneous），而后者是物理上的同时发生．</p>]]></description>
 </item>
 </channel>
 </rss>

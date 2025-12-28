@@ -1,15 +1,22 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>install - 标签 - </title>
+        <title>Install - 标签 - Michael</title>
         <link>https://michaelsongyc.github.io/tags/install/</link>
-        <description>install - 标签 - </description>
+        <description>Install - 标签 - Michael</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 01 May 2022 15:34:11 &#43;0000</lastBuildDate><atom:link href="https://michaelsongyc.github.io/tags/install/" rel="self" type="application/rss+xml" /><item>
     <title>Mac下开发工具安装</title>
-    <link>https://michaelsongyc.github.io/posts/tech/setup/install-software-collection/</link>
+    <link>https://michaelsongyc.github.io/install-software-collection/</link>
     <pubDate>Sun, 01 May 2022 15:34:11 &#43;0000</pubDate>
     <author>Michael Song</author>
-    <guid>https://michaelsongyc.github.io/posts/tech/setup/install-software-collection/</guid>
-    <description><![CDATA[Mac Tool Charles DB mac-mysql安装-参考-1 mac-mysql安装-参考-2 mac-python3 安装-参考 mac-Homebrew 安装-参考]]></description>
+    <guid>https://michaelsongyc.github.io/install-software-collection/</guid>
+    <description><![CDATA[<h1 id="mac">Mac</h1>
+<h2 id="tool">Tool</h2>
+<p><a href="https://zhuanlan.zhihu.com/p/140942687" target="_blank" rel="noopener noreffer ">Charles</a></p>
+<h2 id="db">DB</h2>
+<p><a href="https://www.bilibili.com/read/cv10248181/" target="_blank" rel="noopener noreffer ">mac-mysql安装-参考-1</a></p>
+<p><a href="https://www.jianshu.com/p/199492627ccc" target="_blank" rel="noopener noreffer ">mac-mysql安装-参考-2</a></p>
+<p><a href="https://www.runoob.com/note/52675" target="_blank" rel="noopener noreffer ">mac-python3 安装-参考</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/111014448" target="_blank" rel="noopener noreffer ">mac-Homebrew 安装-参考</a></p>]]></description>
 </item>
 </channel>
 </rss>

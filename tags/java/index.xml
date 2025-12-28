@@ -1,15 +1,72 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Java - 标签 - </title>
+        <title>Java - 标签 - Michael</title>
         <link>https://michaelsongyc.github.io/tags/java/</link>
-        <description>Java - 标签 - </description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 12 Nov 2022 20:18:37 &#43;0800</lastBuildDate><atom:link href="https://michaelsongyc.github.io/tags/java/" rel="self" type="application/rss+xml" /><item>
-    <title>Java常用工具类方法</title>
-    <link>https://michaelsongyc.github.io/posts/tech/java/commons/</link>
-    <pubDate>Sat, 12 Nov 2022 20:18:37 &#43;0800</pubDate>
+        <description>Java - 标签 - Michael</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 19 Mar 2019 22:26:50 &#43;0000</lastBuildDate><atom:link href="https://michaelsongyc.github.io/tags/java/" rel="self" type="application/rss+xml" /><item>
+    <title>Java随笔</title>
+    <link>https://michaelsongyc.github.io/java-learning/</link>
+    <pubDate>Tue, 19 Mar 2019 22:26:50 &#43;0000</pubDate>
     <author>Michael Song</author>
-    <guid>https://michaelsongyc.github.io/posts/tech/java/commons/</guid>
-    <description><![CDATA[JDK Objects 1 Objects.equal(Object a, Object b) JDK8 1 stream.anyMath(...) Function.identity() Function.identity()的使用详解 1 2 3 4 5 6 7 8 List&lt;Student&gt; studentLists = new ArrayList(); // list -&gt; map Map&lt;Long, Student&gt; collect = studentLists.stream() .collect(Collectors.toMap(a -&gt; a.getId(), Function.identity())); Map&lt;Long, Student&gt; collec1 = studentLists.stream() .collect(Collectors.toMap(Student::getId, Function.identity())); 3方]]></description>
+    <guid>https://michaelsongyc.github.io/java-learning/</guid>
+    <description><![CDATA[<h2 id="java基础概括">Java基础概括</h2>
+<h3 id="大图">大图</h3>
+<figure>
+</figure>
+
+<h3 id="java">Java</h3>
+<figure>
+</figure>
+
+<h3 id="设计模式--算法">设计模式 &amp;&amp; 算法</h3>
+<figure>
+</figure>
+
+<h3 id="框架--spring">框架 &amp;&amp; spring</h3>
+<figure>
+</figure>
+
+<h3 id="中间件--其他">中间件 &amp;&amp; 其他</h3>
+<figure>
+</figure>
+
+<h2 id="java-1">Java</h2>
+<h3 id="document">Document</h3>
+<ul>
+<li><a href="https://docs.oracle.com/javase/tutorial/java/index.html" target="_blank" rel="noopener noreffer ">Oracle Java tutorial</a></li>
+</ul>
+<h3 id="list">List</h3>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AbstractList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">implements</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">RandomAccess</span><span class="p">,</span><span class="w"> </span><span class="n">Cloneable</span><span class="p">,</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">Serializable</span><span class="p">{}</span></span></span></code></pre></div></div>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">LinkedList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AbstractSequentialList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">implements</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">Deque</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">Cloneable</span><span class="p">,</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">Serializable</span><span class="p">{}</span></span></span></code></pre></div></div>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CopyOnWriteArrayList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">implements</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">RandomAccess</span><span class="p">,</span><span class="w"> </span><span class="n">Cloneable</span><span class="p">,</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">Serializable</span><span class="w"> </span><span class="p">{}</span></span></span></code></pre></div></div>
+<blockquote>
+<pre><code> List list = Collections.synchronizedList(new ArrayList(...));
+</code></pre></blockquote>
+<h3 id="java-equals-and-hashcode">Java equals() and hashCode()</h3>
+<ul>
+<li><a href="https://www.digitalocean.com/community/tutorials/java-equals-hashcode" target="_blank" rel="noopener noreffer ">refer</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/java-hashmap#how-hashmap-works-in-java" target="_blank" rel="noopener noreffer ">Java HashMap</a></li>
+</ul>
+<h4 id="equals">equals()</h4>
+<p>Object class defined equals() method like this:</p>]]></description>
 </item>
 </channel>
 </rss>

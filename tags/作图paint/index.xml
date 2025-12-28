@@ -1,15 +1,39 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>作图（paint） - 标签 - </title>
+        <title>作图（paint） - 标签 - Michael</title>
         <link>https://michaelsongyc.github.io/tags/%E4%BD%9C%E5%9B%BEpaint/</link>
-        <description>作图（paint） - 标签 - </description>
+        <description>作图（paint） - 标签 - Michael</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 29 May 2020 23:07:02 &#43;0000</lastBuildDate><atom:link href="https://michaelsongyc.github.io/tags/%E4%BD%9C%E5%9B%BEpaint/" rel="self" type="application/rss+xml" /><item>
-    <title>常用作图工具(工作&amp;&amp;生活)</title>
-    <link>https://michaelsongyc.github.io/posts/tech/tools/tools-paint/</link>
+    <title>作图工具-学习法</title>
+    <link>https://michaelsongyc.github.io/tools-paint/</link>
     <pubDate>Fri, 29 May 2020 23:07:02 &#43;0000</pubDate>
     <author>Michael Song</author>
-    <guid>https://michaelsongyc.github.io/posts/tech/tools/tools-paint/</guid>
-    <description><![CDATA[思维导图 xmind UML plantUML Official website demo IDEA plant plugins idea plugin 流程图 Omni全家桶 OmniGraffle Mac平台的流程图绘制软件，相当于windows平台的visio OmniPlan 工期规划甘特图的工具 Gliffy]]></description>
+    <guid>https://michaelsongyc.github.io/tools-paint/</guid>
+    <description><![CDATA[<h2 id="tool">Tool</h2>
+<h3 id="mermaid">mermaid</h3>
+<p><a href="https://mermaid.live" target="_blank" rel="noopener noreffer ">https://mermaid.live</a></p>
+<h4 id="费曼学习法">费曼学习法</h4>
+<div class="mermaid" id="id-1"></div><h4 id="主动回忆法">主动回忆法</h4>
+<div class="mermaid" id="id-2"></div><h4 id="间隔重复法">间隔重复法</h4>
+<div class="mermaid" id="id-3"></div><h2 id="思维导图">思维导图</h2>
+<h3 id="xmind">xmind</h3>
+<h2 id="uml">UML</h2>
+<h3 id="plantuml">plantUML</h3>
+<ul>
+<li><a href="https://plantuml.com/zh/" target="_blank" rel="noopener noreffer ">Official website</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/427358291" target="_blank" rel="noopener noreffer ">demo</a></li>
+</ul>
+<h3 id="idea-plant-plugins">IDEA plant plugins</h3>
+<ul>
+<li>idea plugin</li>
+</ul>
+<h2 id="流程图">流程图</h2>
+<h3 id="omni全家桶">Omni全家桶</h3>
+<ul>
+<li>OmniGraffle Mac平台的流程图绘制软件，相当于windows平台的visio</li>
+<li>OmniPlan 工期规划甘特图的工具</li>
+</ul>
+<h3 id="gliffy-diagrams">Gliffy diagrams</h3>]]></description>
 </item>
 </channel>
 </rss>

@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
     <head>
-	<meta name="generator" content="Hugo 0.101.0" />
+	<meta name="generator" content="Hugo 0.145.0">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title></title><meta name="Description" content="Welcome to SYC Blog"><meta property="og:title" content="" />
-<meta property="og:description" content="Welcome to SYC Blog" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://michaelsongyc.github.io/" /><meta property="og:site_name" content="Michael" />
+        <title>Michael</title><meta name="Description" content="Welcome to SYC Blog"><meta property="og:url" content="https://michaelsongyc.github.io/">
+  <meta property="og:site_name" content="Michael">
+  <meta property="og:title" content="Michael">
+  <meta property="og:description" content="Welcome to SYC Blog">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="website">
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Welcome to SYC Blog"/>
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Michael">
+  <meta name="twitter:description" content="Welcome to SYC Blog">
 <meta name="application-name" content="MichaelSongs">
-<meta name="apple-mobile-web-app-title" content="MichaelSongs"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="apple-mobile-web-app-title" content="MichaelSongs">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://michaelsongyc.github.io/" /><link rel="alternate" href="/index.xml" type="application/rss+xml" title="">
-    <link rel="feed" href="/index.xml" type="application/rss+xml" title=""><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://michaelsongyc.github.io/" /><link rel="alternate" href="/index.xml" type="application/rss+xml" title="Michael">
+    <link rel="feed" href="/index.xml" type="application/rss+xml" title="Michael"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
@@ -26,17 +29,29 @@
         "url": "https:\/\/michaelsongyc.github.io\/","inLanguage": "zh-CN","author": {
                 "@type": "Person",
                 "name": "Michael Song"
-            },"description": "Welcome to SYC Blog","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","name": ""
+            },"description": "Welcome to SYC Blog","image": "https:\/\/michaelsongyc.github.io\/images\/Apple-Devices-Preview.png","thumbnailUrl": "https:\/\/michaelsongyc.github.io\/images\/screenshot.png","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","name": "Michael"
     }
     </script></head>
-    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="">SYC-Lifelong learning(终身学习)</a>
+            <a href="/" title="Michael"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>SYC-Lifelong learning(终身学习)</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item active" href="/"> 首页 </a><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/aboutme/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <i class="fas fa-search fa-fw" aria-hidden="true"></i>
@@ -56,7 +71,7 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="">SYC-Lifelong learning(终身学习)</a>
+                <a href="/" title="Michael"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>SYC-Lifelong learning(终身学习)</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -78,7 +93,7 @@
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
-                </div><a class="menu-item" href="/" title="">首页</a><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/aboutme/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a></div>
     </div>
@@ -88,166 +103,815 @@
     <div class="search-dropdown mobile">
         <div id="search-dropdown-mobile"></div>
     </div><main class="main">
-                <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-avatar"><a href="/" title="首页"><img
+                <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-avatar"><a href="/posts/" title="所有文章"><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="/image/website.png"
-        data-srcset="/image/website.png, /image/website.png 1.5x, /image/website.png 2x"
+        data-src="/images/website.png"
+        data-srcset="/images/website.png, /images/website.png 1.5x, /images/website.png 2x"
         data-sizes="auto"
-        alt="/image/website.png"
-        title="/image/website.png" /></a></div><h1 class="home-title">LOVE AND PEACE</h1><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"></div></div>
+        alt="/images/website.png"
+        title="/images/website.png" /></a></div><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/life/sentence/">心灵鸡汤</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-01-03">2021-01-03</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%94%9F%E6%B4%BB/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>生活</a></span></div><div class="content">视角 邓宁-克鲁格心理效应 能力欠缺的人在自己欠考虑的决定的基础上得出错误结论，但是无法正确认识到自身的不足，辨别错误行为，是一种认知偏差现象。</div><div class="post-footer">
-        <a href="/posts/life/sentence/">阅读全文</a><div class="post-tags">
+        <a href="/bettercoder/">如何成为一名优秀的软件工程师(码农)</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2018-06-03">2018-06-03</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/thinking/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Thinking</a></span></div><div class="content"><h2 id="1保持学习">1.保持学习</h2>
+<p>一个非常重要的观点：如果你停留在一个地方不前，并不代表你能一直呆在那里，而是代表你正在落后（不进则退）。</p>
+<p>前进并不意味着你就一定能进步 - 至少你不会温水煮青蛙，逐步退步。</p></div><div class="post-footer">
+        <a href="/bettercoder/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/sentence/">心灵鸡汤</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-01-03">2021-01-03</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%94%9F%E6%B4%BB/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>生活</a></span></div><div class="content"><h2 id="视角">视角</h2>
+<h3 id="邓宁-克鲁格心理效应">邓宁-克鲁格心理效应</h3>
+<p>  能力欠缺的人在自己欠考虑的决定的基础上得出错误结论，但是无法正确认识到自身的不足，辨别错误行为，是一种认知偏差现象。这些能力欠缺者们沉浸在自我营造的虚幻的优势之中，常常高估自己的能力水平，却无法客观评价他人的能力。</p></div><div class="post-footer">
+        <a href="/sentence/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%8A%B1%E5%BF%97/">励志</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/book/financial/report/">[读书笔记] 《手把手教你读财报》</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-08-27">2023-08-27</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content">关于书 唐朝 / 中国经济出版社 财报是用来排除企业的 财报里的小故事 先给朋友们讲个暖场的股市小故事，如假包换。只是出手 “你懂的”的原因，隐去了企业名</div><div class="post-footer">
-        <a href="/posts/book/financial/report/">阅读全文</a><div class="post-tags">
+        <a href="/2025-summary/">2025 年度总结</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2025-12-28">2025-12-28</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%80%BB%E7%BB%93/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>总结</a></span></div><div class="content"><h2 id="工作">工作</h2>
+<h3 id="1-核心成果回顾">1. 核心成果回顾</h3>
+<ul>
+<li>调整：频繁调整，无创新型业务；</li>
+<li>绩效：中；</li>
+<li>AI：积极拥抱AI，通过AI持续提升工作和学习效率。</li>
+</ul>
+<h3 id="2-存在问题反思">2. 存在问题反思</h3>
+<ul>
+<li>流程/方法问题：持续变化+反复对焦+okr持续变化，需要换个稳定的团队。</li>
+<li>外部因素影响：财年考核介绍后前老板离职，年尾通知要再次调整，1年3个老板，拥抱变化，对一线员工来讲很痛。</li>
+</ul>
+<h3 id="3-下一年度">3. 下一年度</h3>
+<ul>
+<li>核心目标：改变。</li>
+</ul>
+<h2 id="学习">学习</h2>
+<h3 id="1-学习成果">1. 学习成果</h3>
+<ul>
+<li>8月自费参加Google SH 开发者大会，收获很多，各个厂商的LLM在持续迭代，Gemini也越来越智能了，明年继续参加，关注科技前沿；</li>
+<li>参与ATA活动，挑战年度读10本书；</li>
+</ul>
+<h3 id="2-下一年度">2. 下一年度</h3>
+<ul>
+<li>AI：持续关注，持续提升；</li>
+<li>Python 训练模型；</li>
+<li>考试：高级架构师；</li>
+</ul>
+<h2 id="生活">生活</h2>
+<h3 id="1-年度生活亮点">1. 年度生活亮点</h3>
+<ul>
+<li>重要事件：家人住院；</li>
+</ul>
+<h3 id="2-生活中的困扰">2. 生活中的困扰</h3>
+<ul>
+<li>健康：家人住院+术后恢复；</li>
+<li>从年初开始，家人身体抱恙，先后住院3次，突如其来的状况有些让人措手不及，让我意识到身体健康的重要性，以及家庭抗风险能力，同时也打破了原有的工作规划；</li>
+</ul>
+<h3 id="3-下一年度-1">3. 下一年度</h3>
+<ul>
+<li>多陪陪家人</li>
+</ul>
+<h2 id="健康">健康</h2>
+<h3 id="1-年度健康状况">1. 年度健康状况</h3>
+<ul>
+<li>身体状态：中。</li>
+<li>总运动24次，累计141km；其中爬山：9次，累计76km；今年无骑行，更多是跑步、爬山；</li>
+</ul>
+<h3 id="2-下一年度-1">2. 下一年度</h3>
+<ul>
+<li>运动目标：春/秋每月1-2次爬山；保持运动量，适度增加骑行运动（2-3次）；运动做到有规律性；</li>
+</ul>
+<h2 id="旅行">旅行</h2>
+<h3 id="1-年度旅行回顾">1. 年度旅行回顾</h3>
+<ul>
+<li>五一厦门：时隔6年，再来厦门，体验厦门鼓浪屿岛的魅力，鼓浪屿没有印象中的好玩了，岛上商业化很严重，少了些人文自然景观的元素。不过这里看海还是可以的，走走沙滩，吹吹海风；</li>
+<li>十一黄山：时隔10年，再次上山，体验黄山的魅力。10年前3个小伙伴年轻但嘴硬，在无工具的前提下，用脚登山，最终累的一塌糊涂；10年后，和家人一起，果断选择乘索道上山，但黄山真的很大，没有规划好路线，从北门索道上，缺不得不走路下山到西门（因为时间仓促，就近原则），到山脚下时，腿脚基本也是废的了；</li>
+<li>黄山宏村景区里面商业化也是蛮严重，好看的地方就是宏村外面的河景，出片，其他景点都是小众景点，没有太多好的体验。</li>
+</ul>
+<h3 id="2-下一年度-2">2. 下一年度</h3>
+<ul>
+<li>带老爸老妈去北京。</li>
+</ul>
+<h2 id="整体复盘与展望">整体复盘与展望</h2>
+<h3 id="1-年度核心感悟">1. 年度核心感悟</h3>
+<ul>
+<li>频繁的变化，持续的调整，毫无积累；</li>
+</ul>
+<h3 id="2-下一年度核心关键词">2. 下一年度核心关键词</h3>
+<ul>
+<li>AI、赛道</li>
+</ul>
+<h3 id="3-致自己的一句话">3. 致自己的一句话</h3>
+<ul>
+<li>主动变化，需求突破</li>
+</ul></div><div class="post-footer">
+        <a href="/2025-summary/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%B9%B4%E5%BA%A6/">年度</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/independent/">独立开发者常用的研发工具集合</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2025-04-07">2025-04-07</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Categories</a></span></div><div class="content"><p>对于独立开发者而言，选择高效、轻量且成本可控的工具是提升效率的关键。以下是根据研发流程分类的工具推荐，涵盖从需求管理到部署运维的全链条：</p>
+<h2 id="1项目与任务管理"><strong>1.项目与任务管理</strong></h2>
+<ol>
+<li><strong>Trello</strong>
+<a href="https://trello.com/" target="_blank" rel="noopener noreffer ">https://trello.com/</a></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：可视化看板，拖拽式任务管理，支持个人免费版。</li>
+<li><strong>适用场景</strong>：简单任务规划、敏捷开发流程。
+2<strong>禅道</strong></li>
+<li><strong>特点</strong>：开源免费，集成需求、测试、缺陷管理，适合中小团队。</li>
+<li><strong>适用场景</strong>：研发全流程管理，适合注重本地化部署的开发者。
+3</li>
+<li><strong>Notion</strong>：文档管理、知识库、项目看板一体化。</li>
+</ul>
+<h2 id="2-研发">2. 研发</h2>
+<h3 id="21-代码托管与协作"><strong>2.1 代码托管与协作</strong></h3>
+<ol>
+<li><strong>GitHub</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：免费私有仓库，集成 Pull Request、Issue 追踪，生态丰富。</li>
+<li><strong>适用场景</strong>：代码版本控制、团队协作（适合个人或小团队）。</li>
+</ul>
+<ol start="2">
+<li><strong>GitLab</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：免费版支持 CI/CD、代码审查，功能全面。</li>
+<li><strong>适用场景</strong>：全栈开发，追求一站式解决方案。</li>
+</ul>
+<h3 id="22-开发与测试工具"><strong>2.2 开发与测试工具</strong></h3>
+<ol>
+<li><strong>Visual Studio Code</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：轻量强大的 IDE，支持插件扩展，跨平台。</li>
+<li><strong>适用场景</strong>：多语言开发、远程协作。</li>
+</ul>
+<ol start="2">
+<li><strong>Postman</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：API 测试与管理工具，支持自动化测试。</li>
+<li><strong>适用场景</strong>：接口开发与调试。</li>
+</ul>
+<ol start="3">
+<li><strong>JUnit/Selenium</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：单元测试（JUnit）和自动化 UI 测试（Selenium）。</li>
+<li><strong>适用场景</strong>：确保代码质量，减少手动测试成本。</li>
+</ul>
+<h3 id="23用户认证与支付"><strong>2.3、用户认证与支付</strong></h3>
+<ol>
+<li><strong>Supabase</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：开源 BaaS 平台，提供用户认证、数据库等功能，免费额度高。</li>
+<li><strong>适用场景</strong>：快速构建用户系统，适合中小项目。</li>
+</ul>
+<ol start="2">
+<li><strong>Stripe</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：国际支付处理，支持订阅模式，开发友好。</li>
+<li><strong>适用场景</strong>：跨境业务收款。</li>
+</ul>
+<ol start="3">
+<li><strong>KodePay</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：国内开发者友好，支持信用卡、Apple Pay，集成简单。</li>
+<li><strong>适用场景</strong>：网页端或插件支付功能。</li>
+</ul>
+<h3 id="24建站与设计"><strong>2.4、建站与设计</strong></h3>
+<ol>
+<li><strong>WordPress</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：开源 CMS，插件生态丰富，适合快速搭建内容型网站。</li>
+<li><strong>适用场景</strong>：博客、电商、企业官网。</li>
+</ul>
+<ol start="2">
+<li><strong>Figma</strong> <a href="https://www.figma.com/" target="_blank" rel="noopener noreffer ">https://www.figma.com/</a></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：在线协作设计工具，支持原型制作。</li>
+<li><strong>适用场景</strong>：UI/UX 设计，团队协作。</li>
+</ul>
+<h3 id="25-图片服务器"><strong>2.5 图片服务器</strong></h3>
+<ul>
+<li><strong>ImgBB</strong> ：<a href="https://imgbb.com/" target="_blank" rel="noopener noreffer ">https://imgbb.com/</a> 是最好的免费图片托管服务之一，无需注册就能使用。支持 JPEG、PNG、BMP、TIFF、GIF、WEBP、HEIC、PDF 等多种格式，上传文件的最大限制为 32MB，不限制上传图片数量和网上停留时间。上传后可快速获取全尺寸图像直接链接或缩略 HTML 链接，方便在博客中使用。</li>
+<li><strong>Postimage</strong> ：<a href="https://postimg.cc/files" target="_blank" rel="noopener noreffer ">https://postimg.cc/files</a>  无需注册，成立于 2004 年，运行稳定。支持 JPEG 和 PNG 等文件格式，可上传最大 8MB 大小的图像。用户能自定义分享图片大小，设置永久链接或自动失效链接，有效期最长 31 天，适合在网站、博客、留言板和论坛中使用。（优点：会生成各个渠道的超链）</li>
+</ul>
+<h2 id="3运维">3.运维</h2>
+<h3 id="3部署与运维"><strong>3.部署与运维</strong></h3>
+<ol>
+<li><strong>Vercel</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：静态网站托管，支持 Serverless 函数，一键部署。</li>
+<li><strong>适用场景</strong>：前端项目快速上线，适合 React/Vue 等框架。</li>
+</ul>
+<ol start="2">
+<li><strong>Netlify</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：免费 CDN 加速，自动化构建与部署，适合静态站点。</li>
+<li><strong>适用场景</strong>：博客、营销页面等轻量级网站。</li>
+</ul>
+<ol start="3">
+<li><strong>Docker</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：容器化部署，简化环境配置。</li>
+<li><strong>适用场景</strong>：跨平台应用打包与发布。</li>
+</ul>
+<h3 id="32-数据分析与监控"><strong>3.2 数据分析与监控</strong></h3>
+<ol>
+<li><strong>Google Analytics (GA)</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：免费且功能强大，追踪用户行为。</li>
+<li><strong>适用场景</strong>：网站流量分析。</li>
+</ul>
+<ol start="2">
+<li><strong>Umami</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：开源、隐私友好的分析工具，支持实时数据。</li>
+<li><strong>适用场景</strong>：注重用户隐私的项目。</li>
+</ul>
+<ol start="3">
+<li><strong>Prometheus + Grafana</strong></li>
+</ol>
+<ul>
+<li><strong>特点</strong>：开源监控方案，实时跟踪应用性能。</li>
+<li><strong>适用场景</strong>：服务器与微服务监控。</li>
+</ul>
+<h2 id="工具">工具</h2>
+<h3 id="实用工具"><strong>实用工具</strong></h3>
+<ul>
+<li>
+<p><strong>AWS SES/Resend</strong>：邮件服务，支持交易与营销邮件。</p></div><div class="post-footer">
+        <a href="/independent/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E7%A0%94%E5%8F%91%E5%B7%A5%E5%85%B7/">研发工具</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2024-summary/">2024年度总结</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2025-01-01">2025-01-01</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%80%BB%E7%BB%93/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>总结</a></span></div><div class="content"><h2 id="工作">工作</h2>
+<h3 id="1-核心成果回顾">1. 核心成果回顾</h3>
+<ul>
+<li>调整：元旦过后第1天，团队再次迎来调整； 年中时，团队再次调整；1年2次调整，换了2个老板；</li>
+<li>关键项目完成情况：通过nova选品、活动补贴、M2A等项目，在完成技术架构升级的同时，很好的做到业务赋能，提升团队效率。</li>
+<li>绩效：高绩效，但无晋升机会(业务下滑+老板调整)；</li>
+</ul>
+<h3 id="2-存在问题反思">2. 存在问题反思</h3>
+<ul>
+<li>工作中的不足：更多的是应对变化和日常项目落地，缺少积累；</li>
+<li>流程/方法问题：团队调整意味着需要和新的老板重新对焦，建立信任；疲于应对混乱的日常事务，缺少积累。</li>
+<li>外部因素影响：环境频繁变化，年度更换2个老板，被动接受组织调整，合作方接口人也是频繁更换，赛道持续变化，需要及时适应，可能需要换个赛道。</li>
+</ul>
+<h3 id="3-下一年度">3. 下一年度</h3>
+<ul>
+<li>核心目标：调整、提升。</li>
+</ul>
+<h2 id="学习">学习</h2>
+<h3 id="1-学习成果">1. 学习成果</h3>
+<ul>
+<li>备考了2个月的在职研究生考试，最终决定放弃，一个是时间精力不允许，没有时间去学习；第2点，AI在快速迭代，学历在未来变得不再那么重要，最终决定及时止损。</li>
+</ul>
+<h2 id="生活">生活</h2>
+<h3 id="1-年度生活亮点">1. 年度生活亮点</h3>
+<ul>
+<li>重要事件：交房、装修；</li>
+<li>年初交房，装修搞了3个月，一开始计划自己设计图纸后找师傅安装，但最终没有成功，里面设计太多细节和勾兑，耗时过长，ROI太低，最后还是挑选一家公司进行设计和安装。专业的事还是交给专业的团队来做。</li>
+<li>元旦去了温州楠溪江，逛了个音乐节，年轻人的快乐现在有点无法理解，那么多人跑到一个偏僻的山沟沟里，冒着冷风，在那儿蹦蹦跳跳，看上去很nice，付出也是蛮大。体验下来的感触是：快乐是一时，但痛苦缺是很久（寒风瑟瑟+排长队去临时WC+无法打车+步行回住处），安安静静的在家待着它不香吗？</li>
+</ul>
+<h3 id="2-生活中的困扰">2. 生活中的困扰</h3>
+<ul>
+<li>平衡问题：工作与生活继续失衡，陪伴家人时间很少，频繁更换老板，需要反复沟通，建立联系。</li>
+</ul>
+<h3 id="3-下一年度-1">3. 下一年度</h3>
+<ul>
+<li>多陪陪家人</li>
+</ul>
+<h2 id="健康">健康</h2>
+<h3 id="1-年度健康状况">1. 年度健康状况</h3>
+<ul>
+<li>身体状态：偏弱。</li>
+<li>总运动14次，累计46km（环比23年大幅下降）；其中爬山：3次，累计18km；</li>
+</ul>
+<h3 id="2-下一年度">2. 下一年度</h3>
+<ul>
+<li>运动目标：需增加运动量，身体是革命的本钱；</li>
+</ul>
+<h2 id="旅行">旅行</h2>
+<h3 id="1-年度旅行回顾">1. 年度旅行回顾</h3>
+<ul>
+<li>6月份去了HK，玩了1天；杭州到HK很方便，高铁直达，下车后按指示牌提示即可快速出入关；</li>
+<li>HK老外是越来越少了，身边基本都是粤语，相比国内地铁里的喧哗，这边地铁里很安静；</li>
+<li>打卡了一个网红书店，书店很小，但满屋子都是书，各式各样，各种语言的书本。</li>
+</ul>
+<h2 id="整体复盘与展望">整体复盘与展望</h2>
+<h3 id="1-年度核心感悟">1. 年度核心感悟</h3>
+<ul>
+<li>时间在流逝</li>
+</ul>
+<h3 id="2-下一年度核心关键词">2. 下一年度核心关键词</h3>
+<ul>
+<li>变化</li>
+</ul></div><div class="post-footer">
+        <a href="/2024-summary/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%B9%B4%E5%BA%A6/">年度</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2024/">2024龙年春节小记</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-02-18">2024-02-18</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%80%BB%E7%BB%93/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>总结</a></span></div><div class="content"><h2 id="初一">初一</h2>
+<ul>
+<li>往年杭州春节期间，不是阴天就是雨天，今年可能是龙年缘故，龙行天下，春节期间天气出奇的好，晴空万里，温度适中，非常事宜户外活动。</li>
+<li>中午吃完饭后，绕开西湖热门景区大人流，走小众观光路线，游览<code>西溪湿地</code>，晒晒太阳，吸收天地之精华，同时陪伴家人，难得好时光；</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/image/summary/2024/xixi-park.jpg"
+        data-srcset="/image/summary/2024/xixi-park.jpg, /image/summary/2024/xixi-park.jpg 1.5x, /image/summary/2024/xixi-park.jpg 2x"
+        data-sizes="auto"
+        alt="/image/summary/2024/xixi-park.jpg"
+        title="link" /></p></div><div class="post-footer">
+        <a href="/2024/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%98%A5%E8%8A%82/">春节</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2023-summary/">2023年总结</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-01-01">2024-01-01</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%80%BB%E7%BB%93/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>总结</a></span></div><div class="content"><p><strong>核心主旨</strong>：复盘成长轨迹，沉淀经验方法，明确未来方向</p>
+<p>重点突出:具体成果、可落地改进措施，避免空泛表述</p>
+<h2 id="工作">工作</h2>
+<h3 id="1-核心成果回顾">1. 核心成果回顾</h3>
+<ul>
+<li>调整：年初部门调整，从AE调整到Lazada，做的业务还是面向欧洲用户的电商，工作沟通依旧需要倒时差，日常沟通及大促值班时很酸爽；</li>
+<li>关键项目完成情况：快速熟悉基于Lazada的Miravia活动招商系统，同时参考AE国际化技术链路进行简要优化重构；</li>
+<li>能力提升突破：从0-1，快速熟悉了解业务和系统，成为领域PIC，形成个人方法论，优化跨团队合作流程。</li>
+<li>创办公益幸福团，组织活动，传递价值。</li>
+</ul>
+<h3 id="2-存在问题反思">2. 存在问题反思</h3>
+<ul>
+<li>工作中的不足：英语沟通薄弱，影响效率；</li>
+<li>流程/方法问题：创新团队跨团队沟通成本高，多任务并行时优先级混乱；疲于应对混乱的日常事务，影响个人精进。</li>
+<li>外部因素影响：客观团队环境变化频繁，年度更换3个老板，总体应对不足，被动接受组织调整。</li>
+</ul>
+<h3 id="3-下一年度">3. 下一年度</h3>
+<ul>
+<li>核心目标：取得高绩效，晋升。</li>
+<li>具体措施：制定学习计划、优化沟通协作机制。</li>
+</ul>
+<h2 id="学习">学习</h2>
+<h3 id="1-学习成果">1. 学习成果</h3>
+<ul>
+<li>English：从内网中找到1家online课程，老师是印尼人，虽然口音有点差，但性价比高，通过每日25分钟对话，在完成2个月英语在线课程后，敢于开口讲述。</li>
+<li>book：读了6本书，阅读的终局是只读经典，理解文字及文字背后的底层逻辑、社会运转的规律，遵循规律。</li>
+</ul>
+<h2 id="生活">生活</h2>
+<h3 id="1-年度生活亮点">1. 年度生活亮点</h3>
+<ul>
+<li>重要事件：结婚；</li>
+<li>年底在老家办的婚礼，辛苦爹妈操劳；现在操办婚礼比小时候方便很多，会有专门的婚庆公司可以帮你搞定一些你不懂的流程、事项、装备等，酒席也是在专门的酒店安排，不用在家办，可以省很多时间和麻烦事。</li>
+</ul>
+<h3 id="2-生活中的困扰">2. 生活中的困扰</h3>
+<ul>
+<li>平衡问题：工作与生活失衡，陪伴家人时间几乎没有，因为是新的团队+创业业务，周末也会频繁加班；更多的时间被工作所占用，导致生活质量下降。</li>
+</ul>
+<h3 id="3-下一年度-1">3. 下一年度</h3>
+<ul>
+<li>多陪陪家人</li>
+</ul>
+<h2 id="健康">健康</h2>
+<h3 id="1-年度健康状况">1. 年度健康状况</h3>
+<ul>
+<li>身体状态：轻度脂肪肝倾向，需要减重和运动。</li>
+<li>总运动10次，累计146km；其中爬山：7次，累计63km；骑行3次，累计83km；</li>
+</ul>
+<h3 id="2-下一年度">2. 下一年度</h3>
+<ul>
+<li>运动目标：每月1次爬山，年度80km以上累计跑步里程</li>
+</ul>
+<h2 id="旅行">旅行</h2>
+<h3 id="1-年度旅行回顾">1. 年度旅行回顾</h3>
+<ul>
+<li>12月份: 去洛阳、开封游玩，感受河南北方地区的文化特色，在旅行中放松身心，缓解工作压力；</li>
+<li>洛阳：老君山是老子归隐地，有金顶道观群，风景如仙境，山顶的最后一段台阶，是真的难爬，腿在发抖；龙门石窟有大型石刻艺术群，造像精美，文化价值极高。</li>
+<li>开封：清明上河园的实景演出和民俗互动，沉浸式感受北宋都城的繁华。园子是真的大，不过冬天也是真的冷，建议天暖时去；开封府和大相国寺，也是开封的知名景点，历史底蕴深厚。</li>
+</ul>
+<h2 id="整体复盘与展望">整体复盘与展望</h2>
+<h3 id="1-年度核心感悟">1. 年度核心感悟</h3>
+<ul>
+<li>人挪活</li>
+<li>利用一切时间和机会，持续精进自己，让自己有较高的抗风险能力。</li>
+<li>时间过得真快</li>
+<li>用心感悟人生、生活。</li>
+</ul>
+<h3 id="2-下一年度核心关键词">2. 下一年度核心关键词</h3>
+<p>突破、健康、平衡</p></div><div class="post-footer">
+        <a href="/2023-summary/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%B9%B4%E5%BA%A6/">年度</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/report/">[读书笔记] 《手把手教你读财报》</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-08-27">2023-08-27</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content"><h2 id="关于书">关于书</h2>
+<ul>
+<li>唐朝 / 中国经济出版社</li>
+</ul>
+<h2 id="财报是用来排除企业的">财报是用来排除企业的</h2>
+<blockquote>
+<p>财报里的小故事</p></blockquote>
+<p>先给朋友们讲个暖场的股市小故事，如假包换。只是出手 “你懂的”的原因，隐去了企业名称。</p>
+<p>故事：扭亏为盈只需白纸两沓</p></div><div class="post-footer">
+        <a href="/report/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/book/tools/mini-habits/">[读书笔记] 《微习惯》</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-06-22">2023-06-22</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content">微习惯-成就卓越自我管理的法则 关于书 武君 著 微习惯是什么 狗家族出了一只很有志气、很有地的的小细，它向整个家族宣布：要去横穿大沙漠！所有的狗都跑</div><div class="post-footer">
-        <a href="/posts/book/tools/mini-habits/">阅读全文</a><div class="post-tags">
+        <a href="/mini-habits/">[读书笔记] 《微习惯》</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-06-22">2023-06-22</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content"><h2 id="微习惯-成就卓越自我管理的法则">微习惯-成就卓越自我管理的法则</h2>
+<h3 id="关于书">关于书</h3>
+<ul>
+<li>武君 著</li>
+</ul>
+<h3 id="微习惯是什么">微习惯是什么</h3>
+<ul>
+<li>
+<p>狗家族出了一只很有志气、很有地的的小细，它向整个家族宣布：要去横穿大沙漠！所有的狗都跑水向它表示祝贺。在一片欢呼声中，这只小狗带足了食物、水，然后上路了。3天后，突然传来了小狗不幸牺牲的消息。</p></div><div class="post-footer">
+        <a href="/mini-habits/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/book/zengguofan_1/">[读书笔记] 《曾国藩的正面与侧面》</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-06-03">2023-06-03</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content">《曾国藩的正面与侧面》-1 关于书 张宏杰 / 岳麓书社 概述 中国人到中年确实常成为道家信徒，曾国藩也一再说老子的话“柔弱胜 刚强”，（但是什么是柔弱，</div><div class="post-footer">
-        <a href="/posts/book/zengguofan_1/">阅读全文</a><div class="post-tags">
+        <a href="/zengguofan_1/">[读书笔记] 《曾国藩的正面与侧面》</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-06-03">2023-06-03</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content"><h2 id="曾国藩的正面与侧面-1">《曾国藩的正面与侧面》-1</h2>
+<h3 id="关于书">关于书</h3>
+<ul>
+<li>张宏杰 / 岳麓书社</li>
+</ul>
+<h3 id="概述">概述</h3>
+<p>中国人到中年确实常成为道家信徒，曾国藩也一再说老子的话“柔弱胜
+刚强”，（但是什么是柔弱，什么是刚强，对这一点到底了悟到什么程度，往往是人后半生的区分。</p></div><div class="post-footer">
+        <a href="/zengguofan_1/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/book/zengguofan_letter/">[读书笔记] 《曾国藩家书》</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-06-03">2023-06-03</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content">关于书 曾国藩 著 李青 译 相关链接： https://www.8bei8.com/book/zengguofanjiashu.html 序 曾国藩（1811一1872），初名子城，字伯涵，号涤生。中国近代政治家、战略家、理学家、文学家，湘军的创立</div><div class="post-footer">
-        <a href="/posts/book/zengguofan_letter/">阅读全文</a><div class="post-tags">
+        <a href="/zengguofan_letter/">[读书笔记] 《曾国藩家书》</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-06-03">2023-06-03</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content"><h1 id="关于书">关于书</h1>
+<ul>
+<li>曾国藩 著</li>
+<li>李青 译</li>
+<li>相关链接： <a href="https://www.8bei8.com/book/zengguofanjiashu.html" target="_blank" rel="noopener noreffer ">https://www.8bei8.com/book/zengguofanjiashu.html</a></li>
+</ul>
+<h2 id="序">序</h2>
+<ul>
+<li>
+<p>曾国藩（1811一1872），初名子城，字伯涵，号涤生。中国近代政治家、战略家、理学家、文学家，湘军的创立者和统帅。他一生奉行为政以耐烦为第一要义，主张凡事要勤俭廉劳，不可为官自傲。他修身律己，以德求官，礼治为先，以忠谋政，在官场上获得了巨大的成功，与李鸿章、左宗棠、张之洞并称 “晚清中兴四大名臣”.</p></div><div class="post-footer">
+        <a href="/zengguofan_letter/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/book/poordadrichdad/">[读书笔记] 《穷爸爸富爸爸》</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-03-19">2023-03-19</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content">一个爸爸会说：“贪财乃万恶之源。”而另一个爸爸却说：“贫穷才是万恶之本。” 两个不同的观点造就不同的人生； 一个人的观点对他的一生影响巨大； 选择</div><div class="post-footer">
-        <a href="/posts/book/poordadrichdad/">阅读全文</a><div class="post-tags">
+        <a href="/poordadrichdad/">[读书笔记] 《穷爸爸富爸爸》</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-03-19">2023-03-19</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content"><ul>
+<li>
+<p>一个爸爸会说：“贪财乃万恶之源。”而另一个爸爸却说：“贫穷才是万恶之本。”  两个不同的观点造就不同的人生；</p>
+</li>
+<li>
+<p>一个人的观点对他的一生影响巨大；</p>
+</li>
+<li>
+<p>选择不同，命运也会不同；</p></div><div class="post-footer">
+        <a href="/poordadrichdad/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/">经济学</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/book/minihabits/">[读书笔记] 《微习惯-成就卓越自我管理的法则》</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-03-18">2023-03-18</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content">关于书 《微习惯-成就卓越自我管理的法则》 武君 笔记 本书通过分类，阐述了涉及多个方向的微习惯，并在每个分类下引用了不同的实例作为参考样例，证明不</div><div class="post-footer">
-        <a href="/posts/book/minihabits/">阅读全文</a><div class="post-tags">
+        <a href="/minihabits/">[读书笔记] 《微习惯-成就卓越自我管理的法则》</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-03-18">2023-03-18</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content"><h2 id="关于书">关于书</h2>
+<ul>
+<li>《微习惯-成就卓越自我管理的法则》</li>
+<li>武君</li>
+</ul>
+<h3 id="笔记">笔记</h3>
+<ul>
+<li>本书通过分类，阐述了涉及多个方向的微习惯，并在每个分类下引用了不同的实例作为参考样例，证明不同微习惯带给我们的正向效果，侧重于表达微习惯的作用。 但在如何培养微习惯上，没有过多的阐述；</li>
+<li>通过本书目录，可以快速了解不同分类下，作者建议具备的微习惯；</li>
+<li>本书可以作为一本了解微习惯的参考书；</li>
+</ul>
+<h2 id="内容简介">内容简介</h2>
+<p>微习惯是一种非常微小的积极行为，你需要每天强迫自己完成它。</p></div><div class="post-footer">
+        <a href="/minihabits/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%BE%AE%E4%B9%A0%E6%83%AF/">微习惯</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/book/small_dog_money/">[读书笔记]《小狗钱钱》</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-12-11">2022-12-11</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content">关于书 《小狗钱钱-孩子和家长共同成长的金融读物》 [德]博多•舍费尔 著；王钟欣 余茜译 四川少年儿童出版社 引导孩子正确认识财富、创造财富的“金钱童</div><div class="post-footer">
-        <a href="/posts/book/small_dog_money/">阅读全文</a><div class="post-tags">
+        <a href="/small_dog_money/">[读书笔记]《小狗钱钱》</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-12-11">2022-12-11</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content"><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/image/book/small_dog_money_1.png"
+        data-srcset="/image/book/small_dog_money_1.png, /image/book/small_dog_money_1.png 1.5x, /image/book/small_dog_money_1.png 2x"
+        data-sizes="auto"
+        alt="/image/book/small_dog_money_1.png"
+        title="徒手深蹲" /></p>
+<h2 id="关于书">关于书</h2>
+<ul>
+<li>《小狗钱钱-孩子和家长共同成长的金融读物》</li>
+<li>[德]博多•舍费尔 著；王钟欣 余茜译</li>
+<li>四川少年儿童出版社</li>
+</ul>
+<blockquote>
+<p>引导孩子正确认识财富、创造财富的“金钱童话”</p></div><div class="post-footer">
+        <a href="/small_dog_money/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/book/throw/">[读书笔记]《断舍离》</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-12-10">2022-12-10</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content">关于书 《断舍离.心灵篇》 山下英子; 王珊译 广西科学技术出版社 三种扔不掉东西的人 逃避现实型 真麻烦； 这种类型的人太忙碌，几乎没什么时间待在家里，所</div><div class="post-footer">
-        <a href="/posts/book/throw/">阅读全文</a><div class="post-tags">
+        <a href="/throw/">[读书笔记]《断舍离》</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-12-10">2022-12-10</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content"><h2 id="关于书">关于书</h2>
+<ul>
+<li>《断舍离.心灵篇》</li>
+<li>山下英子; 王珊译</li>
+<li>广西科学技术出版社</li>
+</ul>
+<h2 id="三种扔不掉东西的人">三种扔不掉东西的人</h2>
+<h3 id="逃避现实型">逃避现实型</h3>
+<ul>
+<li>真麻烦；</li>
+<li>这种类型的人太忙碌，几乎没什么时间待在家里，所以也没办法收拾屋子。多数情況下，这种人都是对家庭有所不满，
+不愿意待在家里，所以就找各种各样的事，让自己忙碌起来。加上家里乱七八糟的，所以就更不想待在家里了。慢慢地，在这样的恶性循环里越陷越深。</li>
+</ul>
+<h3 id="执着过去型">执着过去型</h3>
+<ul>
+<li>真可惜；</li>
+<li>这种类型的人，即便是现在己经不会再用的过去的东西，也非得收着不可。相册、奖杯等等，统统当作命根子似的保管起来。
+他们多半隐含着对过去幸福时光的留恋。从不想面对现实这一层意义上来看，与逃避现实型也有相通之处。</li>
+</ul>
+<h3 id="担忧未来型">担忧未来型</h3>
+<ul>
+<li>也许有天会用到；</li>
+<li>这种类型的人致力于投资不知何时会发生的未来的不安要素。这类人的特点是过分地囤积纸巾等日用品，要是没了这些就会觉得困扰、焦虑不安。
+在三种类型当中，这一类的人最多。</li>
+</ul>
+<h2 id="断舍离-概念">断舍离 概念</h2>
+<p>&ldquo;断舍离”的概念非常简单：</p></div><div class="post-footer">
+        <a href="/throw/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/book/how_to_read_book/">[读书笔记] 《如何阅读一本书》</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-12-10">2022-12-10</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content">效率 效能，单位时间内产生的生产价值；提高效能意味着 使用相对少的时间，产生相对大的生产价值。 效率，在产生效能过程中的使用的方式方法等。 大到机构</div><div class="post-footer">
-        <a href="/posts/book/how_to_read_book/">阅读全文</a><div class="post-tags">
+        <a href="/how_to_read_book/">[读书笔记] 《如何阅读一本书》</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-12-10">2022-12-10</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content"><h2 id="效率">效率</h2>
+<ul>
+<li>
+<p>效能，单位时间内产生的生产价值；提高效能意味着 使用相对少的时间，产生相对大的生产价值。</p>
+</li>
+<li>
+<p>效率，在产生效能过程中的使用的方式方法等。</p>
+</li>
+<li>
+<p>大到机构、公司、经济体，小到团队、个人等，提升效率，方可产生最大效能； 在这个竞争越来越激烈的时代，谁能提供生产效率，谁就可以早一步，抢先占领市场，降低被淘汰的风险。</p></div><div class="post-footer">
+        <a href="/how_to_read_book/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/language/material/">英语素材</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-12-03">2022-12-03</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Categories</a></span></div><div class="content">基础 Learning 250+ advanced English words at a time 最常用1000句英语口语发音示范，太实用了！收藏起来！ 史上最全思维导图，一网打尽英语单词、句型和语法！ 每日一句经典句型1</div><div class="post-footer">
-        <a href="/posts/language/material/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/">Tags</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/job/inteview/interview-internal/">test</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-12-03">2022-12-03</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E9%9D%A2%E8%AF%95/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>面试</a></span></div><div class="content">need work mac Daraz 物流相关的job 花费一个周末时间，整理简历； 第1轮 技术面 面试官为认识的一个合作过的P8，之前有些工作上的交集，这里主要介绍了dara</div><div class="post-footer">
-        <a href="/posts/job/inteview/interview-internal/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E9%9D%A2%E8%AF%95/">面试</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/language/vocabulary/">vocabulary</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-11-18">2022-11-18</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/english/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>English</a></span></div><div class="content">vocabulary capacity:容量 mutex: 互斥 generic: 泛型、通用的 Java 泛型（generics） Java Generics and Inheritance Java 泛型和继承 violated 违反</div><div class="post-footer">
-        <a href="/posts/language/vocabulary/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/english/">English</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/english/">English</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-11-17">2022-11-17</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Categories</a></span></div><div class="content">1. Can you introduce yourself? I am from Henan Province. My major is Computer science and technology. I graduated from Zhejiang University in 2016
-I like reading, sports, fitness, such as: playing Badminton, running, mountain climbing and so on.
-I also like to travel. For example: I went to Xinjiang province in July this year. There are so many beautiful places in Xinjiang, such as snow mountains, delicious food and fruits, and It&rsquo;s not hot here in summer, it&rsquo;s cool.</div><div class="post-footer">
-        <a href="/posts/english/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/">Tags</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/book/pyramidprinciple/">[读书笔记] 《金字塔原理》</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-11-13">2022-11-13</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content">概要 《金字塔原理》介绍了一种能清晰地展现思路的高效方法，是训练思考、使表达呈现逻辑性的实用宝典。金字塔原理能将零散的观点有序组织起来，化繁为</div><div class="post-footer">
-        <a href="/posts/book/pyramidprinciple/">阅读全文</a><div class="post-tags">
+        <a href="/pyramidprinciple/">[读书笔记] 《金字塔原理》</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-11-13">2022-11-13</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content"><h2 id="概要">概要</h2>
+<p>《金字塔原理》介绍了一种能清晰地展现思路的高效方法，是训练思考、使表达呈现逻辑性的实用宝典。金字塔原理能将零散的观点有序组织起来，化繁为简，适合所有需要精进思考、分析、表达能力的读者。</p></div><div class="post-footer">
+        <a href="/pyramidprinciple/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/java/commons/">Java常用工具类方法</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-11-12">2022-11-12</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div><div class="content">JDK Objects 1 Objects.equal(Object a, Object b) JDK8 1 stream.anyMath(...) Function.identity() Function.identity()的使用详解 1 2 3 4 5 6 7 8 List&lt;Student&gt; studentLists = new ArrayList(); // list -&gt; map Map&lt;Long, Student&gt; collect = studentLists.stream() .collect(Collectors.toMap(a -&gt; a.getId(), Function.identity())); Map&lt;Long, Student&gt; collec1 = studentLists.stream() .collect(Collectors.toMap(Student::getId, Function.identity())); 3方</div><div class="post-footer">
-        <a href="/posts/tech/java/commons/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/java/">Java</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/designpattern/parttern1/">[TODO]设计模式-1</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-11-07">2022-11-07</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>设计模式</a></span></div><div class="content"></div><div class="post-footer">
-        <a href="/posts/tech/designpattern/parttern1/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/al/mine_record/">内部-个人总结</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-11-04">2022-11-04</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%86%85%E9%83%A8/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>内部</a></span></div><div class="content">个人发展 略 技术能力及组织影响力 1. 请简要说明当前核心工作内容 作为AE活动招商技术负责人 对接运营和产品侧需求，从业务和商家视角，深入理解业务上的</div><div class="post-footer">
-        <a href="/posts/tech/al/mine_record/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%86%85%E9%83%A8/">内部</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/al/db_design/">In-MySQL设计规约</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-11-02">2022-11-02</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%86%85%E9%83%A8/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>内部</a></span></div><div class="content">在我们对数据库技术方案设计的时候，我们是否有自己的设计理念或者原则，还是更多的依据自己的直觉去设 计，是否曾经快悔线上发生过的一次低級故障，可</div><div class="post-footer">
-        <a href="/posts/tech/al/db_design/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%86%85%E9%83%A8/">内部</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/al/tobeleader/">In-如果我是一线主管</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-11-02">2022-11-02</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%86%85%E9%83%A8/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>内部</a></span></div><div class="content">如果我是一线主管 如果我是一线技术主管，可能曾经是团队综合实力最强的，被时间支配不能再每天写代码，但团队各种挑战依旧在； 如果我是一线技术主管，</div><div class="post-footer">
-        <a href="/posts/tech/al/tobeleader/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%86%85%E9%83%A8/">内部</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/tools/code/">In-Code规范</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-11-02">2022-11-02</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%86%85%E9%83%A8/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>内部</a></span></div><div class="content">CR 有感 前段时间参与了xx代码 Code Review，开始前大家有些不安，觉得代码水平很难评判，详细研究了各个评分纬度，但实际 Review 下来发现评判特别简单，</div><div class="post-footer">
-        <a href="/posts/tech/tools/code/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%86%85%E9%83%A8/">内部</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/al/work-advice/">In-Work Advice</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-11-02">2022-11-02</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%86%85%E9%83%A8/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>内部</a></span></div><div class="content">多希望入职时候就知道的 成长的捷径 谦逊的态度是对的，但不要把“我是新人&quot;作为心理安全线 技术博客写一篇大概需要两周左右，但可能是最快的</div><div class="post-footer">
-        <a href="/posts/tech/al/work-advice/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%86%85%E9%83%A8/">内部</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/life/interesting/">一些引人深思的图片</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-11-01">2022-11-01</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%94%9F%E6%B4%BB/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>生活</a></span></div><div class="content">沟通的技巧 沟通-换位思考 视角 视角</div><div class="post-footer">
-        <a href="/posts/life/interesting/">阅读全文</a><div class="post-tags">
+        <a href="/interesting/">一些引人深思的图片</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-11-01">2022-11-01</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%94%9F%E6%B4%BB/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>生活</a></span></div><div class="content"><h2 id="沟通的技巧">沟通的技巧</h2>
+<figure><img src="/image/life/interesting/coder.png"><figcaption>
+      <h4>沟通-换位思考</h4>
+    </figcaption>
+</figure>
+
+<h2 id="视角">视角</h2>
+<figure><img src="/image/life/pig_thinking.png"><figcaption>
+      <h4>视角</h4>
+    </figcaption>
+</figure></div><div class="post-footer">
+        <a href="/interesting/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%9B%BE%E7%89%87/">图片</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/al/design-os/">功能设计场景</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-10-27">2022-10-27</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>架构设计</a></span></div><div class="content">《那些年，为了进阿里背过的面试题》 秒杀架构设计[大数据与高并发] 业务介绍 什么是秒杀？通俗一点讲就是网络商家为促销等目的组织的网上限时抢购活动</div><div class="post-footer">
-        <a href="/posts/tech/al/design-os/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/">架构设计</a></div></div>
+        <a href="/inspriemovies/">情绪低落时，可以看下这些电影，自我治愈</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-10-07">2022-10-07</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%94%9F%E6%B4%BB/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>生活</a></span></div><div class="content"><h2 id="当幸福来敲门">当幸福来敲门</h2>
+<p>  看过N遍的电影，记忆最深刻的台词：</p>
+<blockquote>
+<p>当人们做不到一些事情的时候，他们就会对你说你也同样不能。</p>
+<p>不要让别人告诉你，你不能做什么。 只要有梦想，就要去追求。</p></div><div class="post-footer">
+        <a href="/inspriemovies/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E7%94%B5%E5%BD%B1/">电影</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/al/learning2/">内部-架构学习整理</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-10-25">2022-10-25</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%86%85%E9%83%A8/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>内部</a></span></div><div class="content">架构学习整理 1.当我们在谈架构时，我们谈的是什么？ 首先，架构是一个抽象词语，100 个人谈架构可能会有 101种答案 个人看到最简洁的说法就是：架</div><div class="post-footer">
-        <a href="/posts/tech/al/learning2/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%86%85%E9%83%A8/">内部</a></div></div>
+        <a href="/xinjiang/">新疆旅行-北疆</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-07-22">2022-07-22</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%94%9F%E6%B4%BB/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>生活</a></span></div><div class="content"><p>  今年年初就计划着去新疆旅行，刚好六月份看到朋友发的帖子，大家一拍即合，开团成行；刚好借此计划给自己放一个长假，
+把自己从持续多年的忙碌状态中抽离出来，利用这几天时间，来一场心灵的放松、灵魂的洗礼和体力的马拉松。来阿里四年，给自己休的第一次长假。<br></p></div><div class="post-footer">
+        <a href="/xinjiang/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%96%B0%E7%96%86/">新疆</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/al/advicetonew/">技术牛人给新人的学习建议</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-10-25">2022-10-25</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%86%85%E9%83%A8/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>内部</a></span></div><div class="content">新人出师标准 熟悉团队对应的业务，以及业务相关的人和项目 熟悉团队，理解其文化和规则，并在熟悉过程中对其遇到的问题进行完善、改进和沉淀。 主动参加</div><div class="post-footer">
-        <a href="/posts/tech/al/advicetonew/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%86%85%E9%83%A8/">内部</a></div></div>
+        <a href="/naval/">[读书笔记] 《纳瓦尔宝典》</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-07-05">2022-07-05</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content"><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/image/book/naval_note.png"
+        data-srcset="/image/book/naval_note.png, /image/book/naval_note.png 1.5x, /image/book/naval_note.png 2x"
+        data-sizes="auto"
+        alt="/image/book/naval_note.png"
+        title="参加图片" /></p>
+<h2 id="个人履历">个人履历</h2>
+<p>   纳纳瓦尔 •拉维坎特经历表</p>
+<ul>
+<li>1974年，出生于印度德里</li>
+<li>1983年，9岁，从印度新德里搬到美国纽约皇后区</li>
+<li>1988年，14岁，就读于史岱文森高中</li>
+<li>1995年，21岁，从达特茅斯大学毕业（学习<code>计算机科学和经济学</code>）</li>
+<li>1999年，25岁，成为 Epinions 创始人、首席执行官</li>
+<li>2001年，27岁，成为风投机构 August Capital 创业合伙人</li>
+<li>2003年，29岁，成为分类广告平台 Vast.com 创始人</li>
+<li>2005年，31岁，在硅谷被称为“放射性泥浆”</li>
+<li>2007年，33岁，创立小型风险投资基金 Hit Forge，最初设想是用作艀化器</li>
+<li>2007年，33岁，创立 VentureHacks 博客</li>
+<li>2010年，36岁，创立AngelList</li>
+<li>2010年，36岁，投资优步</li>
+<li>2012年，38岁，游说国会通过 《就业法案》</li>
+<li>2018年，44岁，获评 “年度天使投资人”</li>
+</ul>
+<h2 id="语录">语录</h2>
+<ul>
+<li>
+<p>只要想做，办法总是有的。</p></div><div class="post-footer">
+        <a href="/naval/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/al/softskill/">内部-程序员最重要的八种软技能</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-10-25">2022-10-25</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%86%85%E9%83%A8/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>内部</a></span></div><div class="content">程序员最重要的八种软技能 前言 笔者带团队的六年中，发现程序员们在职场都有一个共同的困扰，好像写代码都没什么问题了，日常工作基本上都是应付业务需</div><div class="post-footer">
-        <a href="/posts/tech/al/softskill/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%86%85%E9%83%A8/">内部</a></div></div>
+        <a href="/install-software-collection/">Mac下开发工具安装</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-05-01">2022-05-01</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div><div class="content"><h1 id="mac">Mac</h1>
+<h2 id="tool">Tool</h2>
+<p><a href="https://zhuanlan.zhihu.com/p/140942687" target="_blank" rel="noopener noreffer ">Charles</a></p>
+<h2 id="db">DB</h2>
+<p><a href="https://www.bilibili.com/read/cv10248181/" target="_blank" rel="noopener noreffer ">mac-mysql安装-参考-1</a></p>
+<p><a href="https://www.jianshu.com/p/199492627ccc" target="_blank" rel="noopener noreffer ">mac-mysql安装-参考-2</a></p>
+<p><a href="https://www.runoob.com/note/52675" target="_blank" rel="noopener noreffer ">mac-python3 安装-参考</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/111014448" target="_blank" rel="noopener noreffer ">mac-Homebrew 安装-参考</a></p></div><div class="post-footer">
+        <a href="/install-software-collection/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/install/">Install</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/todo/">Todo</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-10-25">2022-10-25</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/todo/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>todo</a></span></div><div class="content">常用设计模式 demo； Spring DB mybatis -&gt; 的 《学徒》-纪录片- 面试</div><div class="post-footer">
-        <a href="/posts/tech/todo/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/todo/">todo</a></div></div>
+        <a href="/beleader/">管理</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-03-07">2022-03-07</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div><div class="content"><h2 id="如果我是一线主管">如果我是一线主管</h2>
+<ul>
+<li>每周也要写周报，每年也要写绩效，也想晋升、加薪、诸如此类；</li>
+<li>团队有五、六个人还好，十几个人的团队的话会希望有人可以站出来帮我;</li>
+</ul>
+<h2 id="不抱怨">不抱怨</h2>
+<p>如果我是一线技术主管，不会喜欢团队喜欢抱怨的同学</p></div><div class="post-footer">
+        <a href="/beleader/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/">Tags</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/al/growup/">内部-成长的烦恼-个人经历</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-10-24">2022-10-24</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%86%85%E9%83%A8/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>内部</a></span></div><div class="content">有感于近期来身边发生了各种变化。有老朋友的离开、团队调整、公司的变革&hellip;.，在不同场合也听多过很多同学的困惑，我内心也是五味杂陈</div><div class="post-footer">
-        <a href="/posts/tech/al/growup/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%86%85%E9%83%A8/">内部</a></div></div>
+        <a href="/longwangshan/">[户外]龙王山-雾凇</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-12-17">2021-12-17</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%94%9F%E6%B4%BB/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>生活</a></span></div><div class="content"><h2 id="攀爬">攀爬</h2>
+<figure><img src="/image/life/sport/longwangshan_2021_01.png"><figcaption>
+      <h4>晶莹剔透</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/image/life/sport/longwangshan_2021_010.png"><figcaption>
+      <h4>群山环绕</h4>
+    </figcaption>
+</figure>
+
+<h2 id="雾凇">雾凇</h2>
+<ul>
+<li>对于没在山上长大的同学，能看到雾凇的机会不是太多；
+<figure><img src="/image/life/sport/longwangshan_2021_02.png"><figcaption>
+      <h4>近距离看雾凇</h4>
+    </figcaption>
+</figure>
+</li>
+</ul>
+<h2 id="龙王山雾凇1587m">龙王山·雾凇（1587m）</h2>
+<figure><img src="/image/life/sport/longwangshan_2021_03.png"><figcaption>
+      <h4>到达山顶</h4>
+    </figcaption>
+</figure>
+
+<h2 id="记录">记录</h2>
+<figure><img src="/image/life/sport/longwangshan_2021_06.png"><figcaption>
+      <h4>记录</h4>
+    </figcaption>
+</figure></div><div class="post-footer">
+        <a href="/longwangshan/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E9%BE%99%E7%8E%8B%E5%B1%B1/">龙王山</a>,&nbsp;<a href="/tags/%E9%9B%BE%E5%87%87/">雾凇</a>,&nbsp;<a href="/tags/%E6%88%B7%E5%A4%96/">户外</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/al/parallelstream/">内部-Java ParallelStream 踩坑记录</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-10-24">2022-10-24</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/java/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Java</a>&nbsp;<a href="/categories/%E5%86%85%E9%83%A8/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>内部</a></span></div><div class="content">一、踩坑经历 在使用JDK8中的stream大家肯定不陌生，而且在处理集合（list、map）的时候用起来很爽，更爽的是可以通过 ParallelStream 进行并行操作</div><div class="post-footer">
-        <a href="/posts/tech/al/parallelstream/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a>,&nbsp;<a href="/tags/parallelstream/">ParallelStream</a></div></div>
+        <a href="/famoussentence/">[读书笔记] 《吾日三省吾身》</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-10-03">2021-10-03</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content"><h2 id="古语">古语</h2>
+<ul>
+<li>
+<p>子曰：“学而时习之，不亦说乎?有朋自远方来，不亦乐乎?人不知而不愠，不亦君子乎?”（《学而》）</p>
+</li>
+<li>
+<p>曾子曰：“吾日三省吾身：为人谋而不忠乎？与朋友交而不信乎？传不习乎？”（《学而》）</p></div><div class="post-footer">
+        <a href="/famoussentence/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/life_orientation/">[读书笔记] 《人生定位》</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-08-21">2021-08-21</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content"><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/image/book/life_orientation.png"
+        data-srcset="/image/book/life_orientation.png, /image/book/life_orientation.png 1.5x, /image/book/life_orientation.png 2x"
+        data-sizes="auto"
+        alt="/image/book/life_orientation.png"
+        title="参加图片" /></p>
+<h2 id="案例背景">案例背景</h2>
+<p>中国正处在一个至关重要的十字路口上。制造廉价产品已使中国有了很大的发展，但上升的劳动力成本、环境问题、收入不平等以及对创新的需求都意味着重要的不是制造更廉价的产品，而是更好地进行产品营销。只有这样，中国才能赚更多的钱，才能在员工收入、环境保护和其他方面进行更大的投入。这意味着中国需要更好地掌握如何在顾客和潜在顾客的心智中建立品牌和认知，如何应对国内及国际上无处不在的竞争.</p></div><div class="post-footer">
+        <a href="/life_orientation/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E8%A7%84%E5%88%92/">规划</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/algorithm/">算法概述</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-08-18">2021-08-18</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/leetcode/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Leetcode</a></span></div><div class="content"><h2 id="一数据结构的存储方式">一、数据结构的存储方式</h2>
+<p>数据结构的存储方式只有两种：<code>数组（顺序存储）和链表（链式存储）</code></p>
+<p>这句话怎么理解，不是还有散列表、栈、队列、堆、树、图等等各种数据结构吗？</p>
+<p>我们分析问题，一定要有递归的思想，自顶向下，从抽象到具体。你上来就列出这么多，那些都属于「上层建筑」，而数组和链表才是「结构基础」。因为那些多样化的数据结构，究其源头，都是在链表或者数组上的特殊操作，API 不同而已。</p></div><div class="post-footer">
+        <a href="/algorithm/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>,&nbsp;<a href="/tags/leetcode/">Leetcode</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/wanning/">万宁Outing</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-07-13">2021-07-13</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%94%9F%E6%B4%BB/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>生活</a></span></div><div class="content"><ul>
+<li>2021.07.02-2021.07.05</li>
+</ul>
+<h2 id="day1-周五">Day1 【周五】</h2>
+<ul>
+<li>周五下坐飞机飞海口，原计划14点的飞机，晚点到17点起飞；</li>
+<li>20点左右到达海口，乘坐旅游大巴赶往万宁；</li>
+<li>23点左右入到达万宁，入住<code>神州半岛福朋喜来登酒店</code>；</li>
+<li>酒店在海边一个小岛的景区中，晚上人烟稀少，在周边找吃的有些费劲；</li>
+</ul>
+<h2 id="day2周六">Day2【周六】</h2>
+<ul>
+<li>早起，自助餐早点，伙食还不错的；</li>
+<li>酒店一日躺，下午海边泳池玩水；
+<figure><img src="/image/travel/2021hainan/wanning_hotel_1.png"><figcaption>
+       <h4>酒店泳池</h4>
+     </figcaption>
+ </figure>
+</li>
+<li>晚上附近找了个沙滩，玩篝火、吃烧烤、海边踩水；
+<figure><img src="/image/travel/2021hainan/wanning_fire_1.png"><figcaption>
+        <h4>万宁沙滩</h4>
+      </figcaption>
+  </figure>
+
+<figure><img src="/image/travel/2021hainan/wanning_fire.png"><figcaption>
+        <h4>万宁沙滩篝火</h4>
+      </figcaption>
+  </figure>
+</li>
+</ul>
+<h2 id="day3周日">Day3【周日】</h2>
+<ul>
+<li>坐高铁到三亚，开启三亚一日游模式；
+<figure><img src="/image/travel/2021hainan/sanya_1.png"><figcaption>
+        <h4>三亚凤凰岛</h4>
+      </figcaption>
+  </figure>
+
+<figure><img src="/image/travel/2021hainan/sanya_2.png"><figcaption>
+        <h4>鸿洲国际游艇码头</h4>
+      </figcaption>
+  </figure>
+</li>
+<li>浪里个浪，耗资几百大元，体验了把人工潜水+水下拍照，体验效果：近海区水太脏了，照片效果令人堪忧，完美踩坑；</li>
+<li>晚上搜了家大众点评top3的海鲜店，吃海鲜，口味很棒；吃完返程回万宁；</li>
+</ul>
+<h2 id="day4周一">Day4【周一】</h2>
+<ul>
+<li>早起，先坐大巴到海口，然后回杭；</li>
+</ul></div><div class="post-footer">
+        <a href="/wanning/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%B5%B7%E5%8D%97/">海南</a>,&nbsp;<a href="/tags/%E4%B8%87%E5%AE%81/">万宁</a>,&nbsp;<a href="/tags/%E4%B8%89%E4%BA%9A/">三亚</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/learning/">[纪录片] 学习的人.Homo.Academics</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-06-26">2021-06-26</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%94%9F%E6%B4%BB/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>生活</a></span></div><div class="content"><h2 id="学习的人">学习的人</h2>
+<p>  近期发现一部不错的韩国纪录片，关于如何学习，片名《学习的人.Homo.Academics》, 网易公开课、哔哩哔哩或外网均有完整视频。
+<code>这部片值得反复观看学习。</code></p></div><div class="post-footer">
+        <a href="/learning/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E7%BA%AA%E5%BD%95%E7%89%87/">纪录片</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/zhexidaxiagu/">[户外]吴越古道➕浙西天池</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-05-03">2021-05-03</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%94%9F%E6%B4%BB/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>生活</a></span></div><div class="content"><h2 id="吴越古道浙西天池">吴越古道➕浙西天池</h2>
+<p><figure><img src="/image/life/sport/zhexi_2021_1.png"><figcaption>
+      <h4>吴越古道</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/image/life/sport/zhexi_2021_2.png"><figcaption>
+      <h4>队伍</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/image/life/sport/zhexi_2021_3.png"><figcaption>
+      <h4>生命的力量</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/image/life/sport/zhexi_2021_4.png"><figcaption>
+      <h4>微视角</h4>
+    </figcaption>
+</figure>
+</p>
+<h2 id="刷新徒步新记录">刷新徒步新记录</h2>
+<ul>
+<li>20.76km，刷新单日徒步记录；
+<figure><img src="/image/life/sport/zhexi_2021_6.png">
+</figure>
+</li>
+</ul></div><div class="post-footer">
+        <a href="/zhexidaxiagu/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%88%B7%E5%A4%96/">户外</a></div></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -256,21 +920,20 @@ I also like to travel. For example: I went to Xinjiang province in July this yea
                     <span class="page-link">
                         <a href="/page/2/">2</a>
                     </span>
-                </li><li class="page-item ">
-                    <span class="page-link">
-                        <a href="/page/3/">3</a>
-                    </span>
                 </li></ul></div></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">Powered by MichaelSongs
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2018 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Michael Song</a></span></div>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2018 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Michael Song</a></span></div>
         </div>
     </footer></div>
 
         <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
                 <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"data":{"id-1":"Welcome to SYC Blog"},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.zh-cn","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/algoliasearch@5.20.2/dist/lite/builds/browser.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js"></script><script>window.config={"data":{"id-1":"Welcome to SYC Blog"},"search":{"algoliaAppID":"GZT24PWKNT","algoliaIndex":"index","algoliaSearchKey":"634ab679e825b815de2663de38908f9d","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script src="/js/theme.min.js"></script></body>
 </html>

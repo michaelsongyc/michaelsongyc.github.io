@@ -1,15 +1,21 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>markdown - 标签 - </title>
+        <title>Markdown - 标签 - Michael</title>
         <link>https://michaelsongyc.github.io/tags/markdown/</link>
-        <description>markdown - 标签 - </description>
+        <description>Markdown - 标签 - Michael</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 06 May 2018 15:20:51 &#43;0000</lastBuildDate><atom:link href="https://michaelsongyc.github.io/tags/markdown/" rel="self" type="application/rss+xml" /><item>
     <title>Markdown 基本语法</title>
-    <link>https://michaelsongyc.github.io/posts/tech/tools/markdown/</link>
+    <link>https://michaelsongyc.github.io/markdown/</link>
     <pubDate>Sun, 06 May 2018 15:20:51 &#43;0000</pubDate>
     <author>Michael Song</author>
-    <guid>https://michaelsongyc.github.io/posts/tech/tools/markdown/</guid>
-    <description><![CDATA[markdown-it-demo Refer markdown grammar Markdown，写博客当然要用这个。在线编辑器，所见即所得地编写。 标题 markdown总支持1~6六级标题，通过在一行之前加上不同]]></description>
+    <guid>https://michaelsongyc.github.io/markdown/</guid>
+    <description><![CDATA[<!-- toc -->
+<p><a href="https://markdown-it.github.io/" target="_blank" rel="noopener noreffer ">markdown-it-demo</a></p>
+<h1 id="refer">Refer</h1>
+<p><a href="https://wizardforcel.gitbooks.io/markdown-simple-world/content/2.html" target="_blank" rel="noopener noreffer ">markdown grammar</a></p>
+<p><a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="noopener noreffer ">Markdown，写博客当然要用这个。在线编辑器，所见即所得地编写。</a></p>
+<h2 id="标题">标题</h2>
+<p>markdown总支持1~6六级标题，通过在一行之前加上不同数量的井号来表示。</p>]]></description>
 </item>
 </channel>
 </rss>

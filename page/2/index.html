@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
     <head>
-	<meta name="generator" content="Hugo 0.101.0" />
+	<meta name="generator" content="Hugo 0.145.0">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title></title><meta name="Description" content="Welcome to SYC Blog"><meta property="og:title" content="" />
-<meta property="og:description" content="Welcome to SYC Blog" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://michaelsongyc.github.io/" /><meta property="og:site_name" content="Michael" />
+        <title>Michael</title><meta name="Description" content="Welcome to SYC Blog"><meta property="og:url" content="https://michaelsongyc.github.io/">
+  <meta property="og:site_name" content="Michael">
+  <meta property="og:title" content="Michael">
+  <meta property="og:description" content="Welcome to SYC Blog">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="website">
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Welcome to SYC Blog"/>
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Michael">
+  <meta name="twitter:description" content="Welcome to SYC Blog">
 <meta name="application-name" content="MichaelSongs">
-<meta name="apple-mobile-web-app-title" content="MichaelSongs"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="apple-mobile-web-app-title" content="MichaelSongs">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://michaelsongyc.github.io/" /><link rel="alternate" href="/index.xml" type="application/rss+xml" title="">
-    <link rel="feed" href="/index.xml" type="application/rss+xml" title=""><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://michaelsongyc.github.io/" /><link rel="alternate" href="/index.xml" type="application/rss+xml" title="Michael">
+    <link rel="feed" href="/index.xml" type="application/rss+xml" title="Michael"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
@@ -26,17 +29,29 @@
         "url": "https:\/\/michaelsongyc.github.io\/","inLanguage": "zh-CN","author": {
                 "@type": "Person",
                 "name": "Michael Song"
-            },"description": "Welcome to SYC Blog","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","name": ""
+            },"description": "Welcome to SYC Blog","image": "https:\/\/michaelsongyc.github.io\/images\/Apple-Devices-Preview.png","thumbnailUrl": "https:\/\/michaelsongyc.github.io\/images\/screenshot.png","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","name": "Michael"
     }
     </script></head>
-    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="">SYC-Lifelong learning(终身学习)</a>
+            <a href="/" title="Michael"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>SYC-Lifelong learning(终身学习)</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item active" href="/"> 首页 </a><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/aboutme/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <i class="fas fa-search fa-fw" aria-hidden="true"></i>
@@ -56,7 +71,7 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="">SYC-Lifelong learning(终身学习)</a>
+                <a href="/" title="Michael"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>SYC-Lifelong learning(终身学习)</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -78,7 +93,7 @@
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
-                </div><a class="menu-item" href="/" title="">首页</a><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/aboutme/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a></div>
     </div>
@@ -88,164 +103,454 @@
     <div class="search-dropdown mobile">
         <div id="search-dropdown-mobile"></div>
     </div><main class="main">
-                <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-avatar"><a href="/" title="首页"><img
+                <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-avatar"><a href="/posts/" title="所有文章"><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="/image/website.png"
-        data-srcset="/image/website.png, /image/website.png 1.5x, /image/website.png 2x"
+        data-src="/images/website.png"
+        data-srcset="/images/website.png, /images/website.png 1.5x, /images/website.png 2x"
         data-sizes="auto"
-        alt="/image/website.png"
-        title="/image/website.png" /></a></div><h1 class="home-title">LOVE AND PEACE</h1><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"></div></div>
+        alt="/images/website.png"
+        title="/images/website.png" /></a></div><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/life/movie/inspriemovies/">情绪低落时，可以看下这些电影，自我治愈</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-10-07">2022-10-07</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%94%9F%E6%B4%BB/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>生活</a></span></div><div class="content">当幸福来敲门 看过N遍的电影，记忆最深刻的台词： 当人们做不到一些事情的时候，他们就会对你说你也同样不能。 不要让别人告诉你，你不能做什么。 只要有</div><div class="post-footer">
-        <a href="/posts/life/movie/inspriemovies/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E7%94%B5%E5%BD%B1/">电影</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/life/fitness/fitness/">Fitness</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-09-11">2022-09-11</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%94%9F%E6%B4%BB/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>生活</a></span></div><div class="content">练腿的好处 提升人体心肺功能 深蹲练习中，可以训练到人体200多块肌肉，耗能很多，能很好地锻炼并提升人体心肺功能。当然，心肺功能的提高不是靠一两</div><div class="post-footer">
-        <a href="/posts/life/fitness/fitness/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%81%A5%E8%BA%AB/">健身</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/leetcode/collect/">算法-搜集</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-09-10">2022-09-10</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/leetcode/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>leetcode</a></span></div><div class="content">1-容易-两数之和 1-容易-两数之和 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target 的那 两个 整数，并返回它们的</div><div class="post-footer">
-        <a href="/posts/tech/leetcode/collect/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E7%BB%BC%E5%90%88/">综合</a>,&nbsp;<a href="/tags/leetcode/">leetcode</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/leetcode/tree/">算法-二叉树</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-08-21">2022-08-21</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/leetcode/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>leetcode</a></span></div><div class="content">二叉树 二叉树题型主要是用来培养递归思维的 二叉树解题的思维模式分两类： 1、是否可以通过遍历一遍二叉树得到答案？如果可以，用一个 traverse 函数配合外部变</div><div class="post-footer">
-        <a href="/posts/tech/leetcode/tree/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>,&nbsp;<a href="/tags/leetcode/">leetcode</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/leetcode/listnode/">算法-链表</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-08-21">2022-08-21</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/leetcode/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>leetcode</a></span></div><div class="content">链表 链表分带头结点的链表 和 不带头结点的链表； 所有的链表都有一个头指针head，带头结点的链表中head的数据项为空，而不带头的链表直接在头结</div><div class="post-footer">
-        <a href="/posts/tech/leetcode/listnode/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E9%93%BE%E8%A1%A8/">链表</a>,&nbsp;<a href="/tags/leetcode/">leetcode</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/leetcode/array/">算法-数组</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-08-19">2022-08-19</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/leetcode/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>leetcode</a></span></div><div class="content">数组/单链表系列算法 单链表常考的技巧就是双指针 比如判断单链表是否成环，拍脑袋的暴力解是什么？就是用一个 HashSet 之类的数据结构来缓存走过的节点，遇到</div><div class="post-footer">
-        <a href="/posts/tech/leetcode/array/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/tags/leetcode/">leetcode</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/life/huakailing/">花开岭公益行</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-08-06">2022-08-06</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%94%9F%E6%B4%BB/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>生活</a></span></div><div class="content">8.6号，机缘巧合，今天来到杭州花开岭公益基地，&ldquo;免费午餐&rdquo;、&ldquo;微博打拐发起人&rdquo; 邓飞 老师在这</div><div class="post-footer">
-        <a href="/posts/life/huakailing/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%85%AC%E7%9B%8A/">公益</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/travel/xinjiang/">新疆旅行-北疆</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-07-22">2022-07-22</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%94%9F%E6%B4%BB/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>生活</a></span></div><div class="content">今年年初就计划着去新疆旅行，刚好六月份看到朋友发的帖子，大家一拍即合，开团成行；刚好借此计划给自己放一个长假， 把自己从持续多年的忙碌状态中抽</div><div class="post-footer">
-        <a href="/posts/travel/xinjiang/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%96%B0%E7%96%86/">新疆</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/book/naval/">[读书笔记] 《纳瓦尔宝典》</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-07-05">2022-07-05</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content">个人履历 纳纳瓦尔 •拉维坎特经历表 1974年，出生于印度德里 1983年，9岁，从印度新德里搬到美国纽约皇后区 1988年，14岁，就读于史岱文森</div><div class="post-footer">
-        <a href="/posts/book/naval/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/tools/wordcode/">Word中如何插入代码块？</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-06-21">2022-06-21</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div><div class="content">方式1 使用 codeinword 在线工具，选择code对应的语言后，生成copy，粘贴到word中即可。 方式2 使用 Visual Studio code. VSCode 支持复制后直接粘贴到word即是着色后</div><div class="post-footer">
-        <a href="/posts/tech/tools/wordcode/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/tools/">tools</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/interview/interview-nw-java/">内部-design-1</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-06-03">2022-06-03</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/java/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Java</a></span></div><div class="content">一、基础篇 网络基础 TCP三次握手 1、OSI与TCP/IP 模型 2、常见网络服务分层 3、TCP与UDP区别及场景 4、TCP滑动窗口，拥塞控制 5、</div><div class="post-footer">
-        <a href="/posts/tech/interview/interview-nw-java/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/java%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94/">Java学习随笔</a>,&nbsp;<a href="/tags/interview/">interview</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/interview/interview-al-design/">内部-design</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-06-03">2022-06-03</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/java/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Java</a></span></div><div class="content"></div><div class="post-footer">
-        <a href="/posts/tech/interview/interview-al-design/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/java%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94/">Java学习随笔</a>,&nbsp;<a href="/tags/interview/">interview</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/collection-material/">TODO- 搜集素材</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-06-02">2022-06-02</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div><div class="content">leetcode leetcode-labuladong (109k) labuladong-算法讲解 宫水三叶-blog leetcode-宫水三叶 github-宫水三叶 soulmachine-leetcode 算法珠玑-在线刷题 github java Guide-1 java Guide-2 java Guide-git Java Family</div><div class="post-footer">
-        <a href="/posts/tech/collection-material/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/learning/">learning</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/setup/install-software-collection/">Mac下开发工具安装</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-05-01">2022-05-01</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div><div class="content">Mac Tool Charles DB mac-mysql安装-参考-1 mac-mysql安装-参考-2 mac-python3 安装-参考 mac-Homebrew 安装-参考</div><div class="post-footer">
-        <a href="/posts/tech/setup/install-software-collection/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/install/">install</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/job/management/beleader/">管理</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-03-07">2022-03-07</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div><div class="content">如果我是一线主管 每周也要写周报，每年也要写绩效，也想晋升、加薪、诸如此类； 团队有五、六个人还好，十几个人的团队的话会希望有人可以站出来帮我;</div><div class="post-footer">
-        <a href="/posts/job/management/beleader/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/">Tags</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/life/sport/longwangshan/">[户外]龙王山-雾凇</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-12-17">2021-12-17</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%94%9F%E6%B4%BB/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>生活</a></span></div><div class="content">攀爬 晶莹剔透 群山环绕 雾凇 对于没在山上长大的同学，能看到雾凇的机会不是太多； 近距离看雾凇 龙王山·雾凇（1587m） 到达山顶 记录 记录</div><div class="post-footer">
-        <a href="/posts/life/sport/longwangshan/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E9%BE%99%E7%8E%8B%E5%B1%B1/">龙王山</a>,&nbsp;<a href="/tags/%E9%9B%BE%E5%87%87/">雾凇</a>,&nbsp;<a href="/tags/%E6%88%B7%E5%A4%96/">户外</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/book/famoussentence/">[读书笔记] 《吾日三省吾身》</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-10-03">2021-10-03</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content">古语 子曰：“学而时习之，不亦说乎?有朋自远方来，不亦乐乎?人不知而不愠，不亦君子乎?”（《学而》） 曾子曰：“吾日三省吾身：为人谋而不忠乎？与</div><div class="post-footer">
-        <a href="/posts/book/famoussentence/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/book/life_orientation/">[读书笔记] 《人生定位》</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-08-21">2021-08-21</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content">案例背景 中国正处在一个至关重要的十字路口上。制造廉价产品已使中国有了很大的发展，但上升的劳动力成本、环境问题、收入不平等以及对创新的需求都意</div><div class="post-footer">
-        <a href="/posts/book/life_orientation/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E8%A7%84%E5%88%92/">规划</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/leetcode/algorithm/">算法概述</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-08-18">2021-08-18</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/leetcode/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>leetcode</a></span></div><div class="content">一、数据结构的存储方式 数据结构的存储方式只有两种：数组（顺序存储）和链表（链式存储） 这句话怎么理解，不是还有散列表、栈、队列、堆、树、图等等</div><div class="post-footer">
-        <a href="/posts/tech/leetcode/algorithm/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>,&nbsp;<a href="/tags/leetcode/">leetcode</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/travel/wanning/">万宁Outing</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-07-13">2021-07-13</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%94%9F%E6%B4%BB/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>生活</a></span></div><div class="content">2021.07.02-2021.07.05 Day1 【周五】 周五下坐飞机飞海口，原计划14点的飞机，晚点到17点起飞； 20点左右到达海口，乘坐旅游大巴赶往万宁； 23点左右入到达万宁，入住神</div><div class="post-footer">
-        <a href="/posts/travel/wanning/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%B5%B7%E5%8D%97/">海南</a>,&nbsp;<a href="/tags/%E4%B8%87%E5%AE%81/">万宁</a>,&nbsp;<a href="/tags/%E4%B8%89%E4%BA%9A/">三亚</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/life/movie/learning/">[纪录片] 学习的人.Homo.Academics</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-06-26">2021-06-26</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%94%9F%E6%B4%BB/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>生活</a></span></div><div class="content">学习的人 近期发现一部不错的韩国纪录片，关于如何学习，片名《学习的人.Homo.Academics》, 网易公开课、哔哩哔哩或外网均有完整视频。</div><div class="post-footer">
-        <a href="/posts/life/movie/learning/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E7%BA%AA%E5%BD%95%E7%89%87/">纪录片</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/life/sport/zhexidaxiagu/">[户外]吴越古道➕浙西天池</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-05-03">2021-05-03</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%94%9F%E6%B4%BB/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>生活</a></span></div><div class="content">吴越古道➕浙西天池 吴越古道 队伍 生命的力量 微视角 刷新徒步新记录 20.76km，刷新单日徒步记录；</div><div class="post-footer">
-        <a href="/posts/life/sport/zhexidaxiagu/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%88%B7%E5%A4%96/">户外</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/life/sport/westlake2021/">[户外]西湖群山-10km越野赛</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-04-24">2021-04-24</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%94%9F%E6%B4%BB/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>生活</a></span></div><div class="content">开跑 第一次报名参加越野跑，也就是传说中的跑山、跑土路，听上去就蛮刺激的； 起点-开跑 一路风景 真的跑山哈，没路的话，就硬踩出路。 山里找路 左右边都</div><div class="post-footer">
-        <a href="/posts/life/sport/westlake2021/">阅读全文</a><div class="post-tags">
+        <a href="/westlake2021/">[户外]西湖群山-10km越野赛</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-04-24">2021-04-24</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%94%9F%E6%B4%BB/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>生活</a></span></div><div class="content"><h2 id="开跑">开跑</h2>
+<p>第一次报名参加越野跑，也就是传说中的跑山、跑土路，听上去就蛮刺激的；
+<figure><img src="/image/life/sport/westlake2021_01.png"><figcaption>
+      <h4>起点-开跑</h4>
+    </figcaption>
+</figure>
+</p>
+<h2 id="一路风景">一路风景</h2>
+<p>真的跑山哈，没路的话，就硬踩出路。
+<figure><img src="/image/life/sport/westlake2021_02.png"><figcaption>
+      <h4>山里找路</h4>
+    </figcaption>
+</figure>
+</p>
+<p>左右边都是茶田，空气蛮好；
+<figure><img src="/image/life/sport/westlake2021_03.png">
+</figure>
+</p></div><div class="post-footer">
+        <a href="/westlake2021/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E9%A9%AC%E6%8B%89%E6%9D%BE/">马拉松</a>,&nbsp;<a href="/tags/%E6%88%B7%E5%A4%96/">户外</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/thinking/mine-thinking/">[思考-记录]mine-thinking</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-01-03">2021-01-03</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%94%9F%E6%B4%BB/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>生活</a></span></div><div class="content">方向 一到两个 方向/赛道，不要多。 知识分享、知识付费 资料 自媒体-1 自媒体-2 自媒体-3 所有的行业-》提供产品，服务消费者，教培行业[知识付费]</div><div class="post-footer">
-        <a href="/posts/thinking/mine-thinking/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/middleware/cache/cache/">缓存框架小结</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2020-11-01">2020-11-01</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E4%B8%AD%E9%97%B4%E4%BB%B6/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>中间件</a>&nbsp;<a href="/categories/%E7%BC%93%E5%AD%98/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>缓存</a></span></div><div class="content">常用三个框架 Caffeine, GuavaCache, EhCache 前言 在大部分互联网架构中 Cache 己经成为了必可不少的一环- 常用的方案有大家熟知的 NoSQL数据库 (Redis、Memcached</div><div class="post-footer">
-        <a href="/posts/middleware/cache/cache/">阅读全文</a><div class="post-tags">
+        <a href="/cache/">中间件-缓存</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2020-11-01">2020-11-01</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E4%B8%AD%E9%97%B4%E4%BB%B6/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>中间件</a>&nbsp;<a href="/categories/%E7%BC%93%E5%AD%98/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>缓存</a></span></div><div class="content"><p>常用三个框架 Caffeine, GuavaCache, EhCache</p>
+<h2 id="前言">前言</h2>
+<p>在大部分互联网架构中 Cache 己经成为了必可不少的一环- 常用的方案有大家熟知的 NoSQL数据库 (Redis、Memcached) 等,也有大量的进程内缓存 Caffeine、EhCache、Guava Cache等.</p></div><div class="post-footer">
+        <a href="/cache/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E7%BC%93%E5%AD%98/">缓存</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/middleware/mq/mq/">消息(MQ)小结</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2020-09-12">2020-09-12</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E4%B8%AD%E9%97%B4%E4%BB%B6/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>中间件</a>&nbsp;<a href="/categories/%E6%B6%88%E6%81%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>消息</a></span></div><div class="content">什么是消息中间件 消息队列 (MQ全称: Message Queue) 是应用程序和应用程序之间的通信方法。 MQ关注于数据的发送和接收，利用高效、可靠的异步消息传递机制集成</div><div class="post-footer">
-        <a href="/posts/middleware/mq/mq/">阅读全文</a><div class="post-tags">
+        <a href="/mq/">中间件-消息(MQ)</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2020-09-12">2020-09-12</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E4%B8%AD%E9%97%B4%E4%BB%B6/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>中间件</a>&nbsp;<a href="/categories/%E6%B6%88%E6%81%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>消息</a></span></div><div class="content"><h2 id="什么是消息中间件">什么是消息中间件</h2>
+<ul>
+<li>消息队列 (MQ全称: Message Queue) 是应用程序和应用程序之间的通信方法。</li>
+<li>MQ关注于数据的发送和接收，利用高效、可靠的异步消息传递机制集成分布式系统。通过提供消息传递和消息排队模型，它可以在分布式环境下扩展进程间的通信。</li>
+</ul>
+<h2 id="为什么需要消息中间件">为什么需要消息中间件</h2>
+<p>  在项目中，可将一些无需即时返回且耗时的操作提取出来，进行<code>异步处理</code>，这种异步处理的方式大大的节省了服务器的请求响应时间，最终提高了系统的<code>吞吐量</code>。</p></div><div class="post-footer">
+        <a href="/mq/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%B6%88%E6%81%AF/">消息</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/tools/mac-translate-word/">Mac文字语音转换</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2020-09-10">2020-09-10</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div><div class="content">文字转语音 say的常用方法 say -v &lsquo;?&rsquo; ;列出所有播音员 say -o xxx.acc ;指出输出文件名称 say -f xxx.xxx ;指出输入文件名称 say -v Ting-Ting 我爱你中国 ;指定播音员”Ting-Ti</div><div class="post-footer">
-        <a href="/posts/tech/tools/mac-translate-word/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/mac/">mac</a></div></div>
+        <a href="/tools-paint/">作图工具-学习法</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2020-05-29">2020-05-29</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div><div class="content"><h2 id="tool">Tool</h2>
+<h3 id="mermaid">mermaid</h3>
+<p><a href="https://mermaid.live" target="_blank" rel="noopener noreffer ">https://mermaid.live</a></p>
+<h4 id="费曼学习法">费曼学习法</h4>
+<div class="mermaid" id="id-1"></div><h4 id="主动回忆法">主动回忆法</h4>
+<div class="mermaid" id="id-2"></div><h4 id="间隔重复法">间隔重复法</h4>
+<div class="mermaid" id="id-3"></div><h2 id="思维导图">思维导图</h2>
+<h3 id="xmind">xmind</h3>
+<h2 id="uml">UML</h2>
+<h3 id="plantuml">plantUML</h3>
+<ul>
+<li><a href="https://plantuml.com/zh/" target="_blank" rel="noopener noreffer ">Official website</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/427358291" target="_blank" rel="noopener noreffer ">demo</a></li>
+</ul>
+<h3 id="idea-plant-plugins">IDEA plant plugins</h3>
+<ul>
+<li>idea plugin</li>
+</ul>
+<h2 id="流程图">流程图</h2>
+<h3 id="omni全家桶">Omni全家桶</h3>
+<ul>
+<li>OmniGraffle Mac平台的流程图绘制软件，相当于windows平台的visio</li>
+<li>OmniPlan 工期规划甘特图的工具</li>
+</ul>
+<h3 id="gliffy-diagrams">Gliffy diagrams</h3></div><div class="post-footer">
+        <a href="/tools-paint/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href=""></a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/tools/tools-paint/">常用作图工具(工作&&生活)</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2020-05-29">2020-05-29</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div><div class="content">思维导图 xmind UML plantUML Official website demo IDEA plant plugins idea plugin 流程图 Omni全家桶 OmniGraffle Mac平台的流程图绘制软件，相当于windows平台的visio OmniPlan 工期规划甘特图的工具 Gliffy</div><div class="post-footer">
-        <a href="/posts/tech/tools/tools-paint/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E4%BD%9C%E5%9B%BEpaint/">作图（paint）</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/book/duplicateleader/">[读书笔记]可复制的领导力：樊登的9堂上商业课程</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2020-05-02">2020-05-02</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content">整本书用口语在和读者交流，没有太多理论抽象，案例非常多，读起来相对轻松，如果有丰富的管理经验，甚至看目录即可。 第1章 80%的管理者能达到 80</div><div class="post-footer">
-        <a href="/posts/book/duplicateleader/">阅读全文</a><div class="post-tags">
+        <a href="/duplicateleader/">[读书笔记]可复制的领导力：樊登的9堂上商业课程</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2020-05-02">2020-05-02</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content"><p>整本书用口语在和读者交流，没有太多理论抽象，案例非常多，读起来相对轻松，如果有丰富的管理经验，甚至看目录即可。</p>
+<h2 id="第1章-80的管理者能达到-80分">第1章 80%的管理者能达到 80分</h2>
+<p>作者通过孔子和柏拉因教学方式的差异，总结了一个很有意思的观点：西方更强调逻得思维，讨论事物给出的答案非常的具象，而且习惯标准化；东方更强调综合思维，关注宏观问题，讨论内容非常抽象，很难标准化</p></div><div class="post-footer">
+        <a href="/duplicateleader/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/spring/springboot/starter/">Spring Boot Starter小结</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2019-11-23">2019-11-23</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/spring/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Spring</a></span></div><div class="content">概述 Springboot 秉承 &ldquo;约定大于配置&quot;的理念，通过规范化的文件结构、约定的配置文件等方式，将复杂的pom引用依赖通过stater包</div><div class="post-footer">
-        <a href="/posts/spring/springboot/starter/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/springboot/">SpringBoot</a></div></div>
+        <a href="/python3/">Python3</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2019-11-16">2019-11-16</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div><div class="content"><ul>
+<li></li>
+</ul>
+<h2 id="chart---pyecharts">Chart - pyecharts</h2>
+<p><a href="https://github.com/pyecharts/pyecharts" target="_blank" rel="noopener noreffer ">github: Python3 pyecharts</a></p></div><div class="post-footer">
+        <a href="/python3/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/python/">Python</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/arthas/">阿里开源-Arthas(阿尔萨斯)</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2019-10-05">2019-10-05</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div><div class="content"><h2 id="概要">概要</h2>
+<ul>
+<li>Arthas 是Alibaba 开源的 Java 诊断工具，是一款线上(运行时)监控诊断产品，通过全局视角实时查看应用 load、内存、gc、线程的状态信息，并能在不修改应用代码的情况下，对业务问题进行诊断，包括查看方法调用的出入参、异常，监测方法执行耗时，类加载信息等，大大提升线上问题排查效率。</li>
+<li><a href="https://arthas.aliyun.com/" target="_blank" rel="noopener noreffer ">Arthas官网</a></li>
+</ul>
+<h3 id="arthas阿尔萨斯能为你做什么">Arthas（阿尔萨斯）能为你做什么？</h3>
+<p>Arthas 是 Alibaba 开源的 Java 诊断工具，深受开发者喜爱。</p></div><div class="post-footer">
+        <a href="/arthas/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/arthas/">Arthas</a>,&nbsp;<a href="/tags/opensource/">Opensource</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/callable/">Java 多线程并行处理</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2019-09-18">2019-09-18</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/java/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Java</a>&nbsp;<a href="/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>多线程</a></span></div><div class="content"><h2 id="callable-和-runnable的区别">Callable 和 Runnable的区别</h2>
+<h3 id="相同点">相同点</h3>
+<ol>
+<li>都是接口</li>
+<li>都可以编写多线程程序</li>
+<li>都采用Thread.start()启动线程</li>
+</ol>
+<h3 id="不同点">不同点</h3>
+<ol>
+<li>Runnable没有返回值；Callable可以返回执行结果，是个泛型，和Future、FutureTask配合可以用来获取异步执行的结果;</li>
+<li>callable接口实现类中的run方法允许异常向上抛出，可以在内部处理，try catch，但是runnable接口实现类中run方法的异常必须在内部处理，不能抛出;</li>
+<li>注：Callalble接口支持返回执行结果，需要调用FutureTask.get()得到，此方法会阻塞主进程的继续往下执行，如果不调用不会阻塞。</li>
+</ol>
+<h3 id="callable-样例">Callable 样例</h3>
+<ol>
+<li>声明线程池；</li>
+<li>创建任务；</li>
+<li>任务执行；</li>
+<li>等待任务执行完成；</li>
+<li>解析任务执行结构；</li>
+<li>关闭线程池；</li>
+</ol>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExecutorPool</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="cm">/*声明线程池*/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">ExecutorService</span><span class="w"> </span><span class="n">EXECUTOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">4</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">100</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">0L</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">TimeUnit</span><span class="p">.</span><span class="na">SECONDS</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">LinkedBlockingQueue</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">100</span><span class="p">),</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">ThreadFactoryBuilder</span><span class="p">().</span><span class="na">setNameFormat</span><span class="p">(</span><span class="s">&#34;customize-pool-%d&#34;</span><span class="p">).</span><span class="na">build</span><span class="p">(),</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">ThreadPoolExecutor</span><span class="p">.</span><span class="na">CallerRunsPolicy</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Builder</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ResultDTO</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">Integer</span><span class="w"> </span><span class="n">id</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">processResult</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Slf4j</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CampaignDemoTask</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Callable</span><span class="o">&lt;</span><span class="n">ResultDTO</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Integer</span><span class="w"> </span><span class="n">id</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">CountDownLatch</span><span class="w"> </span><span class="n">countDownLatch</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">CampaignDemoTask</span><span class="p">(</span><span class="n">Integer</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">CountDownLatch</span><span class="w"> </span><span class="n">countDownLatch</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">countDownLatch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">countDownLatch</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ResultDTO</span><span class="w"> </span><span class="nf">call</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">log</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&#34;CampaignTaskDemoThread process id={}&#34;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">id</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">//process...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">NumberUtils</span><span class="p">.</span><span class="na">INTEGER_ONE</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">id</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">TimeUnit</span><span class="p">.</span><span class="na">SECONDS</span><span class="p">.</span><span class="na">sleep</span><span class="p">(</span><span class="n">5L</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">TimeUnit</span><span class="p">.</span><span class="na">SECONDS</span><span class="p">.</span><span class="na">sleep</span><span class="p">(</span><span class="n">2L</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">log</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&#34;CampaignTaskDemoThread finish id={}&#34;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">id</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">InterruptedException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">countDownLatch</span><span class="p">.</span><span class="na">countDown</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ResultDTO</span><span class="p">.</span><span class="na">builder</span><span class="p">().</span><span class="na">id</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">id</span><span class="p">).</span><span class="na">processResult</span><span class="p">(</span><span class="n">Boolean</span><span class="p">.</span><span class="na">TRUE</span><span class="p">).</span><span class="na">build</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Slf4j</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CallableTest</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">CallableTest</span><span class="w"> </span><span class="n">callTest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CallableTest</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">callTest</span><span class="p">.</span><span class="na">run</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">//总任务数</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">3</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">//线程任务结果集</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Future</span><span class="o">&lt;</span><span class="n">ResultDTO</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">futureList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Lists</span><span class="p">.</span><span class="na">newArrayList</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">//1. 组装线程任务</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">CountDownLatch</span><span class="w"> </span><span class="n">countDownLatch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CountDownLatch</span><span class="p">(</span><span class="n">total</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">total</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">CampaignDemoTask</span><span class="w"> </span><span class="n">campaignTaskDemoThread</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CampaignDemoTask</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">countDownLatch</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">//2. 线程池执行</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">Future</span><span class="o">&lt;</span><span class="n">ResultDTO</span><span class="o">&gt;</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ExecutorPool</span><span class="p">.</span><span class="na">EXECUTOR</span><span class="p">.</span><span class="na">submit</span><span class="p">(</span><span class="n">campaignTaskDemoThread</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">futureList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">result</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">log</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&#34;futureList={}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">JSON</span><span class="p">.</span><span class="na">toJSONString</span><span class="p">(</span><span class="n">futureList</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">//3. 等待线程池任务执行完成</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">countDownLatch</span><span class="p">.</span><span class="na">await</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// 个别线程执行时间会很长，如果线程执行时间超过某段时间，自动结束该线程; 可使用下面方式</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// countDownLatch.await(3L, TimeUnit.SECONDS);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">InterruptedException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">log</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&#34;futureList={}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">JSON</span><span class="p">.</span><span class="na">toJSONString</span><span class="p">(</span><span class="n">futureList</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">//3. 解析处理结果</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">futureList</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">ResultDTO</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="na">get</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">log</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&#34;result={}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">JSON</span><span class="p">.</span><span class="na">toJSONString</span><span class="p">(</span><span class="n">result</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">InterruptedException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ExecutionException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">});</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">//4.线程池关闭</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">ExecutorPool</span><span class="p">.</span><span class="na">EXECUTOR</span><span class="p">.</span><span class="na">shutdown</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">log</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&#34;done!&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div></div><div class="post-footer">
+        <a href="/callable/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a>,&nbsp;<a href="/tags/%E5%B9%B6%E8%A1%8C%E5%A4%84%E7%90%86/">并行处理</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/poor_charlie_book/">[读书笔记] 《穷查理宝典》</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2019-07-29">2019-07-29</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书笔记</a></span></div><div class="content"><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/image/book/poor_charlie_book.png"
+        data-srcset="/image/book/poor_charlie_book.png, /image/book/poor_charlie_book.png 1.5x, /image/book/poor_charlie_book.png 2x"
+        data-sizes="auto"
+        alt="/image/book/poor_charlie_book.png"
+        title="参加图片" /></p>
+<h2 id="语录">语录</h2>
+<ul>
+<li>
+<p>查理就是如此独特的人，他的独特性既表现在他的思想上，也表现在他的人格上。
+比如说，查理思考问题总是从逆向开始。如果要明白人生如何得到幸福，查理首先是研究人生如何才能变得痛苦；要研究企业如何做强做大，查理首先研究企业是如何衰败的；大部分人更关心如何在股市投资上成功，查理最关心的是为什么在股市投资上大部分人都失败了。
+他的这种思考方法来源于下面这句农夫谚语中所蕴含的哲理：我只想知道将来我会死在什么地方，这样我就就=不去那儿了。”这也是逆向思维的典型例子。</p></div><div class="post-footer">
+        <a href="/poor_charlie_book/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E7%90%86%E8%B4%A2/">理财</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/mac-reset-mysql-pwd/">Mac下Mysql重置密码</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2019-06-16">2019-06-16</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div><div class="content"><p>具体的解决方案如下：</p>
+<ol>
+<li>苹果-&gt;系统偏好设置-&gt;最下边点mysql 在弹出页面中 关闭mysql服务（点击stop mysql server）</li>
+<li>进入终端输入：cd /usr/local/mysql/bin/</li>
+<li>回车后 登录管理员权限 sudo su</li>
+<li>输入mac的管理员密码</li>
+<li>回车后输入以下命令来禁止mysql验证功能 ./mysqld_safe &ndash;skip-grant-tables &amp;</li>
+<li>回车后mysql会自动重启（偏好设置中mysql的状态会变成running）</li>
+<li>输入命令 ./mysql</li>
+<li>输入命令 FLUSH PRIVILEGES;</li>
+<li>输入命令 SET PASSWORD FOR &lsquo;root&rsquo;@&rsquo;localhost&rsquo; = PASSWORD(&lsquo;你的新密码&rsquo;);
+至此，密码已经修改成功，可以登录啦！</li>
+</ol></div><div class="post-footer">
+        <a href="/mac-reset-mysql-pwd/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/install/">Install</a>,&nbsp;<a href="/tags/mysql/">Mysql</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/concurrencyparall/">并行&&并发</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2019-05-25">2019-05-25</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/java/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Java</a>&nbsp;<a href="/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>多线程</a></span></div><div class="content"><ul>
+<li>并发: 一个处理器同时处理多个任务。<code>有效解决了单CPU下的多任务问题</code>；</li>
+<li>并行: 多个处理器或者是多核的处理器同时处理多个不同的任务.[ <code>能够并行执行任务的基础就是多核CPU</code> ]</li>
+</ul>
+<blockquote>
+<p>前者是逻辑上的同时发生（simultaneous），而后者是物理上的同时发生．</p></div><div class="post-footer">
+        <a href="/concurrencyparall/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href=""></a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/java-learning/">Java随笔</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2019-03-19">2019-03-19</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/java/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Java</a></span></div><div class="content"><h2 id="java基础概括">Java基础概括</h2>
+<h3 id="大图">大图</h3>
+<figure><img src="/image/tech/java/architecture/JavaBaseArchitecture.png">
+</figure>
+
+<h3 id="java">Java</h3>
+<figure><img src="/image/tech/java/architecture/JavaBaseArchitecture_java.png">
+</figure>
+
+<h3 id="设计模式--算法">设计模式 &amp;&amp; 算法</h3>
+<figure><img src="/image/tech/java/architecture/JavaBaseArchitecture_design.png">
+</figure>
+
+<h3 id="框架--spring">框架 &amp;&amp; spring</h3>
+<figure><img src="/image/tech/java/architecture/JavaBaseArchitecture_11.png">
+</figure>
+
+<h3 id="中间件--其他">中间件 &amp;&amp; 其他</h3>
+<figure><img src="/image/tech/java/architecture/JavaBaseArchitecture_2.png">
+</figure>
+
+<h2 id="java-1">Java</h2>
+<h3 id="document">Document</h3>
+<ul>
+<li><a href="https://docs.oracle.com/javase/tutorial/java/index.html" target="_blank" rel="noopener noreffer ">Oracle Java tutorial</a></li>
+</ul>
+<h3 id="list">List</h3>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AbstractList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">implements</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">RandomAccess</span><span class="p">,</span><span class="w"> </span><span class="n">Cloneable</span><span class="p">,</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">Serializable</span><span class="p">{}</span></span></span></code></pre></div></div>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">LinkedList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AbstractSequentialList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">implements</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">Deque</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">Cloneable</span><span class="p">,</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">Serializable</span><span class="p">{}</span></span></span></code></pre></div></div>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CopyOnWriteArrayList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">implements</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">RandomAccess</span><span class="p">,</span><span class="w"> </span><span class="n">Cloneable</span><span class="p">,</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">Serializable</span><span class="w"> </span><span class="p">{}</span></span></span></code></pre></div></div>
+<blockquote>
+<pre><code> List list = Collections.synchronizedList(new ArrayList(...));
+</code></pre></blockquote>
+<h3 id="java-equals-and-hashcode">Java equals() and hashCode()</h3>
+<ul>
+<li><a href="https://www.digitalocean.com/community/tutorials/java-equals-hashcode" target="_blank" rel="noopener noreffer ">refer</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/java-hashmap#how-hashmap-works-in-java" target="_blank" rel="noopener noreffer ">Java HashMap</a></li>
+</ul>
+<h4 id="equals">equals()</h4>
+<p>Object class defined equals() method like this:</p></div><div class="post-footer">
+        <a href="/java-learning/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/java/">Java</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/git/">Git小结</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2018-10-11">2018-10-11</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div><div class="content"><h2 id="版本控制--集中式-vs-分布式">版本控制 : 集中式 vs 分布式</h2>
+<h3 id="集中式版本控制csvsvn">集中式版本控制（csv、svn）</h3>
+<ul>
+<li>集中式版本控制系统，版本库是集中存放在中央服务器的，而干活的时候，用的都是自己的电脑，所以要先从中央服务器取得最新的版本，然后开始干活，干完活了，再把自己的活推送给中央服务器。中央服务器就好比是一个图书馆，你要改一本书，必须先从图书馆借出来，然后回到家自己改，改完了，再放回图书馆。</li>
+<li>缺点
+<ul>
+<li>集中式版本控制系统最大的毛病就是必须联网才能工作；</li>
+<li>集中式版本控制系统的中央服务器要是出了问题，所有人都没法干活了。</li>
+</ul>
+</li>
+</ul>
+<h3 id="分布式版本控制git">分布式版本控制（git）</h3>
+<ul>
+<li>分布式版本控制系统根本没有“中央服务器”，每个人的电脑上都是一个完整的版本库，这样，你工作的时候，就不需要联网了，因为版本库就在你自己的电脑上.</li>
+<li>优点
+<ul>
+<li>不需要联网，也可以工作；</li>
+<li>安全性要高很多，因为每个人电脑里都有完整的版本库，某一个人的电脑坏掉了不要紧，随便从其他人那里复制一个就可以了。</li>
+</ul>
+</li>
+</ul>
+<h2 id="git安装配置">Git安装&amp;&amp;配置</h2>
+<h3 id="yum安装linux">yum安装(Linux)</h3>
+<p>在Linux上是有yum安装Git，非常简单，只需要一行命令</p></div><div class="post-footer">
+        <a href="/git/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/git/">Git</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/linux/">Linux相关</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2018-06-05">2018-06-05</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div><div class="content"><h2 id="linux-单机最大进程数线程数连接数">Linux 单机最大进程数、线程数、连接数</h2>
+<h3 id="1查看linux系统开启的最大进程数">1、查看Linux系统开启的最大进程数</h3>
+<blockquote>
+<p>cat /proc/sys/kernel/pid_max</p></blockquote>
+<h3 id="2查看lixu系统开启的最大线程数">2、查看Lixu系统开启的最大线程数</h3>
+<blockquote>
+<p>查看 / 设置进程的最大用户线程数（user processes），这是对单个进程线程数的直接限制</p>
+<p>ulimit -u</p>
+<p>ulimit -a</p></div><div class="post-footer">
+        <a href="/linux/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/linux/">Linux</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/windowsbat/">bat同jar交互</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2018-05-12">2018-05-12</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div><div class="content"><p>Windows下通过bat调用jar时的传参，网上有很多例子，这里就不做阐述。</p>
+<p>今儿讲下如何在bat调用jar后，获取jar的返回值：</p>
+<p>思路如下：</p>
+<ol>
+<li>jar内部执行相应的逻辑，输出不同的内容；</li>
+<li>通过常规bat调用jar，同时将jar的输出内容定向到某一个文件a.txt中。（jar中若有时间轮询或等待，bat则会等jar完全结束后，才回处理后续作业）</li>
+<li>bat后续通过读取文件a.txt内容，进行后续逻辑操作；</li>
+</ol>
+<p>以上思路，曲线救国~</p></div><div class="post-footer">
+        <a href="/windowsbat/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/bat/">Bat</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/markdown/">Markdown 基本语法</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2018-05-06">2018-05-06</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div><div class="content"><!-- toc -->
+<p><a href="https://markdown-it.github.io/" target="_blank" rel="noopener noreffer ">markdown-it-demo</a></p>
+<h1 id="refer">Refer</h1>
+<p><a href="https://wizardforcel.gitbooks.io/markdown-simple-world/content/2.html" target="_blank" rel="noopener noreffer ">markdown grammar</a></p>
+<p><a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="noopener noreffer ">Markdown，写博客当然要用这个。在线编辑器，所见即所得地编写。</a></p>
+<h2 id="标题">标题</h2>
+<p>markdown总支持1~6六级标题，通过在一行之前加上不同数量的井号来表示。</p></div><div class="post-footer">
+        <a href="/markdown/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/markdown/">Markdown</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/githubaction/">Github Pages Action (github 自动部署指令)</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2018-03-21">2018-03-21</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div><div class="content"><h2 id="github-自动部署流程">github 自动部署流程</h2>
+<ul>
+<li>开发人员把代码push 到 github</li>
+<li>触发 github 钩子（push）执行 github action预定好的工作流</li>
+<li>安装依赖，打包构建</li>
+<li>通过ssh 上传静态资源到服务器</li>
+<li>可选性通知开发者</li>
+</ul>
+<p><a href="" rel=""><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://i.postimg.cc/jjbvLqnj/github-action-flow.png"
+        data-srcset="https://i.postimg.cc/jjbvLqnj/github-action-flow.png, https://i.postimg.cc/jjbvLqnj/github-action-flow.png 1.5x, https://i.postimg.cc/jjbvLqnj/github-action-flow.png 2x"
+        data-sizes="auto"
+        alt="https://i.postimg.cc/jjbvLqnj/github-action-flow.png"
+        title="github-action-flow.png" /></a></p></div><div class="post-footer">
+        <a href="/githubaction/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/github/">Github</a>,&nbsp;<a href="/tags/hugo/">Hugo</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -254,21 +559,20 @@
                     <span class="page-link">
                         <a href="/page/2/">2</a>
                     </span>
-                </li><li class="page-item ">
-                    <span class="page-link">
-                        <a href="/page/3/">3</a>
-                    </span>
                 </li></ul></div></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">Powered by MichaelSongs
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2018 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Michael Song</a></span></div>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2018 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Michael Song</a></span></div>
         </div>
     </footer></div>
 
         <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
                 <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"data":{"id-1":"Welcome to SYC Blog"},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.zh-cn","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/algoliasearch@5.20.2/dist/lite/builds/browser.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js"></script><script>window.config={"data":{"id-1":"Welcome to SYC Blog"},"search":{"algoliaAppID":"GZT24PWKNT","algoliaIndex":"index","algoliaSearchKey":"634ab679e825b815de2663de38908f9d","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script src="/js/theme.min.js"></script></body>
 </html>

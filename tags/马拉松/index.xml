@@ -1,15 +1,32 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>马拉松 - 标签 - </title>
+        <title>马拉松 - 标签 - Michael</title>
         <link>https://michaelsongyc.github.io/tags/%E9%A9%AC%E6%8B%89%E6%9D%BE/</link>
-        <description>马拉松 - 标签 - </description>
+        <description>马拉松 - 标签 - Michael</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 24 Apr 2021 16:05:18 &#43;0800</lastBuildDate><atom:link href="https://michaelsongyc.github.io/tags/%E9%A9%AC%E6%8B%89%E6%9D%BE/" rel="self" type="application/rss+xml" /><item>
     <title>[户外]西湖群山-10km越野赛</title>
-    <link>https://michaelsongyc.github.io/posts/life/sport/westlake2021/</link>
+    <link>https://michaelsongyc.github.io/westlake2021/</link>
     <pubDate>Sat, 24 Apr 2021 16:05:18 &#43;0800</pubDate>
     <author>Michael Song</author>
-    <guid>https://michaelsongyc.github.io/posts/life/sport/westlake2021/</guid>
-    <description><![CDATA[开跑 第一次报名参加越野跑，也就是传说中的跑山、跑土路，听上去就蛮刺激的； 起点-开跑 一路风景 真的跑山哈，没路的话，就硬踩出路。 山里找路 左右边都]]></description>
+    <guid>https://michaelsongyc.github.io/westlake2021/</guid>
+    <description><![CDATA[<h2 id="开跑">开跑</h2>
+<p>第一次报名参加越野跑，也就是传说中的跑山、跑土路，听上去就蛮刺激的；
+<figure><figcaption>
+      <h4>起点-开跑</h4>
+    </figcaption>
+</figure>
+</p>
+<h2 id="一路风景">一路风景</h2>
+<p>真的跑山哈，没路的话，就硬踩出路。
+<figure><figcaption>
+      <h4>山里找路</h4>
+    </figcaption>
+</figure>
+</p>
+<p>左右边都是茶田，空气蛮好；
+<figure>
+</figure>
+</p>]]></description>
 </item>
 </channel>
 </rss>

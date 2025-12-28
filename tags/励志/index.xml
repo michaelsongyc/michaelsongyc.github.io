@@ -1,15 +1,17 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>励志 - 标签 - </title>
+        <title>励志 - 标签 - Michael</title>
         <link>https://michaelsongyc.github.io/tags/%E5%8A%B1%E5%BF%97/</link>
-        <description>励志 - 标签 - </description>
+        <description>励志 - 标签 - Michael</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 03 Jan 2021 20:19:50 &#43;0800</lastBuildDate><atom:link href="https://michaelsongyc.github.io/tags/%E5%8A%B1%E5%BF%97/" rel="self" type="application/rss+xml" /><item>
     <title>心灵鸡汤</title>
-    <link>https://michaelsongyc.github.io/posts/life/sentence/</link>
+    <link>https://michaelsongyc.github.io/sentence/</link>
     <pubDate>Sun, 03 Jan 2021 20:19:50 &#43;0800</pubDate>
     <author>Michael Song</author>
-    <guid>https://michaelsongyc.github.io/posts/life/sentence/</guid>
-    <description><![CDATA[视角 邓宁-克鲁格心理效应 能力欠缺的人在自己欠考虑的决定的基础上得出错误结论，但是无法正确认识到自身的不足，辨别错误行为，是一种认知偏差现象。]]></description>
+    <guid>https://michaelsongyc.github.io/sentence/</guid>
+    <description><![CDATA[<h2 id="视角">视角</h2>
+<h3 id="邓宁-克鲁格心理效应">邓宁-克鲁格心理效应</h3>
+<p>  能力欠缺的人在自己欠考虑的决定的基础上得出错误结论，但是无法正确认识到自身的不足，辨别错误行为，是一种认知偏差现象。这些能力欠缺者们沉浸在自我营造的虚幻的优势之中，常常高估自己的能力水平，却无法客观评价他人的能力。</p>]]></description>
 </item>
 </channel>
 </rss>

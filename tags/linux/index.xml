@@ -1,15 +1,23 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Linux - 标签 - </title>
+        <title>Linux - 标签 - Michael</title>
         <link>https://michaelsongyc.github.io/tags/linux/</link>
-        <description>Linux - 标签 - </description>
+        <description>Linux - 标签 - Michael</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 05 Jun 2018 12:28:07 &#43;0800</lastBuildDate><atom:link href="https://michaelsongyc.github.io/tags/linux/" rel="self" type="application/rss+xml" /><item>
     <title>Linux相关</title>
-    <link>https://michaelsongyc.github.io/posts/tech/os/linux/</link>
+    <link>https://michaelsongyc.github.io/linux/</link>
     <pubDate>Tue, 05 Jun 2018 12:28:07 &#43;0800</pubDate>
     <author>Michael Song</author>
-    <guid>https://michaelsongyc.github.io/posts/tech/os/linux/</guid>
-    <description><![CDATA[Linux 单机最大进程数、线程数、连接数 1、查看Linux系统开启的最大进程数 cat /proc/sys/kernel/pid_max 2、查看Lixu系统开启的最大线程数 ulimit -u ulimit -a 1 2 3 4 5 6 7 8 9 10 11]]></description>
+    <guid>https://michaelsongyc.github.io/linux/</guid>
+    <description><![CDATA[<h2 id="linux-单机最大进程数线程数连接数">Linux 单机最大进程数、线程数、连接数</h2>
+<h3 id="1查看linux系统开启的最大进程数">1、查看Linux系统开启的最大进程数</h3>
+<blockquote>
+<p>cat /proc/sys/kernel/pid_max</p></blockquote>
+<h3 id="2查看lixu系统开启的最大线程数">2、查看Lixu系统开启的最大线程数</h3>
+<blockquote>
+<p>查看 / 设置进程的最大用户线程数（user processes），这是对单个进程线程数的直接限制</p>
+<p>ulimit -u</p>
+<p>ulimit -a</p>]]></description>
 </item>
 </channel>
 </rss>

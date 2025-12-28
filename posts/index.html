@@ -4,29 +4,44 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>所有文章 - </title><meta name="Description" content="Welcome to SYC Blog"><meta property="og:title" content="Posts" />
-<meta property="og:description" content="Welcome to SYC Blog" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://michaelsongyc.github.io/posts/" /><meta property="og:site_name" content="Michael" />
+        <title>所有文章 - Michael</title><meta name="Description" content="Welcome to SYC Blog"><meta property="og:url" content="https://michaelsongyc.github.io/posts/">
+  <meta property="og:site_name" content="Michael">
+  <meta property="og:title" content="Posts">
+  <meta property="og:description" content="Welcome to SYC Blog">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="website">
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="Welcome to SYC Blog"/>
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Posts">
+  <meta name="twitter:description" content="Welcome to SYC Blog">
 <meta name="application-name" content="MichaelSongs">
-<meta name="apple-mobile-web-app-title" content="MichaelSongs"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="apple-mobile-web-app-title" content="MichaelSongs">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://michaelsongyc.github.io/posts/" /><link rel="alternate" href="/posts/index.xml" type="application/rss+xml" title="">
-    <link rel="feed" href="/posts/index.xml" type="application/rss+xml" title=""><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://michaelsongyc.github.io/posts/" /><link rel="alternate" href="/posts/index.xml" type="application/rss+xml" title="Michael">
+    <link rel="feed" href="/posts/index.xml" type="application/rss+xml" title="Michael"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript></head>
-    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="">SYC-Lifelong learning(终身学习)</a>
+            <a href="/" title="Michael"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>SYC-Lifelong learning(终身学习)</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/"> 首页 </a><a class="menu-item active" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/aboutme/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item active" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <i class="fas fa-search fa-fw" aria-hidden="true"></i>
@@ -46,7 +61,7 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="">SYC-Lifelong learning(终身学习)</a>
+                <a href="/" title="Michael"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>SYC-Lifelong learning(终身学习)</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -68,7 +83,7 @@
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
-                </div><a class="menu-item" href="/" title="">首页</a><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/aboutme/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a></div>
     </div>
@@ -78,261 +93,161 @@
     <div class="search-dropdown mobile">
         <div id="search-dropdown-mobile"></div>
     </div><main class="main">
-                <div class="container"><div class="page archive"><h2 class="single-title animate__animated animate__pulse animate__faster">所有文章</h2>
-        共 81 篇文章<h3 class="group-title">2023 </h3><article class="archive-item">
-                        <a href="/posts/book/financial/report/" class="archive-item-link">[读书笔记] 《手把手教你读财报》</a>
+                <div class="container"><div class="page archive"><h2 class="single-title animate__animated animate__pulse animate__faster">所有文章</h2><h3 class="group-title">2025</h3><article class="archive-item">
+                        <a href="/2025-summary/" class="archive-item-link">2025 年度总结</a>
+                        <span class="archive-item-date">12-28</span>
+                    </article><article class="archive-item">
+                        <a href="/independent/" class="archive-item-link">独立开发者常用的研发工具集合</a>
+                        <span class="archive-item-date">04-07</span>
+                    </article><article class="archive-item">
+                        <a href="/2024-summary/" class="archive-item-link">2024年度总结</a>
+                        <span class="archive-item-date">01-01</span>
+                    </article><h3 class="group-title">2024</h3><article class="archive-item">
+                        <a href="/2024/" class="archive-item-link">2024龙年春节小记</a>
+                        <span class="archive-item-date">02-18</span>
+                    </article><article class="archive-item">
+                        <a href="/2023-summary/" class="archive-item-link">2023年总结</a>
+                        <span class="archive-item-date">01-01</span>
+                    </article><h3 class="group-title">2023</h3><article class="archive-item">
+                        <a href="/report/" class="archive-item-link">[读书笔记] 《手把手教你读财报》</a>
                         <span class="archive-item-date">08-27</span>
                     </article><article class="archive-item">
-                        <a href="/posts/book/tools/mini-habits/" class="archive-item-link">[读书笔记] 《微习惯》</a>
+                        <a href="/mini-habits/" class="archive-item-link">[读书笔记] 《微习惯》</a>
                         <span class="archive-item-date">06-22</span>
                     </article><article class="archive-item">
-                        <a href="/posts/book/zengguofan_1/" class="archive-item-link">[读书笔记] 《曾国藩的正面与侧面》</a>
+                        <a href="/zengguofan_1/" class="archive-item-link">[读书笔记] 《曾国藩的正面与侧面》</a>
                         <span class="archive-item-date">06-03</span>
                     </article><article class="archive-item">
-                        <a href="/posts/book/zengguofan_letter/" class="archive-item-link">[读书笔记] 《曾国藩家书》</a>
+                        <a href="/zengguofan_letter/" class="archive-item-link">[读书笔记] 《曾国藩家书》</a>
                         <span class="archive-item-date">06-03</span>
                     </article><article class="archive-item">
-                        <a href="/posts/book/poordadrichdad/" class="archive-item-link">[读书笔记] 《穷爸爸富爸爸》</a>
+                        <a href="/poordadrichdad/" class="archive-item-link">[读书笔记] 《穷爸爸富爸爸》</a>
                         <span class="archive-item-date">03-19</span>
                     </article><article class="archive-item">
-                        <a href="/posts/book/minihabits/" class="archive-item-link">[读书笔记] 《微习惯-成就卓越自我管理的法则》</a>
+                        <a href="/minihabits/" class="archive-item-link">[读书笔记] 《微习惯-成就卓越自我管理的法则》</a>
                         <span class="archive-item-date">03-18</span>
-                    </article><h3 class="group-title">2022 </h3><article class="archive-item">
-                        <a href="/posts/book/small_dog_money/" class="archive-item-link">[读书笔记]《小狗钱钱》</a>
+                    </article><h3 class="group-title">2022</h3><article class="archive-item">
+                        <a href="/small_dog_money/" class="archive-item-link">[读书笔记]《小狗钱钱》</a>
                         <span class="archive-item-date">12-11</span>
                     </article><article class="archive-item">
-                        <a href="/posts/book/throw/" class="archive-item-link">[读书笔记]《断舍离》</a>
+                        <a href="/throw/" class="archive-item-link">[读书笔记]《断舍离》</a>
                         <span class="archive-item-date">12-10</span>
                     </article><article class="archive-item">
-                        <a href="/posts/book/how_to_read_book/" class="archive-item-link">[读书笔记] 《如何阅读一本书》</a>
+                        <a href="/how_to_read_book/" class="archive-item-link">[读书笔记] 《如何阅读一本书》</a>
                         <span class="archive-item-date">12-10</span>
                     </article><article class="archive-item">
-                        <a href="/posts/language/material/" class="archive-item-link">英语素材</a>
-                        <span class="archive-item-date">12-03</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/job/inteview/interview-internal/" class="archive-item-link">test</a>
-                        <span class="archive-item-date">12-03</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/language/vocabulary/" class="archive-item-link">vocabulary</a>
-                        <span class="archive-item-date">11-18</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/english/" class="archive-item-link">English</a>
-                        <span class="archive-item-date">11-17</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/book/pyramidprinciple/" class="archive-item-link">[读书笔记] 《金字塔原理》</a>
+                        <a href="/pyramidprinciple/" class="archive-item-link">[读书笔记] 《金字塔原理》</a>
                         <span class="archive-item-date">11-13</span>
                     </article><article class="archive-item">
-                        <a href="/posts/tech/java/commons/" class="archive-item-link">Java常用工具类方法</a>
-                        <span class="archive-item-date">11-12</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/tech/designpattern/parttern1/" class="archive-item-link">[TODO]设计模式-1</a>
-                        <span class="archive-item-date">11-07</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/tech/al/mine_record/" class="archive-item-link">内部-个人总结</a>
-                        <span class="archive-item-date">11-04</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/tech/al/db_design/" class="archive-item-link">In-MySQL设计规约</a>
-                        <span class="archive-item-date">11-02</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/tech/al/tobeleader/" class="archive-item-link">In-如果我是一线主管</a>
-                        <span class="archive-item-date">11-02</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/tech/tools/code/" class="archive-item-link">In-Code规范</a>
-                        <span class="archive-item-date">11-02</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/tech/al/work-advice/" class="archive-item-link">In-Work Advice</a>
-                        <span class="archive-item-date">11-02</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/life/interesting/" class="archive-item-link">一些引人深思的图片</a>
+                        <a href="/interesting/" class="archive-item-link">一些引人深思的图片</a>
                         <span class="archive-item-date">11-01</span>
                     </article><article class="archive-item">
-                        <a href="/posts/tech/al/design-os/" class="archive-item-link">功能设计场景</a>
-                        <span class="archive-item-date">10-27</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/tech/al/learning2/" class="archive-item-link">内部-架构学习整理</a>
-                        <span class="archive-item-date">10-25</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/tech/al/advicetonew/" class="archive-item-link">技术牛人给新人的学习建议</a>
-                        <span class="archive-item-date">10-25</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/tech/al/softskill/" class="archive-item-link">内部-程序员最重要的八种软技能</a>
-                        <span class="archive-item-date">10-25</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/tech/todo/" class="archive-item-link">Todo</a>
-                        <span class="archive-item-date">10-25</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/tech/al/growup/" class="archive-item-link">内部-成长的烦恼-个人经历</a>
-                        <span class="archive-item-date">10-24</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/tech/al/parallelstream/" class="archive-item-link">内部-Java ParallelStream 踩坑记录</a>
-                        <span class="archive-item-date">10-24</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/life/movie/inspriemovies/" class="archive-item-link">情绪低落时，可以看下这些电影，自我治愈</a>
+                        <a href="/inspriemovies/" class="archive-item-link">情绪低落时，可以看下这些电影，自我治愈</a>
                         <span class="archive-item-date">10-07</span>
                     </article><article class="archive-item">
-                        <a href="/posts/life/fitness/fitness/" class="archive-item-link">Fitness</a>
-                        <span class="archive-item-date">09-11</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/tech/leetcode/collect/" class="archive-item-link">算法-搜集</a>
-                        <span class="archive-item-date">09-10</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/tech/leetcode/tree/" class="archive-item-link">算法-二叉树</a>
-                        <span class="archive-item-date">08-21</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/tech/leetcode/listnode/" class="archive-item-link">算法-链表</a>
-                        <span class="archive-item-date">08-21</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/tech/leetcode/array/" class="archive-item-link">算法-数组</a>
-                        <span class="archive-item-date">08-19</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/life/huakailing/" class="archive-item-link">花开岭公益行</a>
-                        <span class="archive-item-date">08-06</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/travel/xinjiang/" class="archive-item-link">新疆旅行-北疆</a>
+                        <a href="/xinjiang/" class="archive-item-link">新疆旅行-北疆</a>
                         <span class="archive-item-date">07-22</span>
                     </article><article class="archive-item">
-                        <a href="/posts/book/naval/" class="archive-item-link">[读书笔记] 《纳瓦尔宝典》</a>
+                        <a href="/naval/" class="archive-item-link">[读书笔记] 《纳瓦尔宝典》</a>
                         <span class="archive-item-date">07-05</span>
                     </article><article class="archive-item">
-                        <a href="/posts/tech/tools/wordcode/" class="archive-item-link">Word中如何插入代码块？</a>
-                        <span class="archive-item-date">06-21</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/tech/interview/interview-nw-java/" class="archive-item-link">内部-design-1</a>
-                        <span class="archive-item-date">06-03</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/tech/interview/interview-al-design/" class="archive-item-link">内部-design</a>
-                        <span class="archive-item-date">06-03</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/tech/collection-material/" class="archive-item-link">TODO- 搜集素材</a>
-                        <span class="archive-item-date">06-02</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/tech/setup/install-software-collection/" class="archive-item-link">Mac下开发工具安装</a>
+                        <a href="/install-software-collection/" class="archive-item-link">Mac下开发工具安装</a>
                         <span class="archive-item-date">05-01</span>
                     </article><article class="archive-item">
-                        <a href="/posts/job/management/beleader/" class="archive-item-link">管理</a>
+                        <a href="/beleader/" class="archive-item-link">管理</a>
                         <span class="archive-item-date">03-07</span>
-                    </article><h3 class="group-title">2021 </h3><article class="archive-item">
-                        <a href="/posts/life/sport/longwangshan/" class="archive-item-link">[户外]龙王山-雾凇</a>
+                    </article><h3 class="group-title">2021</h3><article class="archive-item">
+                        <a href="/longwangshan/" class="archive-item-link">[户外]龙王山-雾凇</a>
                         <span class="archive-item-date">12-17</span>
                     </article><article class="archive-item">
-                        <a href="/posts/book/famoussentence/" class="archive-item-link">[读书笔记] 《吾日三省吾身》</a>
+                        <a href="/famoussentence/" class="archive-item-link">[读书笔记] 《吾日三省吾身》</a>
                         <span class="archive-item-date">10-03</span>
                     </article><article class="archive-item">
-                        <a href="/posts/book/life_orientation/" class="archive-item-link">[读书笔记] 《人生定位》</a>
+                        <a href="/life_orientation/" class="archive-item-link">[读书笔记] 《人生定位》</a>
                         <span class="archive-item-date">08-21</span>
                     </article><article class="archive-item">
-                        <a href="/posts/tech/leetcode/algorithm/" class="archive-item-link">算法概述</a>
+                        <a href="/algorithm/" class="archive-item-link">算法概述</a>
                         <span class="archive-item-date">08-18</span>
                     </article><article class="archive-item">
-                        <a href="/posts/travel/wanning/" class="archive-item-link">万宁Outing</a>
+                        <a href="/wanning/" class="archive-item-link">万宁Outing</a>
                         <span class="archive-item-date">07-13</span>
                     </article><article class="archive-item">
-                        <a href="/posts/life/movie/learning/" class="archive-item-link">[纪录片] 学习的人.Homo.Academics</a>
+                        <a href="/learning/" class="archive-item-link">[纪录片] 学习的人.Homo.Academics</a>
                         <span class="archive-item-date">06-26</span>
                     </article><article class="archive-item">
-                        <a href="/posts/life/sport/zhexidaxiagu/" class="archive-item-link">[户外]吴越古道➕浙西天池</a>
+                        <a href="/zhexidaxiagu/" class="archive-item-link">[户外]吴越古道➕浙西天池</a>
                         <span class="archive-item-date">05-03</span>
                     </article><article class="archive-item">
-                        <a href="/posts/life/sport/westlake2021/" class="archive-item-link">[户外]西湖群山-10km越野赛</a>
+                        <a href="/westlake2021/" class="archive-item-link">[户外]西湖群山-10km越野赛</a>
                         <span class="archive-item-date">04-24</span>
                     </article><article class="archive-item">
-                        <a href="/posts/thinking/mine-thinking/" class="archive-item-link">[思考-记录]mine-thinking</a>
+                        <a href="/sentence/" class="archive-item-link">心灵鸡汤</a>
                         <span class="archive-item-date">01-03</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/life/sentence/" class="archive-item-link">心灵鸡汤</a>
-                        <span class="archive-item-date">01-03</span>
-                    </article><h3 class="group-title">2020 </h3><article class="archive-item">
-                        <a href="/posts/middleware/cache/cache/" class="archive-item-link">缓存框架小结</a>
+                    </article><h3 class="group-title">2020</h3><article class="archive-item">
+                        <a href="/cache/" class="archive-item-link">中间件-缓存</a>
                         <span class="archive-item-date">11-01</span>
                     </article><article class="archive-item">
-                        <a href="/posts/middleware/mq/mq/" class="archive-item-link">消息(MQ)小结</a>
+                        <a href="/mq/" class="archive-item-link">中间件-消息(MQ)</a>
                         <span class="archive-item-date">09-12</span>
                     </article><article class="archive-item">
-                        <a href="/posts/tech/tools/mac-translate-word/" class="archive-item-link">Mac文字语音转换</a>
-                        <span class="archive-item-date">09-10</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/tech/tools/tools-paint/" class="archive-item-link">常用作图工具(工作&&生活)</a>
+                        <a href="/tools-paint/" class="archive-item-link">作图工具-学习法</a>
                         <span class="archive-item-date">05-29</span>
                     </article><article class="archive-item">
-                        <a href="/posts/book/duplicateleader/" class="archive-item-link">[读书笔记]可复制的领导力：樊登的9堂上商业课程</a>
+                        <a href="/duplicateleader/" class="archive-item-link">[读书笔记]可复制的领导力：樊登的9堂上商业课程</a>
                         <span class="archive-item-date">05-02</span>
-                    </article><h3 class="group-title">2019 </h3><article class="archive-item">
-                        <a href="/posts/spring/springboot/starter/" class="archive-item-link">Spring Boot Starter小结</a>
-                        <span class="archive-item-date">11-23</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/tech/python/python3/" class="archive-item-link">python3</a>
+                    </article><h3 class="group-title">2019</h3><article class="archive-item">
+                        <a href="/python3/" class="archive-item-link">Python3</a>
                         <span class="archive-item-date">11-16</span>
                     </article><article class="archive-item">
-                        <a href="/posts/tech/tools/arthas/" class="archive-item-link">Arthas(阿尔萨斯)</a>
+                        <a href="/arthas/" class="archive-item-link">阿里开源-Arthas(阿尔萨斯)</a>
                         <span class="archive-item-date">10-05</span>
                     </article><article class="archive-item">
-                        <a href="/posts/tech/java/callable/" class="archive-item-link">Java 多线程并行处理</a>
+                        <a href="/callable/" class="archive-item-link">Java 多线程并行处理</a>
                         <span class="archive-item-date">09-18</span>
                     </article><article class="archive-item">
-                        <a href="/posts/book/poor_charlie_book/" class="archive-item-link">[读书笔记] 《穷查理宝典》</a>
+                        <a href="/poor_charlie_book/" class="archive-item-link">[读书笔记] 《穷查理宝典》</a>
                         <span class="archive-item-date">07-29</span>
                     </article><article class="archive-item">
-                        <a href="/posts/tech/setup/mac-reset-mysql-pwd/" class="archive-item-link">Mac下Mysql重置密码</a>
+                        <a href="/mac-reset-mysql-pwd/" class="archive-item-link">Mac下Mysql重置密码</a>
                         <span class="archive-item-date">06-16</span>
                     </article><article class="archive-item">
-                        <a href="/posts/tech/java/concurrencyparall/" class="archive-item-link">并行&&并发</a>
+                        <a href="/concurrencyparall/" class="archive-item-link">并行&&并发</a>
                         <span class="archive-item-date">05-25</span>
                     </article><article class="archive-item">
-                        <a href="/posts/tech/java/java-learning/" class="archive-item-link">Java随笔</a>
+                        <a href="/java-learning/" class="archive-item-link">Java随笔</a>
                         <span class="archive-item-date">03-19</span>
-                    </article><h3 class="group-title">2018 </h3><article class="archive-item">
-                        <a href="/posts/tech/tools/git/" class="archive-item-link">Git小结</a>
+                    </article><h3 class="group-title">2018</h3><article class="archive-item">
+                        <a href="/git/" class="archive-item-link">Git小结</a>
                         <span class="archive-item-date">10-11</span>
                     </article><article class="archive-item">
-                        <a href="/posts/tech/hugo/hugo-build-blog/" class="archive-item-link">Hugo搭建博客(How to build a blog quickly?)</a>
-                        <span class="archive-item-date">07-13</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/spring/springboot/" class="archive-item-link">Springboot</a>
-                        <span class="archive-item-date">06-19</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/tech/os/linux/" class="archive-item-link">Linux相关</a>
+                        <a href="/linux/" class="archive-item-link">Linux相关</a>
                         <span class="archive-item-date">06-05</span>
                     </article><article class="archive-item">
-                        <a href="/posts/book/bettercoder/" class="archive-item-link">如何成为一名优秀的码农</a>
+                        <a href="/bettercoder/" class="archive-item-link">如何成为一名优秀的软件工程师(码农)</a>
                         <span class="archive-item-date">06-03</span>
                     </article><article class="archive-item">
-                        <a href="/posts/spring/springquestion/" class="archive-item-link">SpringQuestion</a>
-                        <span class="archive-item-date">06-03</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/spring/springbean/" class="archive-item-link">SpringBean</a>
-                        <span class="archive-item-date">06-02</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/spring/spring/" class="archive-item-link">Spring</a>
-                        <span class="archive-item-date">06-01</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/tech/tools/windowsbat/" class="archive-item-link">bat同jar交互</a>
+                        <a href="/windowsbat/" class="archive-item-link">bat同jar交互</a>
                         <span class="archive-item-date">05-12</span>
                     </article><article class="archive-item">
-                        <a href="/posts/tech/tools/markdown/" class="archive-item-link">Markdown 基本语法</a>
+                        <a href="/markdown/" class="archive-item-link">Markdown 基本语法</a>
                         <span class="archive-item-date">05-06</span>
-                    </article><h3 class="group-title">2017 </h3><article class="archive-item">
-                        <a href="/posts/tech/hugo/hugo-search/" class="archive-item-link">Hugo Search</a>
-                        <span class="archive-item-date">08-14</span>
                     </article><article class="archive-item">
-                        <a href="/posts/tech/hugo/hugo-config/" class="archive-item-link">Hugo配置</a>
-                        <span class="archive-item-date">07-13</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/tech/github/githubaction/" class="archive-item-link">Github Pages Action</a>
-                        <span class="archive-item-date">05-13</span>
-                    </article><article class="archive-item">
-                        <a href="/posts/tech/hugo/tools-hexo/" class="archive-item-link">hexo demo</a>
-                        <span class="archive-item-date">05-05</span>
+                        <a href="/githubaction/" class="archive-item-link">Github Pages Action (github 自动部署指令)</a>
+                        <span class="archive-item-date">03-21</span>
                     </article></div></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">Powered by MichaelSongs
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2018 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Michael Song</a></span></div>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2018 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Michael Song</a></span></div>
         </div>
     </footer></div>
 
         <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
                 <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.zh-cn","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/algoliasearch@5.20.2/dist/lite/builds/browser.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script>window.config={"search":{"algoliaAppID":"GZT24PWKNT","algoliaIndex":"index","algoliaSearchKey":"634ab679e825b815de2663de38908f9d","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script src="/js/theme.min.js"></script></body>
 </html>

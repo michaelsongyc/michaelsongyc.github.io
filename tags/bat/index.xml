@@ -1,15 +1,23 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>bat - 标签 - </title>
+        <title>Bat - 标签 - Michael</title>
         <link>https://michaelsongyc.github.io/tags/bat/</link>
-        <description>bat - 标签 - </description>
+        <description>Bat - 标签 - Michael</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 12 May 2018 12:38:35 &#43;0800</lastBuildDate><atom:link href="https://michaelsongyc.github.io/tags/bat/" rel="self" type="application/rss+xml" /><item>
     <title>bat同jar交互</title>
-    <link>https://michaelsongyc.github.io/posts/tech/tools/windowsbat/</link>
+    <link>https://michaelsongyc.github.io/windowsbat/</link>
     <pubDate>Sat, 12 May 2018 12:38:35 &#43;0800</pubDate>
     <author>Michael Song</author>
-    <guid>https://michaelsongyc.github.io/posts/tech/tools/windowsbat/</guid>
-    <description><![CDATA[Windows下通过bat调用jar时，传参，网上有很多例子，这里就不做阐述。 今儿讲下如何在bat调用jar后，bat可以获取jar的返回值]]></description>
+    <guid>https://michaelsongyc.github.io/windowsbat/</guid>
+    <description><![CDATA[<p>Windows下通过bat调用jar时的传参，网上有很多例子，这里就不做阐述。</p>
+<p>今儿讲下如何在bat调用jar后，获取jar的返回值：</p>
+<p>思路如下：</p>
+<ol>
+<li>jar内部执行相应的逻辑，输出不同的内容；</li>
+<li>通过常规bat调用jar，同时将jar的输出内容定向到某一个文件a.txt中。（jar中若有时间轮询或等待，bat则会等jar完全结束后，才回处理后续作业）</li>
+<li>bat后续通过读取文件a.txt内容，进行后续逻辑操作；</li>
+</ol>
+<p>以上思路，曲线救国~</p>]]></description>
 </item>
 </channel>
 </rss>

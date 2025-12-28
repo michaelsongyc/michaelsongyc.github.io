@@ -1,15 +1,17 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>学习 - 标签 - </title>
+        <title>学习 - 标签 - Michael</title>
         <link>https://michaelsongyc.github.io/tags/%E5%AD%A6%E4%B9%A0/</link>
-        <description>学习 - 标签 - </description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 03 Jan 2021 20:19:50 &#43;0800</lastBuildDate><atom:link href="https://michaelsongyc.github.io/tags/%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
-    <title>[思考-记录]mine-thinking</title>
-    <link>https://michaelsongyc.github.io/posts/thinking/mine-thinking/</link>
-    <pubDate>Sun, 03 Jan 2021 20:19:50 &#43;0800</pubDate>
+        <description>学习 - 标签 - Michael</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 03 Jun 2018 13:07:16 &#43;0800</lastBuildDate><atom:link href="https://michaelsongyc.github.io/tags/%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
+    <title>如何成为一名优秀的软件工程师(码农)</title>
+    <link>https://michaelsongyc.github.io/bettercoder/</link>
+    <pubDate>Sun, 03 Jun 2018 13:07:16 &#43;0800</pubDate>
     <author>Michael Song</author>
-    <guid>https://michaelsongyc.github.io/posts/thinking/mine-thinking/</guid>
-    <description><![CDATA[方向 一到两个 方向/赛道，不要多。 知识分享、知识付费 资料 自媒体-1 自媒体-2 自媒体-3 所有的行业-》提供产品，服务消费者，教培行业[知识付费]]]></description>
+    <guid>https://michaelsongyc.github.io/bettercoder/</guid>
+    <description><![CDATA[<h2 id="1保持学习">1.保持学习</h2>
+<p>一个非常重要的观点：如果你停留在一个地方不前，并不代表你能一直呆在那里，而是代表你正在落后（不进则退）。</p>
+<p>前进并不意味着你就一定能进步 - 至少你不会温水煮青蛙，逐步退步。</p>]]></description>
 </item>
 </channel>
 </rss>

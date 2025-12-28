@@ -1,15 +1,17 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>规划 - 标签 - </title>
+        <title>规划 - 标签 - Michael</title>
         <link>https://michaelsongyc.github.io/tags/%E8%A7%84%E5%88%92/</link>
-        <description>规划 - 标签 - </description>
+        <description>规划 - 标签 - Michael</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 21 Aug 2021 20:03:11 &#43;0800</lastBuildDate><atom:link href="https://michaelsongyc.github.io/tags/%E8%A7%84%E5%88%92/" rel="self" type="application/rss+xml" /><item>
     <title>[读书笔记] 《人生定位》</title>
-    <link>https://michaelsongyc.github.io/posts/book/life_orientation/</link>
+    <link>https://michaelsongyc.github.io/life_orientation/</link>
     <pubDate>Sat, 21 Aug 2021 20:03:11 &#43;0800</pubDate>
     <author>Michael Song</author>
-    <guid>https://michaelsongyc.github.io/posts/book/life_orientation/</guid>
-    <description><![CDATA[案例背景 中国正处在一个至关重要的十字路口上。制造廉价产品已使中国有了很大的发展，但上升的劳动力成本、环境问题、收入不平等以及对创新的需求都意]]></description>
+    <guid>https://michaelsongyc.github.io/life_orientation/</guid>
+    <description><![CDATA[<p></p>
+<h2 id="案例背景">案例背景</h2>
+<p>中国正处在一个至关重要的十字路口上。制造廉价产品已使中国有了很大的发展，但上升的劳动力成本、环境问题、收入不平等以及对创新的需求都意味着重要的不是制造更廉价的产品，而是更好地进行产品营销。只有这样，中国才能赚更多的钱，才能在员工收入、环境保护和其他方面进行更大的投入。这意味着中国需要更好地掌握如何在顾客和潜在顾客的心智中建立品牌和认知，如何应对国内及国际上无处不在的竞争.</p>]]></description>
 </item>
 </channel>
 </rss>

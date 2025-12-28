@@ -1,15 +1,38 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>git - 标签 - </title>
+        <title>Git - 标签 - Michael</title>
         <link>https://michaelsongyc.github.io/tags/git/</link>
-        <description>git - 标签 - </description>
+        <description>Git - 标签 - Michael</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 11 Oct 2018 12:55:26 &#43;0800</lastBuildDate><atom:link href="https://michaelsongyc.github.io/tags/git/" rel="self" type="application/rss+xml" /><item>
     <title>Git小结</title>
-    <link>https://michaelsongyc.github.io/posts/tech/tools/git/</link>
+    <link>https://michaelsongyc.github.io/git/</link>
     <pubDate>Thu, 11 Oct 2018 12:55:26 &#43;0800</pubDate>
     <author>Michael Song</author>
-    <guid>https://michaelsongyc.github.io/posts/tech/tools/git/</guid>
-    <description><![CDATA[版本控制 : 集中式 vs 分布式 集中式版本控制（csv、svn） 集中式版本控制系统，版本库是集中存放在中央服务器的，而干活的时候，用的都是自己的电脑]]></description>
+    <guid>https://michaelsongyc.github.io/git/</guid>
+    <description><![CDATA[<h2 id="版本控制--集中式-vs-分布式">版本控制 : 集中式 vs 分布式</h2>
+<h3 id="集中式版本控制csvsvn">集中式版本控制（csv、svn）</h3>
+<ul>
+<li>集中式版本控制系统，版本库是集中存放在中央服务器的，而干活的时候，用的都是自己的电脑，所以要先从中央服务器取得最新的版本，然后开始干活，干完活了，再把自己的活推送给中央服务器。中央服务器就好比是一个图书馆，你要改一本书，必须先从图书馆借出来，然后回到家自己改，改完了，再放回图书馆。</li>
+<li>缺点
+<ul>
+<li>集中式版本控制系统最大的毛病就是必须联网才能工作；</li>
+<li>集中式版本控制系统的中央服务器要是出了问题，所有人都没法干活了。</li>
+</ul>
+</li>
+</ul>
+<h3 id="分布式版本控制git">分布式版本控制（git）</h3>
+<ul>
+<li>分布式版本控制系统根本没有“中央服务器”，每个人的电脑上都是一个完整的版本库，这样，你工作的时候，就不需要联网了，因为版本库就在你自己的电脑上.</li>
+<li>优点
+<ul>
+<li>不需要联网，也可以工作；</li>
+<li>安全性要高很多，因为每个人电脑里都有完整的版本库，某一个人的电脑坏掉了不要紧，随便从其他人那里复制一个就可以了。</li>
+</ul>
+</li>
+</ul>
+<h2 id="git安装配置">Git安装&amp;&amp;配置</h2>
+<h3 id="yum安装linux">yum安装(Linux)</h3>
+<p>在Linux上是有yum安装Git，非常简单，只需要一行命令</p>]]></description>
 </item>
 </channel>
 </rss>

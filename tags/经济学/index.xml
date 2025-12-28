@@ -1,15 +1,23 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>经济学 - 标签 - </title>
+        <title>经济学 - 标签 - Michael</title>
         <link>https://michaelsongyc.github.io/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/</link>
-        <description>经济学 - 标签 - </description>
+        <description>经济学 - 标签 - Michael</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 19 Mar 2023 13:59:01 &#43;0800</lastBuildDate><atom:link href="https://michaelsongyc.github.io/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/" rel="self" type="application/rss+xml" /><item>
     <title>[读书笔记] 《穷爸爸富爸爸》</title>
-    <link>https://michaelsongyc.github.io/posts/book/poordadrichdad/</link>
+    <link>https://michaelsongyc.github.io/poordadrichdad/</link>
     <pubDate>Sun, 19 Mar 2023 13:59:01 &#43;0800</pubDate>
     <author>Michael Song</author>
-    <guid>https://michaelsongyc.github.io/posts/book/poordadrichdad/</guid>
-    <description><![CDATA[一个爸爸会说：“贪财乃万恶之源。”而另一个爸爸却说：“贫穷才是万恶之本。” 两个不同的观点造就不同的人生； 一个人的观点对他的一生影响巨大； 选择]]></description>
+    <guid>https://michaelsongyc.github.io/poordadrichdad/</guid>
+    <description><![CDATA[<ul>
+<li>
+<p>一个爸爸会说：“贪财乃万恶之源。”而另一个爸爸却说：“贫穷才是万恶之本。”  两个不同的观点造就不同的人生；</p>
+</li>
+<li>
+<p>一个人的观点对他的一生影响巨大；</p>
+</li>
+<li>
+<p>选择不同，命运也会不同；</p>]]></description>
 </item>
 </channel>
 </rss>
