@@ -3,20 +3,14 @@
         <title>Tech - 分类 - Michael</title>
         <link>https://michaelsongyc.github.io/categories/tech/</link>
         <description>Tech - 分类 - Michael</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 01 May 2022 15:34:11 &#43;0000</lastBuildDate><atom:link href="https://michaelsongyc.github.io/categories/tech/" rel="self" type="application/rss+xml" /><item>
-    <title>Mac下开发工具安装</title>
-    <link>https://michaelsongyc.github.io/install-software-collection/</link>
-    <pubDate>Sun, 01 May 2022 15:34:11 &#43;0000</pubDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 16 Aug 2025 20:17:48 &#43;0800</lastBuildDate><atom:link href="https://michaelsongyc.github.io/categories/tech/" rel="self" type="application/rss+xml" /><item>
+    <title>Google Dev 2025</title>
+    <link>https://michaelsongyc.github.io/googledev2025/</link>
+    <pubDate>Sat, 16 Aug 2025 20:17:48 &#43;0800</pubDate>
     <author>Michael Song</author>
-    <guid>https://michaelsongyc.github.io/install-software-collection/</guid>
-    <description><![CDATA[<h1 id="mac">Mac</h1>
-<h2 id="tool">Tool</h2>
-<p><a href="https://zhuanlan.zhihu.com/p/140942687" target="_blank" rel="noopener noreffer ">Charles</a></p>
-<h2 id="db">DB</h2>
-<p><a href="https://www.bilibili.com/read/cv10248181/" target="_blank" rel="noopener noreffer ">mac-mysql安装-参考-1</a></p>
-<p><a href="https://www.jianshu.com/p/199492627ccc" target="_blank" rel="noopener noreffer ">mac-mysql安装-参考-2</a></p>
-<p><a href="https://www.runoob.com/note/52675" target="_blank" rel="noopener noreffer ">mac-python3 安装-参考</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/111014448" target="_blank" rel="noopener noreffer ">mac-Homebrew 安装-参考</a></p>]]></description>
+    <guid>https://michaelsongyc.github.io/googledev2025/</guid>
+    <description><![CDATA[<blockquote>
+<p>当日往返行程杭州－上海：上午搭乘最早的高铁从杭州西站出发，1小时左右抵达上海虹桥站，随后通过地铁转乘（10号线转8号线）直达世博中心，全程衔接顺畅，出地铁后一路小跑，还好没有迟到（&hellip;）。</p>]]></description>
 </item>
 </channel>
 </rss>
