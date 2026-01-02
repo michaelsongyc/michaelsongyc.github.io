@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Hugo配置 - Michael</title><meta name="Description" content="Welcome to SYC Blog"><meta property="og:url" content="http://localhost:1313/hugo-config/">
+  <meta property="og:site_name" content="Michael">
+  <meta property="og:title" content="Hugo配置">
+  <meta property="og:description" content="Hugo如何添加about页 创建页面 此处以even模板为例
+hugo new post/about.md 文件创建完成后，会生成在 ${根目录}/content/post/目录下； 将about.md上移一层，到${根目录}/content/下, 和post目录同级。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2017-07-13T09:52:33+08:00">
+    <meta property="article:modified_time" content="2017-07-13T09:52:33+08:00">
+    <meta property="article:tag" content="Hugo">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hugo配置">
+  <meta name="twitter:description" content="Hugo如何添加about页 创建页面 此处以even模板为例
+hugo new post/about.md 文件创建完成后，会生成在 ${根目录}/content/post/目录下； 将about.md上移一层，到${根目录}/content/下, 和post目录同级。">
+<meta name="application-name" content="MichaelSongs">
+<meta name="apple-mobile-web-app-title" content="MichaelSongs">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/hugo-config/" /><link rel="prev" href="http://localhost:1313/hugo-build-blog/" /><link rel="next" href="http://localhost:1313/githubaction/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Hugo配置",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/hugo-config\/"
+        },"image": ["http:\/\/localhost:1313\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "hugo","wordcount":  2393 ,
+        "url": "http:\/\/localhost:1313\/hugo-config\/","datePublished": "2017-07-13T09:52:33+08:00","dateModified": "2017-07-13T09:52:33+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Michael Song"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Michael"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>SYC-Lifelong learning(终身学习)</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VWLD0KH6Y9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VWLD0KH6Y9');
+    </script>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Michael"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>SYC-Lifelong learning(终身学习)</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Hugo配置</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2017-07-13">2017-07-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 2393 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 5 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#hugo如何添加about页">Hugo如何添加about页</a>
+      <ul>
+        <li><a href="#创建页面">创建页面</a></li>
+        <li><a href="#修改配置">修改配置</a></li>
+        <li><a href="#启动服务">启动服务</a></li>
+      </ul>
+    </li>
+    <li><a href="#hugo添加文章目录toc">Hugo添加文章目录toc</a></li>
+    <li><a href="#访问计数">访问计数</a></li>
+    <li><a href="#评论">评论</a></li>
+    <li><a href="#emoji-表情-支持">Emoji 表情 支持</a></li>
+    <li><a href="#其他">其他</a>
+      <ul>
+        <li><a href="#统计">统计</a></li>
+        <li><a href="#增强">增强</a></li>
+        <li><a href="#文章总数展示">文章总数展示</a></li>
+        <li><a href="#文章列表页置顶">文章列表页置顶</a></li>
+      </ul>
+    </li>
+    <li><a href="#loveit模板-结合-algolia搜索">LoveIt模板 结合 Algolia搜索</a></li>
+    <li><a href="#hugofastsearch">hugofastsearch</a>
+      <ul>
+        <li><a href="#setup">Setup</a></li>
+        <li><a href="#detail">Detail</a></li>
+        <li><a href="#indexjson">index.json</a></li>
+        <li><a href="#configtoml">Config.toml</a></li>
+        <li><a href="#staticjsfastsearchjs">static/js/fastsearch.js</a></li>
+        <li><a href="#staticjsfusejs">static/js/fuse.js</a></li>
+        <li><a href="#baseofhtml">baseof.html</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="hugo如何添加about页">Hugo如何添加about页</h2>
+<h3 id="创建页面">创建页面</h3>
+<p>此处以even模板为例</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-angular2html">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-angular2html" data-lang="angular2html">hugo new post/about.md</code></pre></div>
+<p>文件创建完成后，会生成在 ${根目录}/content/post/目录下；
+将about.md上移一层，到${根目录}/content/下, 和post目录同级。</p>
+<h3 id="修改配置">修改配置</h3>
+<p>修改根目录文件config.toml，新增如下配置</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-angular2html">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-angular2html" data-lang="angular2html">[[menu.main]]
+  name = &#34;关于&#34;
+  identifier = &#34;about&#34;
+  url = &#34;/about/&#34;
+  weight = 50</code></pre></div>
+<p>weight 根据menu的顺序自定义数字即可；</p>
+<h3 id="启动服务">启动服务</h3>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-angular2html">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-angular2html" data-lang="angular2html">hugo server -D</code></pre></div>
+<p>访问：<a href="http://localhost:1313" target="_blank" rel="noopener noreffer ">http://localhost:1313</a> 即可查看效果；</p>
+<h2 id="hugo添加文章目录toc">Hugo添加文章目录toc</h2>
+<p>config.toml中加上toc的显示控制变量.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">toc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span></span></span></code></pre></div></div>
+<h2 id="访问计数">访问计数</h2>
+<p>如下配置</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="o">[</span><span class="n">params</span><span class="o">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">[</span><span class="n">params</span><span class="p">.</span><span class="na">busuanzi</span><span class="o">]</span><span class="w">         </span><span class="err">##</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">traffic</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">busuanzi</span><span class="w">                             </span><span class="err">##</span><span class="w"> </span><span class="n">是否使用不蒜子统计站点访问量</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">enable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">siteUV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">sitePV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">pagePV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span></span></span></code></pre></div></div>
+<h2 id="评论">评论</h2>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="w"> </span><span class="o">[</span><span class="n">params</span><span class="p">.</span><span class="na">utteranc</span><span class="o">]</span><span class="w">       </span><span class="err">##</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="c1">//utteranc.es/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="n">enable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="n">repo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;lovelock/blog-comments&#34;</span><span class="w">               </span><span class="err">##</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">repo</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">store</span><span class="w"> </span><span class="n">comments</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="n">issueTerm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;pathname&#34;</span><span class="w">  </span><span class="err">##</span><span class="n">表示你选择以那种方式让github</span><span class="w"> </span><span class="n">issue的评论和你的文章关联</span><span class="err">。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="n">theme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;github-light&#34;</span><span class="w"> </span><span class="err">##</span><span class="w"> </span><span class="n">样式主题</span><span class="err">，</span><span class="n">有github</span><span class="o">-</span><span class="n">light和github</span><span class="o">-</span><span class="n">dark两种</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="n">async</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span></span></span></code></pre></div></div>
+<h2 id="emoji-表情-支持">Emoji 表情 支持</h2>
+<p>Emoji 可以通过多种方式在 Hugo 项目中启用.</p>
+<p><code>emojify</code> 方法可以直接在模板中调用, 或者使用<code>行内 Shortcodes</code>.</p>
+<p>要全局使用 emoji, 需要在你的网站配置中设置 <code>enableEmoji 为 true</code>, 然后你就可以直接在文章中输入 emoji 的代码.</p>
+<p>它们以<code>冒号</code>开头和结尾，并且包含 emoji 的 代码:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-markdown">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">去露营啦! :tent: 很快就回来.
+</span></span><span class="line"><span class="cl">真开心! :joy:</span></span></code></pre></div></div>
+<p>去露营啦! &#x26fa; 很快就回来.</p>
+<p>真开心! &#x1f602;</p>
+<p><a href="https://hugoloveit.com/zh-cn/emoji-support" target="_blank" rel="noopener noreffer ">Emoji 支持</a></p>
+<h2 id="其他">其他</h2>
+<h3 id="统计">统计</h3>
+<p><a href="https://www.cnblogs.com/brady-wang/p/13837812.html" target="_blank" rel="noopener noreffer ">hugo不蒜子统计数量</a></p>
+<h3 id="增强">增强</h3>
+<ul>
+<li><a href="https://lewky.cn/posts/hugo-3.2.html/" target="_blank" rel="noopener noreffer ">https://lewky.cn/posts/hugo-3.2.html/</a></li>
+</ul>
+<h3 id="文章总数展示">文章总数展示</h3>
+<ul>
+<li><a href="https://immmmm.com/hugo-total-count/" target="_blank" rel="noopener noreffer ">参见</a></li>
+<li><a href="https://gohugo.io/templates/lists/" target="_blank" rel="noopener noreffer ">官方doc</a></li>
+<li>新增文章总数</li>
+<li>对于 LoveIt 主题，在<code>LoveIt/layouts/_default/section.html</code>中，新增一行code <code>共 {{ len (where .Site.RegularPages &quot;Section&quot; &quot;posts&quot;) }} 篇文章</code>
+如下：</li>
+</ul>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-html">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- define &#34;content&#34; -}}
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;page archive&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        {{- /* Title */ -}}
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;single-title animate__animated animate__pulse animate__faster&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            {{- .Params.Title | default (T .Section) | default .Section | dict &#34;Some&#34; | T &#34;allSome&#34; -}}
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        共 {{ len (where .Site.RegularPages &#34;Section&#34; &#34;posts&#34;) }} 篇文章
+</span></span><span class="line"><span class="cl">        {{- /* Paginate */ -}}
+</span></span><span class="line"><span class="cl">        .....</span></span></code></pre></div></div>
+<h3 id="文章列表页置顶">文章列表页置顶</h3>
+<p>使用<code>weight</code>标识符，如下示例：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-html">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">title: &#34;心灵鸡汤&#34;
+</span></span><span class="line"><span class="cl">date: 2021-01-03T20:19:50+08:00
+</span></span><span class="line"><span class="cl">draft: false
+</span></span><span class="line"><span class="cl">tags: [&#34;励志&#34;]
+</span></span><span class="line"><span class="cl">categories: [&#34;生活&#34;]
+</span></span><span class="line"><span class="cl">weight: 1</span></span></code></pre></div></div>
+<h2 id="loveit模板-结合-algolia搜索">LoveIt模板 结合 Algolia搜索</h2>
+<p>loveit支持两种搜索：lunr和algolia。</p>
+<p>lunr性能实在堪忧，特别是对于中文而言基本上不能用。</p>
+<p>因此我们选用algolia，社区版10000条（不知道是按什么计算的，反正肯定不是按文章）搜索项，每月10000次搜索，对于小网站来说也够用了。之后我打算抽空自己用微服务写一个，到时候和博客挂在一起。</p>
+<p>操作：</p>
+<ol>
+<li>前往官网注册账号<a href="https://www.algolia.com/apps/Z3HRU4UP1I/dashboard" target="_blank" rel="noopener noreffer ">algolia</a></li>
+<li>在左侧第二个Indices下选择New，创建Index（我的名称为 blog ）</li>
+<li>在API Keys上拿到Search-Only API Key作为searchKey和Application ID作为appID。</li>
+<li>配置 config.toml 文件，如下：</li>
+</ol>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-javascript">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">enable</span> <span class="o">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">type</span> <span class="o">=</span> <span class="s2">&#34;algolia&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">contentLength</span> <span class="o">=</span> <span class="mi">4000</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">placeholder</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">maxResultLength</span> <span class="o">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">snippetLength</span> <span class="o">=</span> <span class="mi">50</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">highlightTag</span> <span class="o">=</span> <span class="s2">&#34;em&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">absoluteURL</span> <span class="o">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">.</span><span class="nx">algolia</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">index</span> <span class="o">=</span> <span class="s2">&#34;blog&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">appID</span> <span class="o">=</span> <span class="s2">&#34;xxxx&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">searchKey</span> <span class="o">=</span> <span class="s2">&#34;xxxx&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">outputs</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">home</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">,</span> <span class="s2">&#34;RSS&#34;</span><span class="p">,</span> <span class="s2">&#34;JSON&#34;</span><span class="p">]</span> <span class="err">#</span> <span class="nx">这个一定要带上JSON</span><span class="err">，</span><span class="nx">不然不会产生对应的JSON文件</span></span></span></code></pre></div></div>
+<p>每次 hugo 命令之后会产生/public/index.json文件，需要将这个文件上传到algolia中
+json文件大小有限制，内容至多1024k=1MB，超限则上传失败；</p>
+<h2 id="hugofastsearch">hugofastsearch</h2>
+<ul>
+<li><a href="https://gist.github.com/cmod/5410eae147e4318164258742dd053993#setup" target="_blank" rel="noopener noreffer ">hugofastsearch.md</a></li>
+<li>当前仅支持搜索标题</li>
+</ul>
+<h3 id="setup">Setup</h3>
+<ul>
+<li>Add index.json file to layouts/_default</li>
+<li>Add JSON as additional output format in config.toml</li>
+<li>Add fastsearch.js and fuse.js (downloaded from fusejs.io) to static/js</li>
+<li>Add searchbox html to bottom of layouts/_default/baseof.html</li>
+<li>Add css styles to your site&rsquo;s main css file or top of baseof.html</li>
+<li>hugo</li>
+<li>Visit localhost:1313/</li>
+<li>Press CMD-/ to invoke search</li>
+</ul>
+<blockquote>
+<p>You can check the json index by visiting localhost:1313/index.json</p></blockquote>
+<h3 id="detail">Detail</h3>
+<h3 id="indexjson">index.json</h3>
+<ul>
+<li>layouts/_default/index.json</li>
+<li>Hugo already builds indexes of all pages, we can cherry-pick which aspects should be searchable. The result is a newly created JSON index at /index.json</li>
+</ul>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-javascript">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">-</span> <span class="nx">$</span><span class="p">.</span><span class="nx">Scratch</span><span class="p">.</span><span class="nx">Add</span> <span class="s2">&#34;index&#34;</span> <span class="nx">slice</span> <span class="o">-</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">-</span> <span class="nx">range</span> <span class="p">.</span><span class="nx">Site</span><span class="p">.</span><span class="nx">RegularPages</span> <span class="o">-</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{{</span><span class="o">-</span> <span class="nx">$</span><span class="p">.</span><span class="nx">Scratch</span><span class="p">.</span><span class="nx">Add</span> <span class="s2">&#34;index&#34;</span> <span class="p">(</span><span class="nx">dict</span> <span class="s2">&#34;title&#34;</span> <span class="p">.</span><span class="nx">Title</span> <span class="s2">&#34;tags&#34;</span> <span class="p">.</span><span class="nx">Params</span><span class="p">.</span><span class="nx">tags</span> <span class="s2">&#34;categories&#34;</span> <span class="p">.</span><span class="nx">Params</span><span class="p">.</span><span class="nx">categories</span> <span class="s2">&#34;contents&#34;</span> <span class="p">.</span><span class="nx">Plain</span> <span class="s2">&#34;permalink&#34;</span> <span class="p">.</span><span class="nx">Permalink</span><span class="p">)</span> <span class="o">-</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">-</span> <span class="nx">end</span> <span class="o">-</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">-</span> <span class="nx">$</span><span class="p">.</span><span class="nx">Scratch</span><span class="p">.</span><span class="nx">Get</span> <span class="s2">&#34;index&#34;</span> <span class="o">|</span> <span class="nx">jsonify</span> <span class="o">-</span><span class="p">}}</span></span></span></code></pre></div></div>
+<h3 id="configtoml">Config.toml</h3>
+<p>Add this snippet to your config file to instruct Hugo to create the index file in JSON format. (RSS and HTML are default outputs, what&rsquo;s important is to add JSON.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-javascript">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">outputs</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">home</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">,</span> <span class="s2">&#34;RSS&#34;</span><span class="p">,</span> <span class="s2">&#34;JSON&#34;</span><span class="p">]</span></span></span></code></pre></div></div>
+<h3 id="staticjsfastsearchjs">static/js/fastsearch.js</h3>
+<p>This &ldquo;makes&rdquo; the search engine based on the index.json file, and wires up all keyboard handling</p>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-javascript">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">fuse</span><span class="p">;</span> <span class="c1">// holds our search engine
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">searchVisible</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">firstRun</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span> <span class="c1">// allow us to delay loading json data unless search activated
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">list</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;searchResults&#39;</span><span class="p">);</span> <span class="c1">// targets the &lt;ul&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">first</span> <span class="o">=</span> <span class="nx">list</span><span class="p">.</span><span class="nx">firstChild</span><span class="p">;</span> <span class="c1">// first child of search list
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">last</span> <span class="o">=</span> <span class="nx">list</span><span class="p">.</span><span class="nx">lastChild</span><span class="p">;</span> <span class="c1">// last child of search list
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">maininput</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;searchInput&#39;</span><span class="p">);</span> <span class="c1">// input box for search
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">resultsAvailable</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">// Did we get any search results?
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// ==========================================
+</span></span></span><span class="line"><span class="cl"><span class="c1">// The main keyboard event listener running the show
+</span></span></span><span class="line"><span class="cl"><span class="c1">//
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;keydown&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CMD-/ to show / hide Search
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">metaKey</span> <span class="o">&amp;&amp;</span> <span class="nx">event</span><span class="p">.</span><span class="nx">which</span> <span class="o">===</span> <span class="mi">191</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Load json search index if first time invoking search
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// Means we don&#39;t load json unless searches are going to happen; keep user payload small unless needed
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">firstRun</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">loadSearch</span><span class="p">();</span> <span class="c1">// loads our json data and builds fuse.js search index
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">firstRun</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">// let&#39;s never do this again
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// Toggle visibility of search box
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">searchVisible</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;fastSearch&#34;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">visibility</span> <span class="o">=</span> <span class="s2">&#34;visible&#34;</span><span class="p">;</span> <span class="c1">// show search box
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;searchInput&#34;</span><span class="p">).</span><span class="nx">focus</span><span class="p">();</span> <span class="c1">// put focus in input box so you can just start typing
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">searchVisible</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span> <span class="c1">// search visible
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;fastSearch&#34;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">visibility</span> <span class="o">=</span> <span class="s2">&#34;hidden&#34;</span><span class="p">;</span> <span class="c1">// hide search box
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nb">document</span><span class="p">.</span><span class="nx">activeElement</span><span class="p">.</span><span class="nx">blur</span><span class="p">();</span> <span class="c1">// remove focus from search box
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">searchVisible</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">// search not visible
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Allow ESC (27) to close search box
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">keyCode</span> <span class="o">==</span> <span class="mi">27</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">searchVisible</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;fastSearch&#34;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">visibility</span> <span class="o">=</span> <span class="s2">&#34;hidden&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">document</span><span class="p">.</span><span class="nx">activeElement</span><span class="p">.</span><span class="nx">blur</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">searchVisible</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// DOWN (40) arrow
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">keyCode</span> <span class="o">==</span> <span class="mi">40</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">searchVisible</span> <span class="o">&amp;&amp;</span> <span class="nx">resultsAvailable</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;down&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span> <span class="c1">// stop window from scrolling
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">activeElement</span> <span class="o">==</span> <span class="nx">maininput</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">first</span><span class="p">.</span><span class="nx">focus</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span> <span class="c1">// if the currently focused element is the main input --&gt; focus the first &lt;li&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">activeElement</span> <span class="o">==</span> <span class="nx">last</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">last</span><span class="p">.</span><span class="nx">focus</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span> <span class="c1">// if we&#39;re at the bottom, stay there
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">document</span><span class="p">.</span><span class="nx">activeElement</span><span class="p">.</span><span class="nx">parentElement</span><span class="p">.</span><span class="nx">nextSibling</span><span class="p">.</span><span class="nx">firstElementChild</span><span class="p">.</span><span class="nx">focus</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span> <span class="c1">// otherwise select the next search result
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// UP (38) arrow
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">keyCode</span> <span class="o">==</span> <span class="mi">38</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">searchVisible</span> <span class="o">&amp;&amp;</span> <span class="nx">resultsAvailable</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span> <span class="c1">// stop window from scrolling
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">activeElement</span> <span class="o">==</span> <span class="nx">maininput</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">maininput</span><span class="p">.</span><span class="nx">focus</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span> <span class="c1">// If we&#39;re in the input box, do nothing
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">activeElement</span> <span class="o">==</span> <span class="nx">first</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">maininput</span><span class="p">.</span><span class="nx">focus</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span> <span class="c1">// If we&#39;re at the first item, go to input box
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">document</span><span class="p">.</span><span class="nx">activeElement</span><span class="p">.</span><span class="nx">parentElement</span><span class="p">.</span><span class="nx">previousSibling</span><span class="p">.</span><span class="nx">firstElementChild</span><span class="p">.</span><span class="nx">focus</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span> <span class="c1">// Otherwise, select the search result above the current active one
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// ==========================================
+</span></span></span><span class="line"><span class="cl"><span class="c1">// execute search as each character is typed
+</span></span></span><span class="line"><span class="cl"><span class="c1">//
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;searchInput&#34;</span><span class="p">).</span><span class="nx">onkeyup</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">executeSearch</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// ==========================================
+</span></span></span><span class="line"><span class="cl"><span class="c1">// fetch some json without jquery
+</span></span></span><span class="line"><span class="cl"><span class="c1">//
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">fetchJSONFile</span><span class="p">(</span><span class="nx">path</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">httpRequest</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">httpRequest</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">httpRequest</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="mi">4</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="nx">httpRequest</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">httpRequest</span><span class="p">.</span><span class="nx">responseText</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="nx">callback</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">httpRequest</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="nx">path</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">httpRequest</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// ==========================================
+</span></span></span><span class="line"><span class="cl"><span class="c1">// load our search index, only executed once
+</span></span></span><span class="line"><span class="cl"><span class="c1">// on first call of search box (CMD-/)
+</span></span></span><span class="line"><span class="cl"><span class="c1">//
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">loadSearch</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fetchJSONFile</span><span class="p">(</span><span class="s1">&#39;/index.json&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span> <span class="c1">// fuse.js options; check fuse.js website for details
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">shouldSort</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">location</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">distance</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">threshold</span><span class="o">:</span> <span class="mf">0.4</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">minMatchCharLength</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">keys</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                <span class="s1">&#39;title&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s1">&#39;permalink&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s1">&#39;summary&#39;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">};</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">fuse</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Fuse</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span> <span class="c1">// build the index from the json file
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// ==========================================
+</span></span></span><span class="line"><span class="cl"><span class="c1">// using the index we loaded on CMD-/, run
+</span></span></span><span class="line"><span class="cl"><span class="c1">// a search query (for &#34;term&#34;) every time a letter is typed
+</span></span></span><span class="line"><span class="cl"><span class="c1">// in the search box
+</span></span></span><span class="line"><span class="cl"><span class="c1">//
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">executeSearch</span><span class="p">(</span><span class="nx">term</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nx">results</span> <span class="o">=</span> <span class="nx">fuse</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="nx">term</span><span class="p">);</span> <span class="c1">// the actual query being run using fuse.js
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">let</span> <span class="nx">searchitems</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span> <span class="c1">// our results bucket
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;results.len= %s&#39;</span><span class="p">,</span> <span class="nx">results</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// no results based on what was typed into the input box
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">resultsAvailable</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">searchitems</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">// build our html
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">item</span> <span class="k">in</span> <span class="nx">results</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="p">{</span> <span class="c1">// only show first 5 results
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="c1">// console.log(&#39;article= %s results[item].item.title=%s&#39;, item, results[item].item.title)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="c1">// console.log(&#39;article= %s results[item].item.permalink=%s&#39;, item, results[item].item.permalink)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// searchitems = searchitems + &#39;&lt;li&gt;&lt;a href=&#34;&#39; + results[item].item.permalink + &#39;&#34; tabindex=&#34;0&#34;&gt;&#39; + &#39;&lt;span class=&#34;title&#34;&gt;&#39; + results[item].item.title + &#39;&lt;/span&gt;&lt;br /&gt; &lt;span class=&#34;sc&#34;&gt;&#39;+ results[item].item.section +&#39;&lt;/span&gt; — &#39; + results[item].item.date + &#39; — &lt;em&gt;&#39; + results[item].item.desc + &#39;&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;&#39;;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="kd">var</span> <span class="nx">index</span> <span class="o">=</span> <span class="nx">results</span><span class="p">[</span><span class="nx">item</span><span class="p">].</span><span class="nx">item</span><span class="p">.</span><span class="nx">contents</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">term</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">var</span> <span class="nx">showContent</span> <span class="o">=</span> <span class="nx">results</span><span class="p">[</span><span class="nx">item</span><span class="p">].</span><span class="nx">item</span><span class="p">.</span><span class="nx">contents</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="nx">index</span> <span class="o">+</span> <span class="nx">term</span><span class="p">.</span><span class="nx">len</span> <span class="o">+</span> <span class="mi">20</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// var showContent = results[item].item.contents.substring(0, 10)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">searchitems</span> <span class="o">=</span> <span class="nx">searchitems</span> <span class="o">+</span> <span class="s1">&#39;&lt;li&gt;&lt;a href=&#34;&#39;</span> <span class="o">+</span> <span class="nx">results</span><span class="p">[</span><span class="nx">item</span><span class="p">].</span><span class="nx">item</span><span class="p">.</span><span class="nx">permalink</span> <span class="o">+</span> <span class="s1">&#39;&#34; tabindex=&#34;0&#34;&gt;&#39;</span> <span class="o">+</span> <span class="s1">&#39;&lt;span class=&#34;title&#34;&gt;&#39;</span> <span class="o">+</span> <span class="nx">results</span><span class="p">[</span><span class="nx">item</span><span class="p">].</span><span class="nx">item</span><span class="p">.</span><span class="nx">title</span> <span class="o">+</span> <span class="s1">&#39;&lt;/span&gt;&lt;br /&gt; &lt;span class=&#34;sc&#34;&gt;&#39;</span> <span class="o">+</span> <span class="nx">results</span><span class="p">[</span><span class="nx">item</span><span class="p">].</span><span class="nx">item</span><span class="p">.</span><span class="nx">categories</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;&lt;/span&gt; — &#39;</span> <span class="o">+</span> <span class="nx">results</span><span class="p">[</span><span class="nx">item</span><span class="p">].</span><span class="nx">item</span><span class="p">.</span><span class="nx">date</span> <span class="o">+</span> <span class="s1">&#39; — &lt;em&gt;&#39;</span> <span class="o">+</span> <span class="nx">showContent</span> <span class="o">+</span> <span class="s1">&#39;&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1">// console.log(&#39;对象类型 typeof(results[item])=%s&#39;, typeof(results[item]))
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="c1">// console.log(&#39;对象属性 Object.getOwnPropertyNames(results[item])=%s&#39;, Object.getOwnPropertyNames(results[item]))
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="c1">// for(var name in results[item]){
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="c1">//     console.log(&#39;name=%s, results[item][name]= %s&#39;,name, results[item][name])
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="c1">// }
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;searchitems= %s&#39;</span><span class="p">,</span> <span class="nx">searchitems</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">resultsAvailable</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;searchResults&#34;</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">searchitems</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">first</span> <span class="o">=</span> <span class="nx">list</span><span class="p">.</span><span class="nx">firstChild</span><span class="p">.</span><span class="nx">firstElementChild</span><span class="p">;</span> <span class="c1">// first result container — used for checking against keyboard up/down location
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">last</span> <span class="o">=</span> <span class="nx">list</span><span class="p">.</span><span class="nx">lastChild</span><span class="p">.</span><span class="nx">firstElementChild</span><span class="p">;</span> <span class="c1">// last result container — used for checking against keyboard up/down location
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<h3 id="staticjsfusejs">static/js/fuse.js</h3>
+<p>fuse.js (downloaded from <a href="https://fusejs.io/getting-started/installation.html" target="_blank" rel="noopener noreffer ">fusejs.io</a> )) to static/js</p>
+<h3 id="baseofhtml">baseof.html</h3>
+<p>Add this block to the bottom of your baseof.html file, just before the footer</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="w"> </span><span class="o">&lt;</span><span class="n">div</span><span class="w"> </span><span class="n">id</span><span class="o">=</span><span class="s">&#34;fastSearch&#34;</span><span class="o">&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="o">&lt;</span><span class="n">input</span><span class="w"> </span><span class="n">id</span><span class="o">=</span><span class="s">&#34;searchInput&#34;</span><span class="w"> </span><span class="n">tabindex</span><span class="o">=</span><span class="s">&#34;0&#34;</span><span class="o">&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="o">&lt;</span><span class="n">ul</span><span class="w"> </span><span class="n">id</span><span class="o">=</span><span class="s">&#34;searchResults&#34;</span><span class="o">&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="o">&lt;/</span><span class="n">ul</span><span class="o">&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="o">&lt;</span><span class="n">script</span><span class="w"> </span><span class="n">src</span><span class="o">=</span><span class="s">&#34;/js/fuse.js&#34;</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;!--</span><span class="w"> </span><span class="n">download</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">copy</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">fuse</span><span class="p">.</span><span class="na">js</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">fusejs</span><span class="p">.</span><span class="na">io</span><span class="w"> </span><span class="o">--&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="o">&lt;</span><span class="n">script</span><span class="w"> </span><span class="n">src</span><span class="o">=</span><span class="s">&#34;/js/fastsearch.js&#34;</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span></span></span></code></pre></div></div>
+<p>CSS Styling</p>
+<p>Add css styles to your site&rsquo;s main css file or top of baseof.html</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-javascript">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="err">#</span><span class="nx">fastSearch</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">  <span class="nx">visibility</span><span class="o">:</span> <span class="nx">hidden</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">position</span><span class="o">:</span> <span class="nx">absolute</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">right</span><span class="o">:</span> <span class="mi">0</span><span class="nx">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">top</span><span class="o">:</span> <span class="mi">0</span><span class="nx">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">display</span><span class="o">:</span> <span class="nx">inline</span><span class="o">-</span><span class="nx">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">width</span><span class="o">:</span> <span class="mi">300</span><span class="nx">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>      
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">#</span><span class="nx">fastSearch</span> <span class="nx">input</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">  <span class="nx">padding</span><span class="o">:</span> <span class="mi">4</span><span class="nx">px</span> <span class="mi">10</span><span class="nx">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">width</span><span class="o">:</span> <span class="mi">100</span><span class="o">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">height</span><span class="o">:</span> <span class="mi">31</span><span class="nx">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">font</span><span class="o">-</span><span class="nx">size</span><span class="o">:</span> <span class="mf">1.6</span><span class="nx">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">color</span><span class="o">:</span> <span class="err">#</span><span class="nx">aaa</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">font</span><span class="o">-</span><span class="nx">weight</span><span class="o">:</span> <span class="nx">bold</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">background</span><span class="o">-</span><span class="nx">color</span><span class="o">:</span> <span class="err">#</span><span class="mi">000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">border</span><span class="o">-</span><span class="nx">radius</span><span class="o">:</span> <span class="mi">3</span><span class="nx">px</span> <span class="mi">3</span><span class="nx">px</span> <span class="mi">0</span><span class="nx">px</span> <span class="mi">0</span><span class="nx">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">border</span><span class="o">:</span> <span class="nx">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">outline</span><span class="o">:</span> <span class="nx">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">text</span><span class="o">-</span><span class="nx">align</span><span class="o">:</span> <span class="nx">left</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">display</span><span class="o">:</span> <span class="nx">inline</span><span class="o">-</span><span class="nx">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">#</span><span class="nx">searchResults</span> <span class="nx">li</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">  <span class="nx">list</span><span class="o">-</span><span class="nx">style</span><span class="o">:</span> <span class="nx">none</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">  <span class="nx">margin</span><span class="o">-</span><span class="nx">left</span><span class="o">:</span> <span class="mi">0</span><span class="nx">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">background</span><span class="o">-</span><span class="nx">color</span><span class="o">:</span> <span class="err">#</span><span class="nx">aaa</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">  <span class="nx">border</span><span class="o">-</span><span class="nx">bottom</span><span class="o">:</span> <span class="mi">1</span><span class="nx">px</span> <span class="nx">dotted</span> <span class="err">#</span><span class="mi">000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="err">#</span><span class="nx">searchResults</span> <span class="nx">li</span> <span class="p">.</span><span class="nx">title</span> <span class="p">{</span> <span class="nx">font</span><span class="o">-</span><span class="nx">size</span><span class="o">:</span> <span class="mf">1.1</span><span class="nx">em</span><span class="p">;</span> <span class="nx">margin</span><span class="o">-</span><span class="nx">bottom</span><span class="o">:</span> <span class="mi">10</span><span class="nx">px</span><span class="p">;</span> <span class="nx">display</span><span class="o">:</span> <span class="nx">inline</span><span class="o">-</span><span class="nx">block</span><span class="p">;}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">#</span><span class="nx">searchResults</span> <span class="p">{</span> <span class="nx">visibility</span><span class="o">:</span> <span class="nx">inherit</span><span class="p">;</span> <span class="nx">display</span><span class="o">:</span> <span class="nx">inline</span><span class="o">-</span><span class="nx">block</span><span class="p">;</span> <span class="nx">width</span><span class="o">:</span> <span class="mi">320</span><span class="nx">px</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="err">#</span><span class="nx">searchResults</span> <span class="nx">a</span> <span class="p">{</span> <span class="nx">text</span><span class="o">-</span><span class="nx">decoration</span><span class="o">:</span> <span class="nx">none</span> <span class="o">!</span><span class="nx">important</span><span class="p">;</span> <span class="nx">padding</span><span class="o">:</span> <span class="mi">10</span><span class="nx">px</span><span class="p">;</span> <span class="nx">display</span><span class="o">:</span> <span class="nx">inline</span><span class="o">-</span><span class="nx">block</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="err">#</span><span class="nx">searchResults</span> <span class="nx">a</span><span class="o">:</span><span class="nx">hover</span><span class="p">,</span> <span class="nx">a</span><span class="o">:</span><span class="nx">focus</span> <span class="p">{</span> <span class="nx">outline</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">background</span><span class="o">-</span><span class="nx">color</span><span class="o">:</span> <span class="err">#</span><span class="mi">666</span><span class="p">;</span> <span class="nx">color</span><span class="o">:</span> <span class="err">#</span><span class="nx">fff</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  
+</span></span></code></pre></div></div>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2017-07-13</span>
+            </div><div id="page-views" class="post-info-mod">
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/hugo-config/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/hugo/">Hugo</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/hugo-build-blog/" class="prev" rel="prev" title="Hugo搭建博客(How to build a blog quickly?)"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Hugo搭建博客(How to build a blog quickly?)</a>
+            <a href="/githubaction/" class="next" rel="next" title="Github Pages Action (github 自动部署指令)">Github Pages Action (github 自动部署指令)<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by MichaelSongs
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2018 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Michael Song</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/algoliasearch/lite/browser.umd.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"comment":{},"search":{"algoliaAppID":"GZT24PWKNT","algoliaIndex":"index","algoliaSearchKey":"634ab679e825b815de2663de38908f9d","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

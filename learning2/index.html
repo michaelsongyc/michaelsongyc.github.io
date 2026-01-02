@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>内部-架构学习整理 - Michael</title><meta name="Description" content="Welcome to SYC Blog"><meta property="og:url" content="http://localhost:1313/learning2/">
+  <meta property="og:site_name" content="Michael">
+  <meta property="og:title" content="内部-架构学习整理">
+  <meta property="og:description" content="架构学习整理
+1.当我们在谈架构时，我们谈的是什么？ 首先，架构是一个抽象词语，100 个人谈架构可能会有 101种答案
+个人看到最简洁的说法就是：架构=构件＋交互。其实它没有一个标准，这里我们不纠结名词概念， 在现代企业里，可根据从业务需求到系统实现的不同需要分为：业务架构、应用架构。数据架构、技术架构。也被称为 TOGAF4A架构">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-10-25T23:12:27+08:00">
+    <meta property="article:modified_time" content="2022-10-25T23:12:27+08:00">
+    <meta property="article:tag" content="内部">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="内部-架构学习整理">
+  <meta name="twitter:description" content="架构学习整理
+1.当我们在谈架构时，我们谈的是什么？ 首先，架构是一个抽象词语，100 个人谈架构可能会有 101种答案
+个人看到最简洁的说法就是：架构=构件＋交互。其实它没有一个标准，这里我们不纠结名词概念， 在现代企业里，可根据从业务需求到系统实现的不同需要分为：业务架构、应用架构。数据架构、技术架构。也被称为 TOGAF4A架构">
+<meta name="application-name" content="MichaelSongs">
+<meta name="apple-mobile-web-app-title" content="MichaelSongs">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/learning2/" /><link rel="prev" href="http://localhost:1313/advicetonew/" /><link rel="next" href="http://localhost:1313/design-os/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "内部-架构学习整理",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/learning2\/"
+        },"image": ["http:\/\/localhost:1313\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "内部","wordcount":  5437 ,
+        "url": "http:\/\/localhost:1313\/learning2\/","datePublished": "2022-10-25T23:12:27+08:00","dateModified": "2022-10-25T23:12:27+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Michael Song"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Michael"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>SYC-Lifelong learning(终身学习)</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VWLD0KH6Y9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VWLD0KH6Y9');
+    </script>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Michael"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>SYC-Lifelong learning(终身学习)</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">内部-架构学习整理</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%86%85%E9%83%A8/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>内部</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-10-25">2022-10-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 5437 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 11 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1当我们在谈架构时我们谈的是什么">1.当我们在谈架构时，我们谈的是什么？</a>
+      <ul>
+        <li><a href="#11架构与框架的区别">1.1架构与框架的区别？</a></li>
+      </ul>
+    </li>
+    <li><a href="#2架构设计的核心目的">2.架构设计的核心目的</a>
+      <ul>
+        <li><a href="#21-复杂度来源高性能">2.1 复杂度来源：高性能</a></li>
+        <li><a href="#22复杂度来源高可用">2.2复杂度来源：高可用</a></li>
+        <li><a href="#23-复杂度来源可扩展">2.3 复杂度来源：可扩展</a></li>
+        <li><a href="#24-复杂度来源低成本">2.4 复杂度来源：低成本</a></li>
+        <li><a href="#25-复杂度来源安全">2.5 复杂度来源：安全</a></li>
+        <li><a href="#26-复杂度来源规模">2.6 复杂度来源：规模</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-架构原则">3. 架构原则</a>
+      <ul>
+        <li><a href="#31-合适原则">3.1 合适原则</a></li>
+        <li><a href="#32简单原则">3.2简单原则</a></li>
+        <li><a href="#33-可演进原则">3.3 可演进原则</a></li>
+        <li><a href="#34-可持续原则">3.4 可持续原则</a></li>
+      </ul>
+    </li>
+    <li><a href="#4识别复杂度和优先级">4.识别复杂度和优先级</a></li>
+    <li><a href="#5-评估和设计备选方案">5. 评估和设计备选方案</a></li>
+    <li><a href="#6-解决业务复杂度的三种架构模式">6. 解决业务复杂度的三种架构模式</a>
+      <ul>
+        <li><a href="#61-高性能架构模式">6.1 高性能架构模式</a>
+          <ul>
+            <li><a href="#611高性能之读写分离">6.1.1高性能之读写分离</a></li>
+            <li><a href="#612-高性能之负载均衡">6.1.2 高性能之负载均衡</a></li>
+            <li><a href="#613高性能之分库分表">6.1.3高性能之分库分表</a></li>
+            <li><a href="#614-高性能之缓存">6.1.4 高性能之缓存</a></li>
+            <li><a href="#615-高性能之-nosql">6.1.5 高性能之 Nosql</a></li>
+          </ul>
+        </li>
+        <li><a href="#62-高可用架构模式">6.2 高可用架构模式</a>
+          <ul>
+            <li><a href="#621高可用之计算">6.2.1高可用之计算</a></li>
+            <li><a href="#622高可用之存储">6.2.2高可用之存储</a></li>
+            <li><a href="#623-高可用之异地多活我们也叫单元化部署">6.2.3 高可用之异地多活（我们也叫单元化部署）</a></li>
+          </ul>
+        </li>
+        <li><a href="#63-可扩展架构模式">6.3 可扩展架构模式</a>
+          <ul>
+            <li><a href="#631-layered-architecture">6.3.1 (Layered Architecture)</a></li>
+            <li><a href="#632-微内核架构-microkernel-architecture">6.3.2 微内核架构 (microkernel architecture)</a></li>
+            <li><a href="#633-soa-microservices-architecture">6.3.3 SOA (microservices architecture)</a></li>
+            <li><a href="#634-微服务">6.3.4 微服务</a></li>
+            <li><a href="#635-管道架构-pipeline-architecture">6.3.5 管道架构 (Pipeline Architecture)</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#7架构产出物有哪些">7.架构产出物有哪些？</a></li>
+    <li><a href="#8淘宝架构演化案例">8.淘宝架构演化案例</a></li>
+    <li><a href="#9-来看看我们接触过的前端一些架构">9. 来看看我们接触过的前端一些架构</a></li>
+    <li><a href="#10-技术架构的下一站一-云原生">10. 技术架构的下一站一 云原生</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>架构学习整理</p>
+<h2 id="1当我们在谈架构时我们谈的是什么">1.当我们在谈架构时，我们谈的是什么？</h2>
+<p>首先，架构是一个抽象词语，100 个人谈架构可能会有 101种答案</p>
+<p>个人看到最简洁的说法就是：架构=构件＋交互。其实它没有一个标准，这里我们不纠结名词概念，
+在现代企业里，可根据从业务需求到系统实现的不同需要分为：业务架构、应用架构。数据架构、技术架构。也被称为 TOGAF4A架构</p>
+<p>被普遍定义的四大架构领域</p>
+<p>图</p>
+<ul>
+<li>业务架构：比如前台、中台、后台、基础支撑</li>
+<li>应用架构：比如商品、 交易、合同、优惠、资金等各个域的应用</li>
+<li>技术架构：比如高可用、高性能、安全生产B/S、C/S 微服务．分布式</li>
+<li>数据架构：比如数据存储方式（读写分离、分布式存储、数据的生产与消费方式)</li>
+</ul>
+<p>今天，我们要谈的是「技术架构」，而且是偏后端的技木架构，前端会稍微带一下</p>
+<blockquote>
+<p>注：笔者在后端架构上的经验不算多（来阿里之前做过三年的 NET 开发，但仪限开 wincovs 应用开数据分离架构的设
+计和部署，以及稍微尝试过 memCached lucence 等美机架构的中间件）对二分布式架构的经验是比较少的。此文
+笔者最近在学习架构过程中的一些笔记，并非实战分享，如以下技大论点有错误欢迎红正</p></blockquote>
+<h3 id="11架构与框架的区别">1.1架构与框架的区别？</h3>
+<p>框架的英文是 Framework. 架构的英文是 Architecture</p>
+<p>框架关注的是&quot;规范”，架构关注的是&quot;结构”</p>
+<p>软件框架 (Software framework）通常指的是为了实现某个业界标准或完成特定基本任务的软件组件规范，也指为了实现某个软件组件规范时，提供规范所要求之基础功能的软件产品。</p>
+<blockquote>
+<p>问：MVC是架构还是框架？</p></blockquote>
+<h2 id="2架构设计的核心目的">2.架构设计的核心目的</h2>
+<p>几个架构设计的误区</p>
+<ul>
+<li>
+<ul>
+<li>“因为架构很重要，所以要做架构设计&quot;</li>
+</ul>
+</li>
+<li>&ldquo;每个系统都萝做架构设计”</li>
+<li>
+<ul>
+<li>公司流程要求系统开发过程中必须有架构设计”</li>
+</ul>
+</li>
+<li>&ldquo;为了高性能、高可用、可扩展，所以要做架构设计&rdquo;</li>
+<li>
+<ul>
+<li>&ldquo;淘宝的架构是这么做的，我们也要这么做&rdquo;</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>&ldquo;微服务现在很流行，我们的架构应该使用微服务架构&rdquo;</li>
+</ul>
+</li>
+<li>&ldquo;架构是需要专门的架构师来做的&rdquo;</li>
+</ul>
+<p>架构设计的主要目的是为了解決软件复杂度带来的问题</p>
+<h3 id="21-复杂度来源高性能">2.1 复杂度来源：高性能</h3>
+<ul>
+<li>硬件性能：单机性能、集群性能、终端性能</li>
+<li>网络性能：带宽、地域、稳定</li>
+<li>算法性能：任务分配、轮训、渲染</li>
+</ul>
+<p>性能衡量术语：吞吐量 (TPS)、 QPS、并发数、响应时间 (RT)、秒开率等</p>
+<h3 id="22复杂度来源高可用">2.2复杂度来源：高可用</h3>
+<p>高可用本质上都是通过“元余&quot;来实现高可用，说白了就是『加机器』</p>
+<ul>
+<li>计算高可用：难点在&quot;无中断”的计算服务</li>
+<li>存储高可用：难点在：如何规避数据不一致</li>
+<li>高可用衡量术语：N个9（可用性 99.9999%）.1-5-10等</li>
+</ul>
+<p>思考一不，高可用看起都是后端的东西，这个概念放在前端，我们有哪些需要注意的地方？</p>
+<h3 id="23-复杂度来源可扩展">2.3 复杂度来源：可扩展</h3>
+<ul>
+<li>预测变化
+<ul>
+<li>既然是预测，都存在出错的可能性</li>
+<li>依赖经验</li>
+<li>深入组织、业务</li>
+</ul>
+</li>
+<li>应对变化
+<ul>
+<li>使用成熟技术</li>
+<li>经验依赖</li>
+<li>面向对象（6 大设计原则）</li>
+<li>设计模式 （GoF 23 设计模式）</li>
+</ul>
+</li>
+</ul>
+<h3 id="24-复杂度来源低成本">2.4 复杂度来源：低成本</h3>
+<ul>
+<li>规模扩大-＞需要创新、自研 -＞开源</li>
+<li>小优化带来大提升</li>
+</ul>
+<h3 id="25-复杂度来源安全">2.5 复杂度来源：安全</h3>
+<ul>
+<li>功能安全（防小偷)
+<ul>
+<li>比如我们常见的 xSS、 XSRF 攻击</li>
+</ul>
+</li>
+<li>架构安全（防强盗）
+<ul>
+<li>比如我们常见的 DDoS 攻击</li>
+</ul>
+</li>
+</ul>
+<h3 id="26-复杂度来源规模">2.6 复杂度来源：规模</h3>
+<ul>
+<li>系统规模
+<ul>
+<li>系统模块越来越多，导致复杂度提升</li>
+</ul>
+</li>
+<li>人员规模
+<ul>
+<li>人员规模的变化，需要协同的分支越来越多</li>
+</ul>
+</li>
+</ul>
+<p>这两个因素导致看不懂、改不动、不敢改、 修不了的困境</p>
+<h2 id="3-架构原则">3. 架构原则</h2>
+<h3 id="31-合适原则">3.1 合适原则</h3>
+<p>业界领先的方案其实都是&quot;逼&quot;出来的！不要一开始就要造一座罗马帝国。军记一个原则：「合适优于领先」</p>
+<ul>
+<li>合适当下和可预测的业务情况</li>
+<li>合适当下团队规模</li>
+<li>合适当下技术成熱情况</li>
+</ul>
+<h3 id="32简单原则">3.2简单原则</h3>
+<ul>
+<li>组件越多，就越有可能其中某个组件出现故障，从而导致系统故障</li>
+<li>“复杂”在制造领域代 表先进，在建筑领域代表领先，但在软件领域，却恰恰相反，代表的是“问题”。</li>
+</ul>
+<h3 id="33-可演进原则">3.3 可演进原则</h3>
+<ul>
+<li>演进是指架构上的一些变化，比如当业务发生变化时，架构要扩展、重构，甚至重写；</li>
+<li>代码也许会重写，但有价值的经验、教训、逻辑、设计等（类似生物体内的基因）却可以在新架构中延续。</li>
+</ul>
+<h3 id="34-可持续原则">3.4 可持续原则</h3>
+<p>演进是指架构上的一些变化，而持续性针对的是开发人员的变化</p>
+<ul>
+<li>敢于修正架构中的错误部分</li>
+<li>技能水平的持续改进</li>
+<li>应用的持续改进</li>
+<li>设计能力的持续提升</li>
+<li>人员变化带来的持续投入风险控制等</li>
+</ul>
+<h2 id="4识别复杂度和优先级">4.识别复杂度和优先级</h2>
+<p>构建复杂度的来源清单
+一高性能、可用性、扩展性、安全、低成本、规模等。</p>
+<ul>
+<li>结合需求、技术、团队、资源等对上述复杂度逐一分析是否需要？是否关键？</li>
+<li>从功能需求的未来变更幅度等方面去考虑架构的扩展性，延续性。</li>
+<li>按照上述的分析结论，得到复杂度按照优先级的排序清单，越是排在前面的复杂度，就越关键，就越优先解决。</li>
+</ul>
+<h2 id="5-评估和设计备选方案">5. 评估和设计备选方案</h2>
+<ul>
+<li>业务变化：如一旦业务发生不可预知的变化，比如架构调整，方向调整，需求调整，如何应对？</li>
+<li>人员变化：如一旦人员发声变动、裁员、架构如何正常演化？</li>
+<li>三方因素：如开源框架不可用之后，用什么方案替代？</li>
+</ul>
+<h2 id="6-解决业务复杂度的三种架构模式">6. 解决业务复杂度的三种架构模式</h2>
+<p>高性能、高可用、可扩展</p>
+<h3 id="61-高性能架构模式">6.1 高性能架构模式</h3>
+<h4 id="611高性能之读写分离">6.1.1高性能之读写分离</h4>
+<ul>
+<li>考虑复制延迟</li>
+<li>考虑分配机制</li>
+</ul>
+<h4 id="612-高性能之负载均衡">6.1.2 高性能之负载均衡</h4>
+<ul>
+<li>DNS 负载均衡</li>
+<li>F5 硬件负载均衡</li>
+<li>Nginx 反向代理</li>
+</ul>
+<h4 id="613高性能之分库分表">6.1.3高性能之分库分表</h4>
+<ul>
+<li>业务分库
+<figure><img src="/image/tech/al/%E4%B8%9A%E5%8A%A1%E5%88%86%E5%BA%93-1.png">
+     </figure>
+</li>
+<li>分表
+<figure><img src="/image/tech/al/%E5%88%86%E8%A1%A8-1.png"><figcaption>
+          <h4>水平/垂直拆分</h4>
+        </figcaption>
+    </figure>
+</li>
+</ul>
+<h4 id="614-高性能之缓存">6.1.4 高性能之缓存</h4>
+<p>将可能重复使用的数据放到内存中， 一次生成、多次使用，避免每次使用都去访问存储系统，技术典型代表：Memcache、Redis 和Tair。要考虑以下几点：</p>
+<ul>
+<li>失效：应用程序先从cache取数据，没有得到，则从数据 库中取数据，成功店，放到缀存中</li>
+<li>命中：应用程序从cache中取数据．取到后返回</li>
+<li>更新：先把数据存到数据库中，成功后．再让缓存失效</li>
+<li>缓存穿透问题，未命中考虑采用多级缓存</li>
+<li>分级缓存，比如粉丝100W以上的明星缓存 100份</li>
+<li>缓存雪崩，性能急剧下降是否会有风险</li>
+</ul>
+<h4 id="615-高性能之-nosql">6.1.5 高性能之 Nosql</h4>
+<p>是关系型数据库的一个补充</p>
+<ul>
+<li>K-V存储：解决关系数据库无法存储数据结构的问题，以 Redis 为代表。</li>
+<li>文档数据库：解决关系数据库强 schema 约束的问题，以 MongoDB 为代表。</li>
+<li>列式数据库：解决关系数据库大数据场景下的 V0 问题，以 HBase 为代表。</li>
+<li>全文搜索引擎：解决关系数据库的全文搜索性能问题，以 Elastiasearch 为代表。</li>
+</ul>
+<h3 id="62-高可用架构模式">6.2 高可用架构模式</h3>
+<p>CAP 原理：在一个分布式系统(指互相连接并共享数据的节点的集合）中，当涉及读写操作时，只能保证一致性
+(Consistence）、可用性 (Availability)、分区容错性 (Partition Tolerance）三者中的两个，另外一个必须被牺牲。这也
+是我们做架构升级为什么一定要停机的核心原因。</p>
+<p><figure><img src="/image/tech/al/CAP-2.png"><figcaption>
+      <h4>CAP</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/image/tech/al/CAP-1.png"><figcaption>
+      <h4>CAP</h4>
+    </figcaption>
+</figure>
+</p>
+<ul>
+<li>
+<p>一致性（Consistency） 对于客户端的每次读操作，要么读到的是最新的数据，要么读取失败。换句话说，一致性是站在分布式系统的角度，对访问本系统的客户端的一种承诺：要么我给您返回一个错误，要么我给你返回绝对一致的最新数据，不难看出，其强调的是数据正确。</p>
+</li>
+<li>
+<p>可用性（Availability） 任何客户端的请求都能得到响应数据，不会出现响应错误。换句话说，可用性是站在分布式系统的角度，对访问本系统的客户的另一种承诺：我一定会给您返回数据，不会给你返回错误，但不保证数据最新，强调的是不出错。</p>
+</li>
+<li>
+<p>分区容错性（Partition tolerance）由于分布式系统通过网络进行通信，网络是不可靠的。当任意数量的消息丢失或延迟到达时，系统仍会继续提供服务，不会挂掉。换句话说，分区容忍性是站在分布式系统的角度，对访问本系统的客户端的再一种承诺：我会一直运行，不管我的内部出现何种数据同步问题，强调的是不挂掉。</p>
+<ul>
+<li>容错性：网络通信肯定有失败的可能</li>
+<li>一致性：一旦通信失败，一致性就无法保证
+。可用性：要保证一致性，就要牺牲某个区域的可用性</li>
+</ul>
+</li>
+</ul>
+<p>高可用架构的 FMEA 方法论 (Failure Mode and Effects Analysis, 故障模式与影响分析)：</p>
+<ol>
+<li>给出初始的架构设计图
+2．假设架构中某个部件发生故障</li>
+<li>分析此故障对系统功能造成的影响</li>
+<li>根据分析结果，判断架构是否需要进行优化</li>
+</ol>
+<h4 id="621高可用之计算">6.2.1高可用之计算</h4>
+<ul>
+<li>主备
+<ul>
+<li>冷备：备机不启动</li>
+<li>温备、备机启动但不提供服务</li>
+</ul>
+</li>
+<li>主从
+<ul>
+<li>从机负责部分计算，需要任务分配器</li>
+</ul>
+</li>
+<li>集群
+<ul>
+<li>对称集群，每个集群是一个完整的计算单元</li>
+<li>非对称集群，每个集群的角色不同，需要更复杂的任务分配机制</li>
+</ul>
+</li>
+</ul>
+<p>还记得 ACP 认证时候的频繁出现的「弹性伸缩 (Auto Scaling)』吗?</p>
+<h4 id="622高可用之存储">6.2.2高可用之存储</h4>
+<ul>
+<li>双机架构（就是两台机器）
+<ul>
+<li>主备复制</li>
+<li>主从复制</li>
+<li>主备/主从双机切换</li>
+<li>主主</li>
+</ul>
+</li>
+<li>数据集群（多台机器组成的其中一个业务单元，我们也叫单元化)</li>
+</ul>
+<p>多台机器组合在一起形成一个统一的系统</p>
+<ul>
+<li>
+<p>数据集中集群，理解为1主多备或者1主多从，需要考虑每个主机状态检测，如何分配。技术代表 ZooKeeper</p>
+</li>
+<li>
+<p>数据分散集群，每台服务器都是其中一员，负责读写，需要有一个角色来负责执行数据分配算法，技术代表
+Hadoop.Hbase</p>
+</li>
+<li>
+<p>数据分区（我们也叫地域和可用区）
+将数据按照一定的规则进行分区，不同分区分布在不同的地理位置上</p>
+<ul>
+<li>集中式，找同一个备胎</li>
+<li>互备式，相互做备胎</li>
+<li>独立式、各找各备胎</li>
+</ul>
+<blockquote>
+<p>思考一下，计算高可用与存储高可用的异同？</p></blockquote>
+</li>
+</ul>
+<h4 id="623-高可用之异地多活我们也叫单元化部署">6.2.3 高可用之异地多活（我们也叫单元化部署）</h4>
+<p>类似于&quot;不要把鸡蛋都放在同一篮子里”；多活就是指不同地理位置上的系统都能够提供业务服务，这里的&quot;活〞是活动、活跃
+的意思。</p>
+<ul>
+<li>标准
+<ul>
+<li>正常情况下，用户无论访问哪一个地点的业务系统，都能够得到正确的业务服务</li>
+<li>某个地方业务异常的时候，用户访问其他地方正常的业务系统，能够得到正确的业务服务。</li>
+</ul>
+</li>
+<li>代价
+<ul>
+<li>系统复杂度会发生质的变化，需要设计复杂的异地多活架构</li>
+<li>成本会上升，毕竟要多在一个或者多个机房搭建独立的一套业务系统。</li>
+</ul>
+</li>
+</ul>
+<p>异地多活的类型</p>
+<ul>
+<li>同城异区</li>
+<li>跨城异地</li>
+<li>跨国异地
+<figure><img src="/image/tech/al/%E4%BA%A4%E6%98%93%E5%B9%B3%E5%8F%B0%E5%BC%82%E5%9C%B0%E5%A4%9A%E6%B4%BB%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84-1.png">
+  </figure>
+</li>
+</ul>
+<h3 id="63-可扩展架构模式">6.3 可扩展架构模式</h3>
+<p>可扩展架构基本思想：拆＋编排！</p>
+<ul>
+<li>面向流程拆分和编排：将整个业务流程拆分为几个阶段，每个阶段作为一部分。比如：分层架构．流程编排</li>
+<li>面向服务拆分和编排：将系統提供的服务拆分，每个服务作为一部分。比如：SOA．微服务、服务编排</li>
+<li>面向功能拆分和编排：将系统提供的功能拆分，每个功能作为一部分。比如：微内核架构、规则编排</li>
+</ul>
+<h4 id="631-layered-architecture">6.3.1 (Layered Architecture)</h4>
+<ul>
+<li>开放接口层：可直接封装 Service 方法暴露成 RPC 接口；通过 web封装成http 接口;进行 网关安全控制、流量控制等</li>
+<li>终端显示层：各个端的模板渲染并执行显示的层。当前主要是 Velocity 渲染，JS 渲染，JSP 渲染，移动端展示等</li>
+<li>web层：主要是对访问控制进行转发，各类基本参数校验，或者不复用的业务简单处理等</li>
+<li>Service 层：相对具体的业务逻辑服务层</li>
+<li>Manager 层：通用业务处理层
+<ul>
+<li>1）对第三方平台封装的层，预处理返回结果及转化异常信息；</li>
+<li>2）对Service 层通用能力的下沉，如缓存方案、中间件通用处理;</li>
+<li>3)与DAO层交互，对多个DAO的组合复用</li>
+</ul>
+</li>
+<li>DAO层：数据访问层，与底层 My SQL、Oracle、Hbase 进行数据交互</li>
+<li>外部接口或第三方平台：包括其它部门 RPC 开放接口，基础平台，其它公司的 HTTP 接口</li>
+</ul>
+<figure><img src="/image/tech/al/%E7%B3%BB%E7%BB%9F%E5%88%86%E5%B1%82%E8%A7%84%E8%8C%83-1.png">
+</figure>
+
+<h4 id="632-微内核架构-microkernel-architecture">6.3.2 微内核架构 (microkernel architecture)</h4>
+<p>内核 (core）通常只包含系统运行的最小功能。插件则是互相独立的，插件之问的通信，应该减少到最低，避免出现互相依赖的问题。</p>
+<p>我们常见的采用微内核架构的有</p>
+<ul>
+<li>Vue</li>
+<li>JQuery</li>
+<li>ernt</li>
+<li>Babel</li>
+<li>WebPack</li>
+</ul>
+<h4 id="633-soa-microservices-architecture">6.3.3 SOA (microservices architecture)</h4>
+<p>把系统按照实际业务，拆分成刚刚好大小的，合适的、独立部署的模块，每个模块之间相互独立。模块之问是松轉合的。</p>
+<figure><img src="/image/tech/al/SOA.png">
+</figure>
+
+<h4 id="634-微服务">6.3.4 微服务</h4>
+<ul>
+<li>SOA 思想的一种实现</li>
+<li>更细粒度的 SOA</li>
+<li>微服务是去掉 ESB 后的 SOA</li>
+<li>去中心化（ESB） 的服务架构</li>
+<li>微服务的弊端：本质上就是服务的一种分布式部署，增加了协同、联调、调用链路的成本</li>
+</ul>
+<blockquote>
+<p>微服务的服务发现与注册中心与 ESB 的区别2</p></blockquote>
+<h4 id="635-管道架构-pipeline-architecture">6.3.5 管道架构 (Pipeline Architecture)</h4>
+<p>管道就像生产流水线上的传送带，过滤器就像每一道工序上的机器。管道负 责数据的传递，原始数据通过管道传送给第一个
+过滤器，第一个过滤器处理完成之后，再通过管道把处理结果传送给下一个过滤器，重复这个过程直到处理结束，最终得到
+需要的结果数据
+我们常见的来用管道架构的有：</p>
+<ul>
+<li>KOA</li>
+<li>Dawn</li>
+<li>Gulp</li>
+</ul>
+<h2 id="7架构产出物有哪些">7.架构产出物有哪些？</h2>
+<ul>
+<li>
+<p>架构图（必须）</p>
+</li>
+<li>
+<p>迭代计划（必须）</p>
+</li>
+<li>
+<p>技术栈&amp;选型（必须）</p>
+</li>
+<li>
+<p>示例代码</p>
+</li>
+<li>
+<p>部署策略</p>
+</li>
+<li>
+<p>测试策路</p>
+</li>
+<li>
+<p>分工人员（必须）</p>
+</li>
+<li>
+<p>附架构评审模板</p>
+</li>
+</ul>
+<h2 id="8淘宝架构演化案例">8.淘宝架构演化案例</h2>
+<p>部分摘自《淘宝技术这十年》</p>
+<ul>
+<li>03年．买来的电商网站（美国的个人网站 LAMP PHPAuction),一个月上线，<code>简单原则</code></li>
+<li>03年底，Mysal 撑不住，买 Oracle <code>合适原则</code></li>
+<li>04年开始，PHP 热切换到 Java，开启一系列架构升级<code>演化原则、高性能合适原则</code>
+<ul>
+<li>member1.taobao.com的故事</li>
+<li>MVC框架 struts1.x 多人协作很弱，自研webx（—指）</li>
+<li>系统划分越来越多，自研分布式 RPC 服务框架，自研 HSF（小邪）</li>
+<li>分库分表查询的麻烦，自研DBRoute（行癫）到现在的TDDL</li>
+<li>Apache 性能扛不住，发起 Tengine（叔度)</li>
+<li>商品图片越来越多，自研TFS (Taobao File System)</li>
+<li>商品信息和用户信息的膨胜，自创的Key-Value缓存系统一Tair（合井自多隆的TDBM、TBStore )</li>
+<li>搭建 CDN（正明）</li>
+<li>淘宝旺旺 （直接采用 B2B 贸易通)</li>
+</ul>
+</li>
+<li>07年开始，国内第一个前端团队 <code>高性能</code>
+<ul>
+<li>前后端分离</li>
+<li>YUI</li>
+<li>自研前段框架(TBra, Kissy)</li>
+<li>TMS、斑马
+-all in (H5€, Weex, Rax. Kraken)</li>
+</ul>
+</li>
+<li>08-09年五彩石项目将一个单一的电商系统拆分成商品、交易、会员等各个中心，沉淀出共享中心 <code>高可用高性能</code></li>
+<li>09年开始，去 IOE (IBM、Oracel、 EMC) <code>演化原则降成本、创新</code></li>
+<li>15 年中台架构提出，18 年星环发布（业务架构） <code>规模化成本</code></li>
+<li>18年 一路向北 <code>演化原则、规模化成本</code></li>
+<li>19 年，核心系统上云，和客户在同一架飞机上</li>
+</ul>
+<h2 id="9-来看看我们接触过的前端一些架构">9. 来看看我们接触过的前端一些架构</h2>
+<ul>
+<li>组件化架构</li>
+<li>多页应用架构</li>
+<li>单页应用架构
+前后端分离架构</li>
+<li>微前端架构（南天门、费用中心)</li>
+<li>微内核 (BuvCore)</li>
+<li>4RR% (CommonBuy. CPQ)</li>
+<li>Hybrid App 架构（阿里云 App、淘宝、支付宝、钉钉)</li>
+<li>PWA Web 应用架构</li>
+<li>跨端渲染架构(Weex、小程序)</li>
+</ul>
+<p>回顾我们的两个架构改造</p>
+<ul>
+<li>一路向北 <code>高可用高性能</code></li>
+<li>单元化部署 <code>高可用</code></li>
+</ul>
+<blockquote>
+<p>思考：为什么要一路向北，以及一路向北的挑战有哪业？</p></blockquote>
+<h2 id="10-技术架构的下一站一-云原生">10. 技术架构的下一站一 云原生</h2>
+<p>学习中，下回分解！</p>
+<figure><img src="/image/tech/al/%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%A4%A7%E5%85%A8.png">
+</figure>
+
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-10-25</span>
+            </div><div id="page-views" class="post-info-mod">
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/learning2/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%86%85%E9%83%A8/">内部</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/advicetonew/" class="prev" rel="prev" title="技术牛人给新人的学习建议"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>技术牛人给新人的学习建议</a>
+            <a href="/design-os/" class="next" rel="next" title="功能设计场景">功能设计场景<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by MichaelSongs
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2018 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Michael Song</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/algoliasearch/lite/browser.umd.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"comment":{},"search":{"algoliaAppID":"GZT24PWKNT","algoliaIndex":"index","algoliaSearchKey":"634ab679e825b815de2663de38908f9d","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

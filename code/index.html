@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>内部-Code规范 - Michael</title><meta name="Description" content="Welcome to SYC Blog"><meta property="og:url" content="http://localhost:1313/code/">
+  <meta property="og:site_name" content="Michael">
+  <meta property="og:title" content="内部-Code规范">
+  <meta property="og:description" content="CR 有感 前段时间参与了xx代码 Code Review，开始前大家有些不安，觉得代码水平很难评判，详细研究了各个评分纬度，但实际 Review 下来发现评判特别简单，大家给的分数高度一致，总结下自己的感受：">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-11-02T16:06:37+08:00">
+    <meta property="article:modified_time" content="2022-11-02T16:06:37+08:00">
+    <meta property="article:tag" content="内部">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="内部-Code规范">
+  <meta name="twitter:description" content="CR 有感 前段时间参与了xx代码 Code Review，开始前大家有些不安，觉得代码水平很难评判，详细研究了各个评分纬度，但实际 Review 下来发现评判特别简单，大家给的分数高度一致，总结下自己的感受：">
+<meta name="application-name" content="MichaelSongs">
+<meta name="apple-mobile-web-app-title" content="MichaelSongs">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/code/" /><link rel="prev" href="http://localhost:1313/work-advice/" /><link rel="next" href="http://localhost:1313/tobeleader/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "内部-Code规范",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/code\/"
+        },"image": ["http:\/\/localhost:1313\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "内部","wordcount":  1819 ,
+        "url": "http:\/\/localhost:1313\/code\/","datePublished": "2022-11-02T16:06:37+08:00","dateModified": "2022-11-02T16:06:37+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Michael Song"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Michael"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>SYC-Lifelong learning(终身学习)</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VWLD0KH6Y9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VWLD0KH6Y9');
+    </script>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Michael"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>SYC-Lifelong learning(终身学习)</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">内部-Code规范</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Michael Song</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%86%85%E9%83%A8/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>内部</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-11-02">2022-11-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1819 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 4 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#cr-有感">CR 有感</a>
+      <ul>
+        <li><a href="#规范类问题">规范类问题</a></li>
+        <li><a href="#无用和缺省的依赖">无用和缺省的依赖</a></li>
+      </ul>
+    </li>
+    <li><a href="#git-commit-message-格式">git commit message 格式</a>
+      <ul>
+        <li><a href="#type必须">type(必须）</a></li>
+        <li><a href="#scope可选">scope(可选)</a></li>
+        <li><a href="#subject必选">subject(必选)</a></li>
+      </ul>
+    </li>
+    <li><a href="#code-review的一些想法">Code Review的一些想法</a>
+      <ul>
+        <li><a href="#1-统一认知">1. 统一认知</a></li>
+        <li><a href="#2-code-review-作用">2. Code Review 作用</a></li>
+        <li><a href="#3-code-review-关注点">3. Code Review 关注点</a>
+          <ul>
+            <li><a href="#31-可读性--可维护性">3.1 可读性 ＆ 可维护性</a></li>
+            <li><a href="#32-逻辑实现合理">3.2 逻辑实现合理</a></li>
+            <li><a href="#33-是否考虑过">3.3 是否考虑过？</a></li>
+          </ul>
+        </li>
+        <li><a href="#4-code-review-之后">4. Code Review 之后</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="cr-有感">CR 有感</h2>
+<p>前段时间参与了xx代码 Code Review，开始前大家有些不安，觉得代码水平很难评判，详细研究了各个评分纬度，但实际 Review 下来发现评判特别简单，大家给的分数高度一致，总结下自己的感受：</p>
+<ul>
+<li>
+<p>功夫在日常，代码质量很难刷</p>
+<ul>
+<li>最基础的规范都不注意会让评委对后续的 Review 内容带有挑战心态，一屋不扫，何以扫天下</li>
+<li>注意小细节优化的同学一般整体代码规范性会很高</li>
+<li>相对于发起一个重构的项目，重构在日常是个非常可贵的品质，很关项目需要重构，正是因为日常没有做好 Code Review，导致代码腐化，团队效能下降</li>
+</ul>
+</li>
+<li>
+<p>清理无用代码、主动升级依赖、使用新特性 等让人印象深刻</p>
+</li>
+<li>
+<p>README 质量高的项目，代码质量通常不会差，对自己的作品在意会体现在方方面面</p>
+</li>
+<li>
+<p>代码质量分布通常会团队化，不要指望个别优秀的同学带动团队的整体水平提升;</p>
+</li>
+<li>
+<p>与Code Review，技术文化需要主管以身作则
+自己在团队 Review 前端代码总结了几类常见的问题</p>
+</li>
+</ul>
+<h3 id="规范类问题">规范类问题</h3>
+<ul>
+<li>无意义的commit message； 建议所有同学了解一下看看 <code>commit message 规范</code>。</li>
+</ul>
+<h3 id="无用和缺省的依赖">无用和缺省的依赖</h3>
+<blockquote>
+<p>mvn dependency:analyze</p></blockquote>
+<h2 id="git-commit-message-格式">git commit message 格式</h2>
+<blockquote>
+<p>‹type&gt; ( &lt; scope &gt; ) : ‹subject&gt;</p></blockquote>
+<h3 id="type必须">type(必须）</h3>
+<p>用于说明git commit的类别，只允许使用下面的标识</p>
+<ul>
+<li>feat: 新功能 (feature)</li>
+<li>fix/to：修复bug，可以是QA发现的BUG，也可以是研发自己发现的BUG
+<ul>
+<li>fix：产生diff并自动修复此问题。适合于一次提交直接修复问题(可以和Aone bug关联）</li>
+<li>to：只产生dif不自动修复此问题。适合于多次提交。最终修复问题提交时使用fix(可以和Aone bug关联）</li>
+</ul>
+</li>
+<li>docs: 文档 (documentation)</li>
+<li>style：格式（不影响代码运行的变动）</li>
+<li>refactor：重构（即不是新增功能，也不是修改bug的代码变动）</li>
+<li>pert： 优化相关，比如提升性能、体验</li>
+<li>test：增加测试</li>
+<li>chore：构建过程或辅助工具的变动</li>
+<li>revert：回滚到上一个版本</li>
+<li>merge: 代码合并</li>
+<li>sync: 同步主线或分支的Bug</li>
+</ul>
+<h3 id="scope可选">scope(可选)</h3>
+<p>scope用于说明 commit 影响的范围，比如数据层、控制层、视图层等等，视项目不同而不同。
+如果你的修改影响了不止一个scope，你可以使用*代替。</p>
+<h3 id="subject必选">subject(必选)</h3>
+<p>subject是commit目的的简短描述，不超过50个字符。</p>
+<ul>
+<li>建议使用中文(中国人用中文描述问题能更清楚一些）</li>
+<li>结尾不加句号或其他标点符号</li>
+<li>根据以上规范git commit message 将是如下的格式：</li>
+</ul>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-shell">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"> fix<span class="o">(</span>DA0<span class="o">)</span>: 活动查询缺少子活动类型属性
+</span></span><span class="line"><span class="cl"> feat <span class="o">(</span>Controller<span class="o">)</span>: 活动查询接口开发</span></span></code></pre></div></div>
+<p>以上就是我们梳理的git commit规范，那么我们这样规范git commit到底有哪些好处呢？</p>
+<ul>
+<li>便于程序员对提交历史进行追湖，了解发生了什么情况</li>
+<li>一旦约束了commit message，意味着<code>我们将慎重的进行每一次提交，不能再一股脑的把各种各样的改动都放在一个git commit里面</code>，这样一来整个代码改动的历史也将更加清晰</li>
+<li>格式化的commit message才可用于自动化输出 change log</li>
+</ul>
+<h2 id="code-review的一些想法">Code Review的一些想法</h2>
+<h3 id="1-统一认知">1. 统一认知</h3>
+<ul>
+<li>Code Review 不是判定 Coding 水平高低，只要频度够任何人都不会尴尬</li>
+<li>CR 是互相帮助的过程，但同时也是互相学习的过程，因此发起 CR 尽量抄送相关同学</li>
+<li>CR 不只是为了发现有问题的代码，更重要的意义是集思广益写出更好的代码，对待可以 work 但有瑕疵的代
+码要警惕破窗效应</li>
+<li>通过 CR 要让所有人了解团队代码规范，学习更优秀的代码书写；同时发现团队通用问题，优化工具、流程</li>
+</ul>
+<h3 id="2-code-review-作用">2. Code Review 作用</h3>
+<ul>
+<li>统一团队编码规范</li>
+<li>提升团队代码质量</li>
+<li>分享项目知识，了解团队技术变更、发展</li>
+<li>统一团队技术价值观，构建更好的软件、更好的团队</li>
+</ul>
+<h3 id="3-code-review-关注点">3. Code Review 关注点</h3>
+<h4 id="31-可读性--可维护性">3.1 可读性 ＆ 可维护性</h4>
+<ul>
+<li>文件位置 &amp;命名，变量使用、空格 or tab 等是否遵从了团队的统一规范？</li>
+<li>宇段、变量、参数、方法、类的命名是否真实反映它们所代表的事物？</li>
+<li>我是否可以通过读代码理解它做了什么？</li>
+<li>错误信息、异常分支是否可被理解？</li>
+<li>不清晰的代码是否被文档、注释或容易理解的测试用例所覆盖？</li>
+</ul>
+<h4 id="32-逻辑实现合理">3.2 逻辑实现合理</h4>
+<ul>
+<li>代码是否真的达到了预期的目标？</li>
+<li>代码看上去是否包含不明显的 bug，比如使用错误的变量进行检查？</li>
+<li>是否有自动化测试来确保代码的正确性，测试的代码是否真的可以验证代码达到了协定的需求？</li>
+</ul>
+<h4 id="33-是否考虑过">3.3 是否考虑过？</h4>
+<ul>
+<li>是否需要满足相关监管需求？</li>
+<li>是否需要创建公共文档或修改现存的帮助文档？</li>
+<li>是否有会在生产环境中导致应用停止运行的明显错误？</li>
+<li>代码是否会错误地指向测试环境？</li>
+<li>是否存在应在真实服务中移除的硬编码代码？</li>
+<li>对性能的需求是什么？</li>
+<li>是否考虑了安全问题？</li>
+</ul>
+<h3 id="4-code-review-之后">4. Code Review 之后</h3>
+<ol>
+<li>
+<p>互相学习，见贤思齐，见不贤而内自省</p>
+</li>
+<li>
+<p>抽象共性问题，找出解决方案，让团队变的更好</p>
+</li>
+<li>
+<p>典型实践</p>
+<ol>
+<li>形成规范：阿里巴巴 Java 开发手册</li>
+<li>自动校验工具；</li>
+</ol>
+</li>
+</ol>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-11-02</span>
+            </div><div id="page-views" class="post-info-mod">
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/code/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%86%85%E9%83%A8/">内部</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/work-advice/" class="prev" rel="prev" title="内部-Work Advice"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>内部-Work Advice</a>
+            <a href="/tobeleader/" class="next" rel="next" title="内部-如果我是一线主管">内部-如果我是一线主管<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by MichaelSongs
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2018 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Michael Song</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/algoliasearch/lite/browser.umd.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"comment":{},"search":{"algoliaAppID":"GZT24PWKNT","algoliaIndex":"index","algoliaSearchKey":"634ab679e825b815de2663de38908f9d","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script src="/js/theme.min.js"></script></body>
+</html>
